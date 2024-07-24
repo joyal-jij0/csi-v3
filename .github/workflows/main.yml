@@ -1,0 +1,34 @@
+name: Add PR to Project
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add PR to GitHub Project
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const projectNumber = 1;  // Replace with your project number
+            const columnName = 'Pull Requests';  // Replace with your column name
+            
+            const pr = context.payload.pull_request;
+            const projectUrl = `${pr.html_url}/projects/${projectNumber}`;
+            
+            const { data: columns } = await github.projects.listColumns({
+              project_id: projectNumber
+            });
+            
+            const column = columns.find(column => column.name === columnName);
+            
+            if (column) {
+              await github.projects.createCard({
+                column_id: column.id,
+                content_id: pr.id,
+                content_type: 'PullRequest'
+              });
+            }
