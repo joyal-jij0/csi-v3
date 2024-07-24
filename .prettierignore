@@ -1,0 +1,12 @@
+/.vscode
+/node_modules
+./dist
+/.git
+/.next
+/.gitignore
+next-env.d.ts
+next.config.mjs
+postcss.config.mjs
+README.md 
+tailwind.config.ts
+tsconfig.json
