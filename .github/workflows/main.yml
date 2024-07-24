@@ -8,6 +8,9 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Add PR to GitHub Project
         uses: actions/github-script@v6
         with:
@@ -15,20 +18,32 @@ jobs:
           script: |
             const projectNumber = 1;  // Replace with your project number
             const columnName = 'Pull Requests';  // Replace with your column name
-            
+
             const pr = context.payload.pull_request;
-            const projectUrl = `${pr.html_url}/projects/${projectNumber}`;
-            
-            const { data: columns } = await github.projects.listColumns({
-              project_id: projectNumber
+
+            const { data: projects } = await github.projects.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
             });
-            
-            const column = columns.find(column => column.name === columnName);
-            
-            if (column) {
-              await github.projects.createCard({
-                column_id: column.id,
-                content_id: pr.id,
-                content_type: 'PullRequest'
-              });
+
+            const project = projects.find(p => p.number === projectNumber);
+
+            if (!project) {
+              throw new Error(`Project ${projectNumber} not found`);
             }
+
+            const { data: columns } = await github.projects.listColumns({
+              project_id: project.id,
+            });
+
+            const column = columns.find(column => column.name === columnName);
+
+            if (!column) {
+              throw new Error(`Column ${columnName} not found`);
+            }
+
+            await github.projects.createCard({
+              column_id: column.id,
+              content_id: pr.id,
+              content_type: 'PullRequest',
+            });
