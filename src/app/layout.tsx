@@ -26,7 +26,7 @@ export default function RootLayout({
           <div>ABOUT</div>
         </div>
         <div className="flex-shrink-0 ml-3 pr-4 md:pr-7">
-          <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROSHURE</Button>
+          <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROCHURE</Button>
           </div>
       </nav>
         {children}
