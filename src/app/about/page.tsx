@@ -147,7 +147,7 @@ const AboutCSI: React.FC = () => {
                                 objectFit="contain"
                             />
                         </div> */}
-                        <div className="relative flex h-[500px] w-fullcd flex-col items-center justify-center overflow-hidden rounded-[50%]   bg-background md:shadow-xl">
+                        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-[50%]   bg-background md:shadow-xl">
                             <div className="w-48 h-48 relative mb-8 rounded-[50%] overflow-hidden top-[17px]">
                                 <Image
                                     src="/about/image3.png"
