@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/moving-border";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <nav className="flex justify-center items-center py-2 text-[0.7rem] pl-10 md:text-xl md:pl-52 md:py-6">
+        <div className="flex justify-center flex-grow space-x-4 md:space-x-10">
+          <div>TEAM</div>
+          <div>EVENTS</div>
+          <div>GALLERY</div>
+          <div>ABOUT</div>
+        </div>
+        <div className="flex-shrink-0 ml-3 pr-4 md:pr-7">
+          <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROCHURE</Button>
+          </div>
+      </nav>
+        {children}
+        </body>
     </html>
   );
 }
