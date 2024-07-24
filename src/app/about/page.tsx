@@ -1,5 +1,5 @@
 import React from 'react';
-import PlaceholderCard from './PlaceHolderCard';
+import PlaceholderCard from '../../components/PlaceHolderCard';
 import Image from 'next/image';
 import { FaEnvelope, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 
