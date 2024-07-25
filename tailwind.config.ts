@@ -1,9 +1,57 @@
 import type { Config } from "tailwindcss";
+import type { PluginCreator } from "tailwindcss/types/config";
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+
+const textGradientBorderPlugin: PluginCreator = function ({ addUtilities }) {
+  addUtilities({
+    '.text-gradient-border': {
+      'position': 'relative',
+      'background-image': 'linear-gradient(0deg, rgba(0, 0, 0, 0.82) 18.4%, rgba(146, 128, 255, 0.73) 53.4%, #BC4FFF 72.4%)',
+      '-webkit-background-clip': 'text',
+      'background-clip': 'text',
+      'color': 'transparent',
+      'display': 'inline-block',
+    },
+    // '.text-gradient-border::before': {
+    //   'content': 'attr(data-text)',
+    //   'position': 'absolute',
+    //   'left': '0',
+    //   'top': '0',
+    //   'z-index': '-1',
+    //   'color': 'white',
+    //   'text-shadow': `
+    //     0.125px 0.125px 0 white,
+    //     0.25px 0.25px 0 white,
+    //     -0.125px 0.125px 0 white,
+    //     -0.25px 0.25px 0 white,
+    //     0.125px -0.125px 0 white,
+    //     0.25px -0.25px 0 white,
+    //     -0.125px -0.125px 0 white,
+    //     -0.25px -0.25px 0 white
+    //   `,
+    //   'clip-path': 'polygon(0 0, 100% 0, 100% 15%, 0 15%)', // Cover only top 25%
+    // },
+    // '.text-gradient-border::after': {
+    //   'content': 'attr(data-text)',
+    //   'position': 'absolute',
+    //   'left': '0',
+    //   'top': '0',
+    //   'z-index': '-1',
+    //   'color': 'white',
+    //   'text-shadow': `
+    //     0.125px 0 0 white,
+    //     0.25px 0 0 white,
+    //     -0.125px 0 0 white,
+    //     -0.25px 0 0 white
+    //   `,
+    //   'clip-path': 'polygon(0 15%, 100% 15%, 100% 100%, 0% 100%)', // Side borders start from 25%
+    // },
+  });
+};
 
 const config: Config = {
     content: [
@@ -42,6 +90,7 @@ const config: Config = {
     plugins: [
 
     addVariablesForColors,
+    textGradientBorderPlugin,
   ],
 };
 
