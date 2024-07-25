@@ -12,7 +12,8 @@ import {
 } from "react-icons/fa";
 import { GlareCard } from "@/components/ui/glare-card";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
-import Ripple from "@/components/magicui/ripple";
+import Link from "next/link";
+import { Button } from "@/components/ui/moving-border";
 
 const AboutCSI: React.FC = () => {
     return (
@@ -37,7 +38,7 @@ const AboutCSI: React.FC = () => {
 
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:-top-5 sm:relative ">
                         <div className="">
-                            <GlareCard className="flex flex-col items-center justify-center text-center">
+                            <GlareCard className="flex flex-col items-center justify-center text-center max-w-[370px] sm:relative ">
                                 <img
                                     className="h-full w-full absolute inset-0 object-cover"
                                     src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -45,7 +46,7 @@ const AboutCSI: React.FC = () => {
                             </GlareCard>
                         </div>
                     </NeonGradientCard>
-                    <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:-top-5 md:relative md:top-20 ">
+                    <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:top-20 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
                                 <img
@@ -55,7 +56,7 @@ const AboutCSI: React.FC = () => {
                             </GlareCard>
                         </div>
                     </NeonGradientCard>
-                    <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:-top-5 md:relative md:top-5 ">
+                    <NeonGradientCard className="max-w-[370px] items-center justify-center text-center  md:relative md:top-5 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
                                 <img
@@ -99,8 +100,8 @@ const AboutCSI: React.FC = () => {
                         OBJECTIVES
                     </h2>
                     <div className="flex flex-col md:flex-row justify-center items-start gap-60 ">
-                        <div className="flex flex-col items-center max-w-xs">
-                            <div className="relative w-[250px] h-[200px] mb-4">
+                        <div className="flex flex-col items-center max-w-xs ">
+                            <div className="relative w-[250px] h-[200px] mb-4 border">
                                 <Image
                                     src="/about/image1.png"
                                     alt="Students collaborating"
@@ -115,6 +116,7 @@ const AboutCSI: React.FC = () => {
                                 graded.
                             </p>
                         </div>
+
                         <div className="flex flex-col items-center max-w-xs">
                             <div className="relative w-[250px] h-[200px] mb-4">
                                 <Image
@@ -139,26 +141,14 @@ const AboutCSI: React.FC = () => {
                         ABOUT MATES
                     </h2>
                     <div className="flex flex-col items-center">
-                        {/* <div className="w-48 h-48 relative mb-8">
+                        <div className="w-48 h-48 relative mb-8 overflow-hidden top-[17px]">
                             <Image
                                 src="/about/image3.png"
                                 alt="MATES Logo"
                                 layout="fill"
-                                objectFit="contain"
+                                objectFit="cover" // 'contain' can also be used, depending on how you want the image to fit
+                                className="rounded-lg"
                             />
-                        </div> */}
-                        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-[50%]   bg-background md:shadow-xl">
-                            <div className="w-48 h-48 relative mb-8 rounded-[50%] overflow-hidden top-[17px]">
-                                <Image
-                                    src="/about/image3.png"
-                                    alt="MATES Logo"
-                                    layout="fill"
-                                    objectFit="cover" // 'contain' can also be used, depending on how you want the image to fit
-                                    className="rounded-lg"
-                                />
-                            </div>
-
-                            <Ripple />
                         </div>
                         <p className="text-center max-w-3xl mx-auto">
                             Maharaja Agrasen Technical Education Society (MATES)
@@ -174,57 +164,87 @@ const AboutCSI: React.FC = () => {
                         </p>
                     </div>
                 </div>
-{/* Contact Section */}
-<div className="mt-20 md:mt-40 flex flex-col md:flex-row justify-between items-start mb-12 px-4 md:px-10 lg:px-20">
-  <div className='w-full md:w-1/2 mb-8 md:mb-0'>
-    <h3 className="text-xl md:text-2xl font-bold mb-6">CONTACT US</h3>
-    <div className="flex items-center mb-4">
-      <FaMapMarkerAlt className="mr-2" />
-      <p className="text-sm md:text-base">Maharaja Agrasen Institute <br></br> Of Technology</p>
-    </div>
-    <div className="flex items-center mb-4">
-      <FaEnvelope className="mr-2" />
-      <p className="text-sm md:text-base">Email@Gmail.Com</p>
-    </div>
-    <div className="flex items-center">
-      <FaPhone className="mr-2" />
-      <p className="text-sm md:text-base">+91 9871010872</p>
-    </div>
-  </div>
-  <div className="w-full md:w-1/6">
-    <h3 className="text-lg md:text-xl font-bold mb-4">FOLLOW US ON</h3>
-    <div className="flex space-x-4">
-      <FaInstagram size={20} className="md:text-2xl" />
-      <FaLinkedin size={20} className="md:text-2xl" />
-    </div>
-    <hr className='border my-4 md:my-5'></hr>
-    <div className="mt-6 md:mt-8">
-      <h3 className="text-lg md:text-xl font-bold mb-4">FOR MORE UPDATES</h3>
-<a
-      href="#"
-      className="inline-flex items-center py-2 px-4 bg-slate-900 hover:bg-slate-700 focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 text-white rounded-md transition duration-300 text-sm md:text-base"
-    >
-      <svg className="w-8 h-8 fill-current mr-2" viewBox="0 0 24 24">
-        <path d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
-      </svg>
-      <span>Subscribe</span>
-    </a>
-      </div>
-    </div>
-  </div>
-</div>
+                {/* Contact Section */}
+                <div className="mt-20 md:mt-40 flex flex-col md:flex-row justify-between items-start mb-12 px-4 md:px-10 lg:px-20">
+                    <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                        <h3 className="text-xl md:text-2xl font-bold mb-6">
+                            CONTACT US
+                        </h3>
+                        <div className="flex items-center mb-4">
+                            <FaMapMarkerAlt className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                Maharaja Agrasen Institute <br></br> Of
+                                Technology
+                            </p>
+                        </div>
+                        <div className="flex items-center mb-4">
+                            <FaEnvelope className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                Email@Gmail.Com
+                            </p>
+                        </div>
+                        <div className="flex items-center">
+                            <FaPhone className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                +91 9871010872
+                            </p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/6">
+                        <h3 className="text-lg md:text-xl font-bold mb-4">
+                            FOLLOW US ON
+                        </h3>
+                        <div className="flex space-x-4">
+                            <FaInstagram size={20} className="md:text-2xl" />
+                            <FaLinkedin size={20} className="md:text-2xl" />
+                        </div>
+                        <hr className="border my-4 md:my-5"></hr>
+                        <div className="mt-6 md:mt-8">
+                            <h3 className="text-lg md:text-xl font-bold mb-4">
+                                FOR MORE UPDATES
+                            </h3>
 
-{/* Footer */}
-<hr className='border my-2'></hr>
-<footer className="text-white text-center py-2">
-  <div className="flex-grow mt-3"></div>
-  <p className='text-sm md:text-base'>COPYRIGHT © 2024 CSI-INNOVATION</p>
-  {/* <div className="flex-grow"></div> */}
-</footer>
-</div>
+                            <a
+                                href="#"
+                                className="inline-flex items-center  focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 text-white rounded-md transition duration-300 text-sm md:text-base"
+                            >
+                                {/* <svg
+                                    className="w-8 h-8 fill-current mr-2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
+                                </svg>
+                                <span>Subscribe</span> */}
 
+                                <Button
+                                    className="text-[0.7rem] md:text-lg"
+                                    containerClassName="w-20 lg:w-40 lg:h-12"
+                                >
+                                    <svg
+                                        className="w-8 h-8 fill-current mr-2"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
+                                    </svg>
+                                    <span>Subscribe</span>
+                                </Button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  );
+            {/* Footer */}
+            <hr className="border my-2"></hr>
+            <footer className="text-white text-center py-2">
+                <div className="flex-grow mt-3"></div>
+                <p className="text-sm md:text-base">
+                    COPYRIGHT © 2024 CSI-INNOVATION
+                </p>
+                {/* <div className="flex-grow"></div> */}
+            </footer>
+        </div>
+    );
 };
 
 export default AboutCSI;

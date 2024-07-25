@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 import { Button } from "@/components/ui/moving-border";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,22 +17,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <nav className="flex justify-center items-center py-2 text-[0.7rem] pl-10 md:text-xl md:pl-52 md:py-6">
-        <div className="flex justify-center flex-grow space-x-4 md:space-x-10">
-          <div>TEAM</div>
-          <div>EVENTS</div>
-          <div>GALLERY</div>
-          <div>ABOUT</div>
-        </div>
-        <div className="flex-shrink-0 ml-3 pr-4 md:pr-7">
-          <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROCHURE</Button>
+      <body className={`bg-black ${inter.className}`}>
+        <nav className="flex justify-between items-center text-[0.7rem] md:-mt-3 pl-2 md:pl-5 md:text-xl">
+        <Link href="/">
+              <Image 
+                src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1721929345/CSI%20Website/logo_f1pruv.jpg" 
+                alt="Logo" width={130} height={130} 
+                />
+            </Link>
+          <div className="flex items-center space-x-4">
+            
+            <div className="flex justify-center text-white space-x-4 md:space-x-10">
+              <Link href="/team"><div>TEAM</div></Link>
+              <Link href="/events"><div>EVENTS</div></Link>
+              <Link href="/gallery"><div>GALLERY</div></Link>
+              <Link href="/about"><div>ABOUT</div></Link>
+            </div>
           </div>
-      </nav>
+          <div className="flex-shrink-0 ml-3 pr-4 md:pr-7">
+            <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROCHURE</Button>
+          </div>
+        </nav>
         {children}
-        </body>
+      </body>
     </html>
   );
 }

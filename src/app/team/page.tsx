@@ -110,7 +110,5 @@ const people2: Person[] = [
         ))}
       </div>
     </div>
-
-    
   )
 }
