@@ -13,7 +13,6 @@ import {
 import { GlareCard } from "@/components/ui/glare-card";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 import Link from "next/link";
-import ShineBorder from "@/components/magicui/shine-border";
 import { Button } from "@/components/ui/moving-border";
 
 const AboutCSI: React.FC = () => {
@@ -39,7 +38,7 @@ const AboutCSI: React.FC = () => {
 
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:-top-5 sm:relative ">
                         <div className="">
-                            <GlareCard className="flex flex-col items-center justify-center text-center">
+                            <GlareCard className="flex flex-col items-center justify-center text-center max-w-[370px] sm:relative ">
                                 <img
                                     className="h-full w-full absolute inset-0 object-cover"
                                     src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -101,43 +100,39 @@ const AboutCSI: React.FC = () => {
                         OBJECTIVES
                     </h2>
                     <div className="flex flex-col md:flex-row justify-center items-start gap-60 ">
-                        
-                            <div className="flex flex-col items-center max-w-xs ">
-                                <div className="relative w-[250px] h-[200px] mb-4 border">
-                                    <Image
-                                        src="/about/image1.png"
-                                        alt="Students collaborating"
-                                        fill
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className="text-center">
-                                    To cultivate students' interest in the field
-                                    of management or commerce in a convivial
-                                    environment, without the pressure of being
-                                    graded.
-                                </p>
+                        <div className="flex flex-col items-center max-w-xs ">
+                            <div className="relative w-[250px] h-[200px] mb-4 border">
+                                <Image
+                                    src="/about/image1.png"
+                                    alt="Students collaborating"
+                                    fill
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
+                            <p className="text-center">
+                                To cultivate students' interest in the field of
+                                management or commerce in a convivial
+                                environment, without the pressure of being
+                                graded.
+                            </p>
+                        </div>
 
-                        
-                            <div className="flex flex-col items-center max-w-xs">
-                                <div className="relative w-[250px] h-[200px] mb-4">
-                                    <Image
-                                        src="/about/image2.png"
-                                        alt="Sustainable development"
-                                        fill
-                                        style={{ objectFit: "cover" }}
-                                    />
-                                </div>
-                                <p className="text-center">
-                                    Commitment to Sustainable Development:
-                                    Central to our mission is the creation of an
-                                    environment that not only promotes
-                                    innovation but also ensures sustainable
-                                    progress.
-                                </p>
+                        <div className="flex flex-col items-center max-w-xs">
+                            <div className="relative w-[250px] h-[200px] mb-4">
+                                <Image
+                                    src="/about/image2.png"
+                                    alt="Sustainable development"
+                                    fill
+                                    style={{ objectFit: "cover" }}
+                                />
                             </div>
-                        
+                            <p className="text-center">
+                                Commitment to Sustainable Development: Central
+                                to our mission is the creation of an environment
+                                that not only promotes innovation but also
+                                ensures sustainable progress.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 {/* About MATES Section */}
