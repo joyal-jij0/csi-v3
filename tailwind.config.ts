@@ -70,6 +70,7 @@ const config: Config = {
                 backgroundPositionSpin:
                     "background-position-spin 3000ms infinite alternate",
                 ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+                shimmer: "shimmer 2s linear infinite",
             },
             keyframes: {
                 "background-position-spin": {
@@ -84,14 +85,29 @@ const config: Config = {
                         transform: "translate(-50%, -50%) scale(0.9)",
                     },
                 },
+                "shine-pulse": {
+                    "0%": {
+                        "background-position": "0% 0%",
+                    },
+                    "50%": {
+                        "background-position": "100% 100%",
+                    },
+                    to: {
+                        "background-position": "0% 0%",
+                    },
+                },
+                shimmer: {
+                    from: {
+                        backgroundPosition: "0 0",
+                    },
+                    to: {
+                        backgroundPosition: "-200% 0",
+                    },
+                },
             },
         },
     },
-    plugins: [
-
-    addVariablesForColors,
-    textGradientBorderPlugin,
-  ],
+    plugins: [addVariablesForColors, textGradientBorderPlugin],
 };
 
 export default config;
@@ -106,5 +122,6 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
 
 
