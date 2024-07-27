@@ -65,6 +65,7 @@ export default function team() {
             </div>
           ))}
         </div>
+        <div className="ml-8 mr-8 border-t-2 border-dashed border-white-600 pt-8"></div>
         <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center">
           {executivesData.map((dept, index) => (
             <div key={dept.name} className="p-4">
