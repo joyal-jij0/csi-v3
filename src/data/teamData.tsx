@@ -64,3 +64,37 @@ export const people2: Person[] = [
     position: "QA Engineer",
   },
 ]
+
+export interface Department {
+  name: string;
+  people: string[];
+}
+
+export const executivesData: Department[] = [
+  {
+    name: "Technical Executives",
+    people: ["Name 1", "Name 2", "Name 3"]
+  },
+  {
+    name: "Public Relations Executives",
+    people: ["Name 1", "Name 2", "Name 3", "Name 4"]
+  },
+  {
+    name: "Sponsorship Executives",
+    people: ["Name 1", "Name 2", "Name 3"]
+  },
+  {
+    name: "Technical Executives",
+    people: ["Name 1", "Name 2", "Name 3", "Name 4"]
+  },
+  {
+    name: "Public Relations Executives",
+    people: ["Name 1", "Name 2", "Name 3", "Name 4"]
+  },
+  {
+    name: "Sponsorship Executives",
+    people: ["Name 1", "Name 2", "Name 3", "Name 4"]
+  }
+];
+
+export default executivesData;

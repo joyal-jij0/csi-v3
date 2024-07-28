@@ -1,4 +1,4 @@
-import { people1, people2 } from '@/data/teamData'
+import { people1, people2, executivesData } from '@/data/teamData'
 import React from 'react'
 import Image from "next/image";
 export default function team() {
@@ -62,6 +62,24 @@ export default function team() {
                   {eachPerson.position}
                 </h2>
               </div>
+            </div>
+          ))}
+        </div>
+        <div className="ml-8 mr-8 border-t-2 border-dashed border-white-600 pt-8"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center">
+          {executivesData.map((dept, index) => (
+            <div key={dept.name} className="p-4">
+              <h2 className="text-xl text-center font-bold mb-2">{dept.name}</h2>
+              <ul className={`
+                text-center
+                ${index % 3 === 0 ? 'md:text-left' : ''}
+                ${index % 3 === 1 ? 'md:text-center' : ''}
+                ${index % 3 === 2 ? 'md:text-right' : ''}
+              `}>
+                {dept.people.map((person) => (
+                  <li key={person}>{person}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
