@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/moving-border";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import ShimmerButton from "@/components/magicui/ShimmerButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-black ${inter.className}`}>
-        <nav className="flex justify-between items-center text-[0.7rem] md:-mt-3 pl-2 md:pl-5 md:text-xl">
+        <nav className="flex justify-between items-center text-[0.7rem]  md:-mt-3 pl-2 md:pl-5 md:text-xl">
         <Link href="/">
               <Image 
                 src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1721929345/CSI%20Website/logo_f1pruv.jpg" 
@@ -38,8 +39,14 @@ export default function RootLayout({
               <Link href="/about"><div>ABOUT</div></Link>
             </div>
           </div>
-          <div className="flex-shrink-0 ml-3 pr-4 md:pr-7">
-            <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-12">BROCHURE</Button>
+          <div className="">
+            <div className=" pl-2 z-10 w-8/12  items-center justify-center">
+              <ShimmerButton borderRadius="15px" className="shadow-2xl">
+                <span className="whitespace-pre-wrap text-center  font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  BROCHURE
+                </span>
+              </ShimmerButton>
+            </div>
           </div>
         </nav>
         {children}
