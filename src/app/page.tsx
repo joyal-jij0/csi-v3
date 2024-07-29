@@ -1,7 +1,6 @@
 import Infinitescrollbrand from "@/components/InfineScroll";
 import { Button } from "@/components/ui/moving-border";
 import UpdatesAndEvents from "@/components/UpdatesAndEvent";
-import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
