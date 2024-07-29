@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import { Button } from "@/components/ui/moving-border";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+        <Footer/>
       </body>
     </html>
   );

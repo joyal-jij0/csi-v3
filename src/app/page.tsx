@@ -16,12 +16,8 @@ export default function Home() {
           </div>
           <div className="mt-24">
             <UpdatesAndEvents/>
-          </div>
-          
+          </div>          
         </div>
-        <div>
-            <Footer/>
-          </div>
       </div>
     </>
   );

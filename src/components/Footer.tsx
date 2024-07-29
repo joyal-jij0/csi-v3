@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/moving-border";
 function Footer() {
   return (
     <div>
-          <div className="mt-20 text-white md:mt-40 flex flex-col md:flex-row justify-between items-start mb-12 px-4 md:px-10 lg:px-20">
+          <div className="mt-20 text-white md:mt-40 flex flex-col md:flex-row justify-between mx-10 items-start mb-12 px-4 md:px-10 lg:px-20">
                     <div className="w-full md:w-1/2 mb-8 md:mb-0">
                         <h3 className="text-xl md:text-2xl font-bold mb-6">
                             CONTACT US
@@ -63,8 +63,9 @@ function Footer() {
                                 <span>Subscribe</span> */}
 
                                 <Button
-                                    className="text-[0.7rem] md:text-lg"
-                                    containerClassName="w-20 lg:w-40 lg:h-12"
+                                    className="text-[0.7rem]  md:text-lg"
+                                    containerClassName="w-20  lg:w-40 lg:h-12"
+                                    borderClassName='red-500'
                                 >
                                     <svg
                                         className="w-8 h-8 fill-current mr-2"

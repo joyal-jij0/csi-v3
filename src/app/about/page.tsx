@@ -165,9 +165,6 @@ const AboutCSI: React.FC = () => {
                         </p>
                     </div>
                 </div>
-                {/* Contact Section */}
-                <Footer/>
-              
         </div>
         </div>
     );
