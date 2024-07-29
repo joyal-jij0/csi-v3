@@ -1,14 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 const InfiniteScrollBrand = () => {
   const logos = [
-    { src: "/company-logo/dolfy learning.jpeg", alt: "Dolfy Learning" },
-    { src: "https://www.google-melange.com/archive/gsoc/2013/orgs/owasp/logo-200.png", alt: "Download" },
-    { src: "/company-logo/festa-new.jpeg", alt: "Festa Marketing" },
-    { src: "/company-logo/idp-new.png", alt: "IDP" },
-    { src: "/company-logo/meta space'.png", alt: "Meta Space" },
-    { src: "/company-logo/momentum ias.png", alt: "Momentum IAS" },
-    { src: "/company-logo/programming pathshala new.jpeg", alt: "Programming Pathshala" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239365/dolfy_okslvf.png", alt: "Dolfy Learning" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239908/awsap-modify_ogpqgc.jpg", alt: "Download" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238954/festa-new_h4sim3.jpg", alt: "Festa Marketing" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238970/idp-new_iqlzgc.png", alt: "IDP" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238968/meta_space_xhg8di.png", alt: "Meta Space" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238965/momentum_ias_ptmdje.png", alt: "Momentum IAS" },
+    { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238948/programming_pathshala_new_cpoipf.jpg", alt: "Programming Pathshala" },
   ];
 
   return (
@@ -21,10 +22,12 @@ const InfiniteScrollBrand = () => {
           <ul className="flex items-center space-x-8 sm:space-x-12 md:space-x-20">
             {[...logos, ...logos, ...logos].map((logo, index) => (
               <li key={index} className="flex-shrink-0">
-                <img 
-                  src={logo.src} 
-                  alt={logo.alt} 
-                  className="w-16 sm:w-20 md:w-24 h-auto object-contain rounded-full" 
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={96}
+                  height={96}
+                  className="w-16 sm:w-20 md:w-24 h-auto object-contain rounded-full"
                 />
               </li>
             ))}
