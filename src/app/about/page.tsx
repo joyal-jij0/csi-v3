@@ -98,11 +98,11 @@ const AboutCSI: React.FC = () => {
                     </p>
                 </div>
                 {/* Objectives Section */}
-                <div className="mt-20 mt:gap-10">
+                <div className="mt-20">
                     <h2 className="text-4xl font-bold mb-24 text-center">
                         OBJECTIVES
                     </h2>
-                    <div className="flex flex-col md:flex-row justify-center items-start gap-60 ">
+                    <div className="flex flex-col md:flex-row justify-center items-start gap-8 md:gap-60 ">
                         <div className="flex flex-col items-center max-w-xs ">
                             <div className="relative w-[250px] h-[200px] mb-4 border">
                                 <Image
@@ -165,6 +165,17 @@ const AboutCSI: React.FC = () => {
                             efforts, MATES has been able to keep up its
                             commitment to serving the society and its people.
                         </p>
+                        <div className="flex justify-center mt-10">
+                        <iframe
+                            className="w-full h-[300px] sm:w-[520px] sm:h-[400px]"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight={0}
+                            marginWidth={0}
+                            id="gmap_canvas"
+                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20%20PSP%20Area,%20Plot%20No-1,%20Sector-22,%20%20%20Rohini,%20%20%20Delhi-110086%20%20%20INDIA%20Delhi+(Maharaja%20Agrasen%20Institute%20of%20Technology)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        ></iframe>
+                    </div>
                     </div>
                 </div>
             </div>

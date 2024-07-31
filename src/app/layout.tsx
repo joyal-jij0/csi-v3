@@ -9,6 +9,7 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 import ShimmerButton from "@/components/magicui/ShimmerButton";
 import Navbar from "@/components/Navbar";
+import SnowEffect from "@/components/SnowEffect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-black ${inter.className}`}>
+      <SnowEffect /> 
         <Navbar/>
         {children}
         <Footer/>
