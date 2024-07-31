@@ -1,15 +1,9 @@
 "use client"
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import { usePathname}  from "next/navigation" ; // Import useRouter
-import { Button } from "@/components/ui/moving-border";
-import Image from "next/image";
 import Footer from "@/components/Footer";
-import ShimmerButton from "@/components/magicui/ShimmerButton";
 import Navbar from "@/components/Navbar";
-import SnowEffect from "@/components/SnowEffect";
+import SparkleEffect from "@/components/SparkleEffect";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,15 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const pathname = usePathname()
   return (
     <html lang="en">
       <body className={`bg-black ${inter.className}`}>
-      <SnowEffect /> 
+      <SparkleEffect /> 
         <Navbar/>
         {children}
+        
         <Footer/>
+        
       </body>
     </html>
   );
