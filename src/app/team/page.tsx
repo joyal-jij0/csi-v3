@@ -1,7 +1,7 @@
 import { people1, people2, executivesData } from '@/data/teamData'
 import React from 'react'
 import Image from "next/image";
-export default function Team() {
+export default function team() {
   return (
     <div>
         <div className=' text-3xl font-semibold flex w-screen justify-center cursor-default'>
