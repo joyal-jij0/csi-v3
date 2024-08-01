@@ -3,18 +3,8 @@
 import React from "react";
 // import PlaceholderCard from "../../components/PlaceHolderCard";
 import Image from "next/image";
-import {
-    FaEnvelope,
-    FaInstagram,
-    FaLinkedin,
-    FaMapMarkerAlt,
-    FaPhone,
-} from "react-icons/fa";
 import { GlareCard } from "@/components/ui/glare-card";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
-import Link from "next/link";
-import { Button } from "@/components/ui/moving-border";
-import Footer from "@/components/Footer";
 
 const AboutCSI: React.FC = () => {
     return (

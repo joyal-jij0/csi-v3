@@ -1,7 +1,7 @@
-import Infinitescrollbrand from "@/components/InfineScroll";
+import Infinitescrollbrand from "@/components/landingPage/InfineScroll";
 import ShimmerButton from "@/components/magicui/ShimmerButton";
-import { Button } from "@/components/ui/moving-border";
-import UpdatesAndEvents from "@/components/UpdatesAndEvent";
+import UpdatesAndEvents from "@/components/landingPage/UpdatesAndEvent";
+import About from "@/components/landingPage/About";
 export default function Home() {
   return (
     <>
@@ -21,7 +21,10 @@ export default function Home() {
           </div>
           <div className="mt-24">
             <UpdatesAndEvents/>
-          </div>          
+          </div> 
+          <div>
+            <About/>
+          </div>
         </div>
       </div>
     </>
