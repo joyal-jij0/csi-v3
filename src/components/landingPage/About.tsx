@@ -50,7 +50,7 @@ export default function About() {
                         </div>{" "}
                         <span>+</span>
                     </div>
-                    <div  className="text-[0.6rem] lg:text-2xl">PARTICIPATNS</div>
+                    <div  className="text-[0.6rem] lg:text-2xl">PARTICIPANTS</div>
                 </div>
             </div>
         </>
