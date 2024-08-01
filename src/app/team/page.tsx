@@ -77,7 +77,7 @@ export default function Team() {
                 ${index % 3 === 2 ? 'md:text-right' : ''}
               `}>
                 {dept.people.map((person) => (
-                  <li key={person}>{person}</li>
+                  <li className='text-white' key={person}>{person}</li>
                 ))}
               </ul>
             </div>
