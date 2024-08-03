@@ -67,7 +67,7 @@ export function UpdateSection() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-slate-900  dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -85,13 +85,13 @@ export function UpdateSection() {
                   <div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-black dark:text-white text-base"
+                      className="font-medium text-white dark:text-white text-base"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-gray-600 dark:text-gray-300 text-base"
+                      className="text-white dark:text-gray-300 text-base"
                     >
                       {active.description}
                     </motion.p>
@@ -115,7 +115,7 @@ export function UpdateSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-gray-600 dark:text-gray-300 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {active.content()}
                   </motion.div>
