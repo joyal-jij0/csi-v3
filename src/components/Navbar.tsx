@@ -43,7 +43,7 @@ export default function Navbar() {
                   BROCHURE
                 </span>
               </ShimmerButton> */}
-              <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14">BROSHURE</Button>
+              <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14 mx-2">BROCHURE</Button>
             </div>
           </div>
         </nav>
