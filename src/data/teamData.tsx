@@ -1,4 +1,3 @@
-
 export interface Person {
   image_source: string;
   name: string;
