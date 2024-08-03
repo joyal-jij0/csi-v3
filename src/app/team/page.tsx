@@ -1,5 +1,5 @@
-import { people1, people2, executivesData } from '@/data/teamData'
-import React from 'react'
+import { people1, people2, executivesData } from "@/data/teamData";
+import React from "react";
 import Image from "next/image";
 export default function Team() {
   return (
@@ -84,11 +84,7 @@ export default function Team() {
                 {dept.people.map((person) => (
                   <li className='text-white' key={person}>{person}</li>
                 ))}
-              </ul>
             </div>
-          ))}
         </div>
-    </div>
-    
-  )
+    );
 }

@@ -1,9 +1,9 @@
-import React from 'react'
+"use client";
+import { HeroParallax } from "@/components/ui/hero-parallax";
+import eventData from "@/data/eventData";
 
-function Events() {
-  return (
-    <div className='text-white'>events</div>
-  )
+export default function HeroParallaxDemo() {
+
+  return <HeroParallax products={eventData} />;
 }
 
-export default Events
