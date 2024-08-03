@@ -2,6 +2,8 @@ import Infinitescrollbrand from "@/components/landingPage/InfineScroll";
 import ShimmerButton from "@/components/magicui/ShimmerButton";
 import About from "@/components/landingPage/About";
 import { UpdateSection } from "@/components/landingPage/UpdateSection";
+import BentoGridLanding from "@/components/landingPage/BentoGridLanding";
+
 export default function Home() {
   return (
     <>
@@ -26,6 +28,9 @@ export default function Home() {
             <About/>
           </div>
         </div>
+        <div className="mt-16">
+        <BentoGridLanding/>
+          </div>
       </div>
     </>
   );
