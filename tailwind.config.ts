@@ -73,7 +73,7 @@ const config: Config = {
       animation: {
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
-        marquee: "marquee 15s linear infinite",
+        "marquee": "marquee 60s linear infinite",
         backgroundPositionSpin:
                     "background-position-spin 3000ms infinite alternate",
                 ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
