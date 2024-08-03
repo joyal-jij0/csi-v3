@@ -8,91 +8,59 @@ export default function HeroParallaxDemo() {
 export const products = [
   {
     title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    content: " Sed ipsum ipsum, rutrum eget feugiat vitae, ornare nec sem. Duis nec diam quam. Nulla nec erat elementum felis sodales lacinia. Nulla facilisi. Donec tempor erat eu felis fringilla, eleifend scelerisque velit venenatis. Proin eget nunc a metus auctor lobortis at cursus tellus. Cras ac consectetur orci. Suspendisse posuere velit lacus, blandit tempor leo commodo eu. Ut risus eros, aliquet a laoreet ac, bibendum vitae mi. Ut hendrerit, elit id elementum aliquet, lacus mauris ornare nisi, non faucibus nunc urna id dui. Suspendisse potenti. Nunc blandit lacus et nisl eleifend rutrum. Maecenas sodales, lacus vel tincidunt hendrerit, lacus tellus lacinia nisl, in suscipit orci mi et dolor.   ",
+    description: " Sed ipsum ipsum, rutrum eget feugiat vitae, ornare nec sem. Duis nec diam quam. Nulla nec erat elementum felis sodales lacinia. Nulla facilisi. Donec tempor erat eu felis fringilla, eleifend scelerisque velit venenatis. Proin eget nunc a metus auctor lobortis at cursus tellus. Cras ac consectetur orci. Suspendisse posuere velit lacus, blandit tempor leo commodo eu. Ut risus eros, aliquet a laoreet ac, bibendum vitae mi. Ut hendrerit, elit id elementum aliquet, lacus mauris ornare nisi, non faucibus nunc urna id dui. Suspendisse potenti. Nunc blandit lacus et nisl eleifend rutrum. Maecenas sodales, lacus vel tincidunt hendrerit, lacus tellus lacinia nisl, in suscipit orci mi et dolor.    ",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail: "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail: "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:"https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-  "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-    "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:"https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "Moonbeam",
+    content: "content is here",
+    description: "descrirption is here",
     thumbnail:
       "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
   },
+  
 ];
