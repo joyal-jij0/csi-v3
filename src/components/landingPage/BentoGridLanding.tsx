@@ -67,7 +67,8 @@ export default function BentoGridLanding() {
 
     return (
         <>
-            <BentoGrid className="max-w-4xl mx-auto">
+            <div className="text-4xl font-bold text-center mb-7">HIGHLIGHTS</div>
+            <BentoGrid className="max-w-4xl mx-5 md:mx-auto">
                 {items.map((item, i) => (
                     <BentoGridItem
                         key={i}

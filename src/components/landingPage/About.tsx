@@ -3,7 +3,7 @@ import NumberTicker from "../magicui/NumberTicker";
 export default function About() {
     return (
         <>
-            <div className="lg:-mt-56 text-white">
+            <div className="lg:-mt-56 text-white px-2">
                 <div className="text-4xl font-bold text-center">ABOUT</div>
                 <div className="text-center mt-3">
                     The Computer Society of India (CSI) at Maharaja Agrasen
