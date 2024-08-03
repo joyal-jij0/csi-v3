@@ -4,21 +4,28 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
+interface Card {
+  description: string;
+  title: string;
+  src: string;
+  ctaText: string;
+  ctaLink: string;
+  content: () => React.ReactNode;
+}
+
 export function UpdateSection() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
-  );
+  const [active, setActive] = useState<Card | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setActive(false);
+        setActive(null);
       }
     }
 
-    if (active && typeof active === "object") {
+    if (active) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -34,7 +41,7 @@ export function UpdateSection() {
     <div className="bg-black text-white py-8">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-center">UPDATES & EVENTS</h2>
       <AnimatePresence>
-        {active && typeof active === "object" && (
+        {active && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -44,7 +51,7 @@ export function UpdateSection() {
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {active && typeof active === "object" ? (
+        {active && (
           <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
@@ -60,7 +67,7 @@ export function UpdateSection() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-slate-900  dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -78,13 +85,13 @@ export function UpdateSection() {
                   <div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-black dark:text-white text-base"
+                      className="font-medium text-white dark:text-white text-base"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-gray-600 dark:text-gray-300 text-base"
+                      className="text-white dark:text-gray-300 text-base"
                     >
                       {active.description}
                     </motion.p>
@@ -108,25 +115,23 @@ export function UpdateSection() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-gray-600 dark:text-gray-300 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
+                    {active.content()}
                   </motion.div>
                 </div>
               </div>
             </motion.div>
           </div>
-        ) : null}
+        )}
       </AnimatePresence>
-      <ul className="max-w-6xl mx-auto w-full flex flex-row items-start justify-between gap-4">
-        {cards.slice(0, 3).map((card, index) => (
+      <ul className="max-w-6xl mx-auto w-full flex flex-col sm:flex-col md:flex-col lg:flex-row items-center lg:items-start justify-between gap-4">
+        {cards.slice(0, 3).map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-900 rounded-xl cursor-pointer w-1/3 border border-white mx-6"
+            className="p-4 flex flex-col hover:bg-neutral-900 rounded-xl cursor-pointer w-full sm:w-full md:w-full lg:w-1/3 border border-white mx-2 sm:mx-4 md:mx-6 lg:mx-6 mb-4 lg:mb-0"
           >
             <div className="flex gap-4 flex-col w-full">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -160,7 +165,7 @@ export function UpdateSection() {
   );
 }
 
-export const CloseIcon = () => {
+export const CloseIcon: React.FC = () => {
   return (
     <motion.svg
       initial={{ opacity: 0 }}
@@ -183,7 +188,6 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
 const cards = [
   {
     description: "Lana Del Rey",

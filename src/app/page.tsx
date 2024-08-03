@@ -19,7 +19,7 @@ export default function Home() {
           <div className="mt-24">
               <Infinitescrollbrand/>
           </div>
-          <div className="mt-24 mb-72">
+          <div className="mt-24 mb-28 lg:mb-72">
             <UpdateSection/>
           </div> 
           <div>
