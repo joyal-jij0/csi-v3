@@ -27,29 +27,27 @@ const AboutCSI: React.FC = () => {
                     <PlaceholderCard className="md:relative md:top-20" />
                     <PlaceholderCard className="md:relative md:top-5" /> */}
 
-                    <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:-top-5 sm:relative ">
-                        <div className="">
-                            <GlareCard className="flex flex-col items-center justify-center text-center max-w-[370px]  ">
-                            <Image
-                                    alt=''
-                                    width={100}
-                                    height={100}
-                                    className="h-full w-full absolute inset-0 object-cover"
+                    <NeonGradientCard className="max-w-[400px] max-h-[700px] items-center justify-center text-center md:relative md:-top-5 sm:relative">
+                        <div className="relative w-full h-full">
+                            <GlareCard className="flex flex-col items-center justify-center text-center max-w-[370px] h-full">
+                                <Image
+                                    alt="Event"
+                                    width={400} // Set the width to match the desired dimensions
+                                    height={600} // Set the height to match the desired dimensions
+                                    className="object-cover"
                                     src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
-                                    // src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 />
-                                <p>hello</p>
                             </GlareCard>
                         </div>
                     </NeonGradientCard>
-                    
+
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:top-20 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
                                 <Image
-                                    alt=''
-                                    width={100}
-                                    height={100}
+                                    alt=""
+                                    width={400} // Set the width to match the desired dimensions
+                                    height={600} // Set the height to match the desired dimensions
                                     className="h-full w-full absolute inset-0 object-cover"
                                     src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
                                     // src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -60,10 +58,10 @@ const AboutCSI: React.FC = () => {
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center  md:relative md:top-5 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
-                            <Image
-                                    alt=''
-                                    width={100}
-                                    height={100}
+                                <Image
+                                    alt=""
+                                    width={400} // Set the width to match the desired dimensions
+                                    height={600} // Set the height to match the desired dimensions
                                     className="h-full w-full absolute inset-0 object-cover"
                                     src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
                                     // src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -168,16 +166,16 @@ const AboutCSI: React.FC = () => {
                             commitment to serving the society and its people.
                         </p>
                         <div className="flex justify-center mt-10">
-                        <iframe
-                            className="w-full h-[300px] sm:w-[520px] sm:h-[400px]"
-                            frameBorder="0"
-                            scrolling="no"
-                            marginHeight={0}
-                            marginWidth={0}
-                            id="gmap_canvas"
-                            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20%20PSP%20Area,%20Plot%20No-1,%20Sector-22,%20%20%20Rohini,%20%20%20Delhi-110086%20%20%20INDIA%20Delhi+(Maharaja%20Agrasen%20Institute%20of%20Technology)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                        ></iframe>
-                    </div>
+                            <iframe
+                                className="w-full h-[300px] sm:w-[520px] sm:h-[400px]"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight={0}
+                                marginWidth={0}
+                                id="gmap_canvas"
+                                src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20%20PSP%20Area,%20Plot%20No-1,%20Sector-22,%20%20%20Rohini,%20%20%20Delhi-110086%20%20%20INDIA%20Delhi+(Maharaja%20Agrasen%20Institute%20of%20Technology)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
