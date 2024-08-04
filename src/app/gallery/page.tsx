@@ -38,7 +38,7 @@ function Gallery() {
             </ImagesSlider>
           </div>
           
-          <div className=' py-20'>
+          <div className='py-20'>
             {/* Parralex effect */}
             <div className="font-bold relative z-20 bg-clip-text mb-5 text-transparent text-center bg-gradient-to-r from-blue-600 to-indigo-200 ">
               Photos
