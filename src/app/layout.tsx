@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SparkleEffect from "@/components/SparkleEffect";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-backgroud";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +22,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-black ${inter.className}`}>
-      <SparkleEffect /> 
-        <Navbar/>
-        {children}
-        
-        <Footer/>
-        
+      <div className="fixed inset-0 z-0">
+          <ShootingStars/>
+          <StarsBackground starDensity={0.0004}/>
+        </div>
+      <div className="relative z-10">
+          <Navbar/>
+          {children}
+          <Footer/>
+          </div>
       </body>
     </html>
   );
