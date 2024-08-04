@@ -129,7 +129,7 @@ export function UpdateSection() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-base"
+                      className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-sm"
                     >
                       {activeEvent.description}
                     </motion.div>
