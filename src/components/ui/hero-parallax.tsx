@@ -290,7 +290,23 @@ const ExpandedCard = React.forwardRef<
                                 exit={{ opacity: 0 }}
                                 href={active.formLink}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    console.log("Form link:", active.formLink); // Add this line
+                                    if (active.formLink) {
+                                        window.open(
+                                            active.formLink,
+                                            "_blank",
+                                            "noopener,noreferrer"
+                                        );
+                                    } else {
+                                        console.error(
+                                            "Form link is empty or undefined"
+                                        );
+                                    }
+                                }}
                             >
                                 Google Form
                             </motion.a>
