@@ -132,38 +132,66 @@ export const people2: Person[] = [
 
 export interface Department {
   name: string;
+  lead: string;
   people: string[];
 }
 
 export const executivesData: Department[] = [
   {
-    name: "Technical Executives",
-    people: ["Name 1", "Name 2", "Name 3"]
+    name: "Event Management Executives",
+    lead: "Ashish Jain",
+    people: ["Dhruv Mehra", "Lakshay Sharma", "Naveen Verma", "Nikhil Hatwal", "Niyati Chugh", "Ritvik Kant", "Samya Goel", "Shashwat Shankar", "Tinish", "Yash Lohia"]
   },
   {
     name: "Public Relations Executives",
+    lead: "",
     people: ["MD AZAM SIDDIQUI", "Dhruv Goel", "Tanishq Sethi", "Garv goel", "Priyaanshu Sengupta", "Sameer Koli" ]
   },
   {
     name: "Photography Executives",
+    lead: "",
     people: ["Mridul Dutta", "Nipun Agrawal", "Vansh Puri"]
   },
   {
-    name: "Technical Executives",
+    name: "Content Executives",
+    lead: "",
     people: ["Name 1", "Name 2", "Name 3", "Name 4"]
   },
   {
-    name: "Public Relations Executives",
+    name: "Coordinators",
+    lead: "",
     people: ["Samaksh Bhagi", "Jiya", "Kashvi Sharma", "Shubham Mishra", "Rishabh Tripathi", "Sidhant Kumar"]
-  },
-  {
-    name: "Content Executives",
-    people: ["Moksh", "Sarthak Rawat", "Yash", "Ujjawal Gupta", "MOHD KAIF", "Kanika Ahlawat", "Shubham Jha"]
-  }, 
-  {
-    name: "Coordinators", 
-    people: ["Komal Tyagi", "Muskan", "Parth Goel", "Parthsaarthie Sharma", "Vishankh", "Ayush Sinha", "Harshit Goel", "Yakshit Wadhwa"]
   }
 ];
+
+export interface TechnicalDepartment {
+  name: string;
+  lead: string;
+  people: string[];
+}
+
+export const TechinalDeptData: TechnicalDepartment[] = [
+  {
+    name: "Dev Team",
+    lead: "Joyal Jijo",
+    people: ["Adarsh Singh", "Ashish", "Kumar Harsh", "Vrishank Sharma"]
+  },
+  {
+    name: "UI/UX Team",
+    lead: "Tanishq Sagar",
+    people: ["Suhani Duggal"]
+  },
+  {
+    name: "ML Team",
+    lead: "Gaurish Kadian",
+    people: ["Nipun Agrawal", "Vansh Puri"]
+  },
+  {
+    name: "DSA Team",
+    lead: "Devesh Tuteja",
+    people: [ "Pratham Gupta", "Nikita Bansal"]
+  }
+];
+
 
 export default executivesData;
