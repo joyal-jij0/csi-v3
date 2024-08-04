@@ -53,23 +53,12 @@ export function UpdateSection() {
       <AnimatePresence>
         {active && (
           <div className="fixed inset-0 grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-slate-900  dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
+              className="relative w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-slate-900 dark:bg-neutral-800 sm:rounded-3xl overflow-hidden border border-white"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div layoutId={`image-${active.title}-${id}`} className="relative">
                 <Image
                   priority
                   width={200}
@@ -78,10 +67,21 @@ export function UpdateSection() {
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
+                <motion.button
+                  key={`button-${active.title}-${id}`}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, transition: { duration: 0.05 } }}
+                  className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white rounded-full h-6 w-6 flex items-center justify-center"
+                  onClick={() => setActive(null)}
+                >
+                  <CloseIcon />
+                </motion.button>
               </motion.div>
 
-              <div>
-                <div className="flex justify-between items-start p-4">
+              <div className="flex flex-col flex-1">
+                <div className="flex items-center justify-between p-4">
                   <div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
@@ -91,12 +91,11 @@ export function UpdateSection() {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-white dark:text-gray-300 text-base"
+                      className="text-white dark:text-gray-300 text-base mt-2"
                     >
                       {active.description}
                     </motion.p>
                   </div>
-
                   <motion.a
                     layout
                     initial={{ opacity: 0 }}
@@ -109,13 +108,14 @@ export function UpdateSection() {
                     {active.ctaText}
                   </motion.a>
                 </div>
-                <div className="pt-4 relative px-4">
+
+                <div className="pt-4 px-4 flex-1 overflow-auto">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-white dark:text-gray-300 text-xs md:text-sm lg:text-base"
                   >
                     {active.content()}
                   </motion.div>
@@ -134,7 +134,7 @@ export function UpdateSection() {
             className="p-4 flex flex-col hover:bg-neutral-900 rounded-xl cursor-pointer w-full sm:w-full md:w-full lg:w-1/3 border border-white mx-2 sm:mx-4 md:mx-6 lg:mx-6 mb-4 lg:mb-0"
           >
             <div className="flex gap-4 flex-col w-full">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+              <motion.div layoutId={`image-${card.title}-${id}`} className="relative">
                 <Image
                   width={100}
                   height={100}
@@ -143,7 +143,7 @@ export function UpdateSection() {
                   className="h-60 w-full rounded-lg object-cover object-top"
                 />
               </motion.div>
-              <div className="flex justify-center items-center flex-col">
+              <div className="flex justify-center items-center flex-col mt-2">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
                   className="font-medium text-white text-center md:text-left text-base"
@@ -180,7 +180,7 @@ export const CloseIcon: React.FC = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-black"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />
