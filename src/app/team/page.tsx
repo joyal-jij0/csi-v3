@@ -30,7 +30,7 @@ export default function Team() {
         {/* First row of rest of the faculty coordinators pics */}
         <div className=' justify-items-center sm:gap-10 sm:grid sm:grid-cols-3 grid-cols-1 '>
           {people1.map((eachPerson) => (
-            <div key={eachPerson.name} className='font-medium'> 
+            <div key={eachPerson.id} className='font-medium'> 
               <div className='flex justify-center overflow-hidden rounded-full'>
                   <img className='h-auto sm:w-60 w-36 rounded-full sm:hover:scale-[1.1] transition-transform duration-500' src={eachPerson.image_source} />
                   {/* <Image 
@@ -65,7 +65,7 @@ export default function Team() {
         {/* Earlier, the div below had this class:- {className='justify-items-center sm:gap-20 gap-10 p-4 m-2 sm:mt-20 mt-5 grid grid-cols-4'} */}
         <div className='justify-items-center sm:gap-10 gap-10 mt-10 sm:grid sm:grid-cols-4 grid-cols-1'>
           {people2.map((eachPerson) => (
-            <div key={eachPerson.name} className='font-medium'> 
+            <div key={eachPerson.id} className='font-medium'> 
               <div className='flex justify-center overflow-hidden sm:rounded-2xl rounded-xl '>
                 {/* sm:w-[150px] sm:h-[220px] h-[130px] w-[80px] */}
                 {/* Upon simply writing "w-35" mobile version width changes! And that in "sm:w-50" changes bigger screen's width */}
