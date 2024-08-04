@@ -6,7 +6,6 @@ import {
     FaMapMarkerAlt,
     FaPhone,
 } from "react-icons/fa";
-import { Button } from "@/components/ui/moving-border";
 import ShimmerButton from "./magicui/ShimmerButton";
 
 function Footer() {
