@@ -11,6 +11,8 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { Link } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface Product {
     id: number;
@@ -22,7 +24,7 @@ interface Product {
 }
 
 export const HeroParallax = ({ products }: { products: Product[] }) => {
-    const [active, setActive] = useState<Product | null>(null);
+    // const [active, setActive] = useState<Product | null>(null);
     const id = useId();
     const ref = useRef<HTMLDivElement>(null);
 
@@ -62,31 +64,31 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
         springConfig
     );
 
-    useEffect(() => {
-        function onKeyDown(event: KeyboardEvent) {
-            if (event.key === "Escape") {
-                setActive(null);
-            }
-        }
+    // useEffect(() => {
+    //     function onKeyDown(event: KeyboardEvent) {
+    //         if (event.key === "Escape") {
+    //             setActive(null);
+    //         }
+    //     }
 
-        if (active) {
-            document.body.style.overflow = "hidden";
-            document.body.style.height = "100vh";
-            window.addEventListener("keydown", onKeyDown);
-        } else {
-            document.body.style.overflow = "";
-            document.body.style.height = "";
-            window.removeEventListener("keydown", onKeyDown);
-        }
+    //     if (active) {
+    //         document.body.style.overflow = "hidden";
+    //         document.body.style.height = "100vh";
+    //         window.addEventListener("keydown", onKeyDown);
+    //     } else {
+    //         document.body.style.overflow = "";
+    //         document.body.style.height = "";
+    //         window.removeEventListener("keydown", onKeyDown);
+    //     }
 
-        return () => {
-            document.body.style.overflow = "";
-            document.body.style.height = "";
-            window.removeEventListener("keydown", onKeyDown);
-        };
-    }, [active]);
+    //     return () => {
+    //         document.body.style.overflow = "";
+    //         document.body.style.height = "";
+    //         window.removeEventListener("keydown", onKeyDown);
+    //     };
+    // }, [active]);
 
-    useOutsideClick(ref, () => setActive(null));
+    // useOutsideClick(ref, () => setActive(null));
 
     return (
         <div
@@ -108,24 +110,28 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
                             product={product}
                             translate={translateX}
                             key={product.id}
-                            setActive={setActive}
+                            // setActive={setActive}
                             id={id}
+                            
                         />
+
                     ))}
                 </motion.div>
                 <motion.div className="flex flex-row mb-20 space-x-20 ">
                     {secondRow.map((product) => (
+
                         <ProductCard
                             product={product}
                             translate={translateXReverse}
                             key={product.id}
-                            setActive={setActive}
+                            // setActive={setActive}
                             id={id}
                         />
+                        
                     ))}
                 </motion.div>
             </motion.div>
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {active && (
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -135,8 +141,8 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
                         onClick={() => setActive(null)}
                     />
                 )}
-            </AnimatePresence>
-            <AnimatePresence>
+            </AnimatePresence> */}
+            {/* <AnimatePresence>
                 {active && (
                     <ExpandedCard
                         active={active}
@@ -145,7 +151,7 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
                         ref={ref}
                     />
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </div>
     );
 };
@@ -167,14 +173,18 @@ export const Header = () => {
 const ProductCard = ({
     product,
     translate,
-    setActive,
     id,
 }: {
     product: Product;
     translate: MotionValue<number>;
-    setActive: (product: Product | null) => void;
     id: string;
 }) => {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push(`/eventPhotos/${product.id}`);
+    };
+
     return (
         <motion.div
             style={{
@@ -182,7 +192,7 @@ const ProductCard = ({
             }}
             key={product.id}
             className="group/product h-96 w-[30rem] relative flex-shrink-0"
-            onClick={() => setActive(product)}
+            onClick={handleClick}
         >
             <div className="block">
                 <Image
@@ -194,159 +204,156 @@ const ProductCard = ({
                 />
             </div>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-                {product.title}
-            </h2>
         </motion.div>
     );
 };
 
-const ExpandedCard = React.forwardRef<
-    HTMLDivElement,
-    {
-        active: Product;
-        setActive: (product: Product | null) => void;
-        id: string;
-    }
->(({ active, setActive, id }, ref) => {
-    const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+// const ExpandedCard = React.forwardRef<
+//     HTMLDivElement,
+//     {
+//         active: Product;
+//         setActive: (product: Product | null) => void;
+//         id: string;
+//     }
+// >(({ active, setActive, id }, ref) => {
+//     const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
-    useEffect(() => {
-        function handleResize() {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            });
-        }
+//     useEffect(() => {
+//         function handleResize() {
+//             setWindowSize({
+//                 width: window.innerWidth,
+//                 height: window.innerHeight,
+//             });
+//         }
 
-        window.addEventListener("resize", handleResize);
-        handleResize();
+//         window.addEventListener("resize", handleResize);
+//         handleResize();
 
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+//         return () => window.removeEventListener("resize", handleResize);
+//     }, []);
 
-    return (
-        <motion.div
-            className="fixed inset-0 flex items-start justify-center z-[100] p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-                paddingTop: `${window.scrollY}px`,
-            }}
-        >
-            <motion.div
-                layoutId={`card-${active.id}-${id}`}
-                ref={ref}
-                className="w-full bg-slate-900 dark:bg-neutral-800 rounded-3xl overflow-hidden border border-white relative"
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 50, opacity: 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                style={{
-                    maxWidth: `${Math.min(500, windowSize.width * 0.9)}px`,
-                    maxHeight: `${windowSize.height * 0.8}px`,
-                }}
-            >
-                <motion.button
-                    className="absolute top-2 right-2 z-10 p-2 bg-red-800 rounded-full"
-                    onClick={() => setActive(null)}
-                >
-                    <CloseIcon />
-                </motion.button>
-                <motion.div
-                    layoutId={`image-${active.id}-${id}`}
-                    className="w-full h-60 relative"
-                >
-                    <Image
-                        priority
-                        src={active.posterLink}
-                        alt={active.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-t-3xl"
-                    />
-                </motion.div>
+//     return (
+//         <motion.div
+//             className="fixed inset-0 flex items-start justify-center z-[100] p-4"
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             exit={{ opacity: 0 }}
+//             style={{
+//                 paddingTop: `${window.scrollY}px`,
+//             }}
+//         >
+//             <motion.div
+//                 layoutId={`card-${active.id}-${id}`}
+//                 ref={ref}
+//                 className="w-full bg-slate-900 dark:bg-neutral-800 rounded-3xl overflow-hidden border border-white relative"
+//                 initial={{ y: 50, opacity: 0 }}
+//                 animate={{ y: 0, opacity: 1 }}
+//                 exit={{ y: 50, opacity: 0 }}
+//                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
+//                 style={{
+//                     maxWidth: `${Math.min(500, windowSize.width * 0.9)}px`,
+//                     maxHeight: `${windowSize.height * 0.8}px`,
+//                 }}
+//             >
+//                 <motion.button
+//                     className="absolute top-2 right-2 z-10 p-2 bg-red-800 rounded-full"
+//                     onClick={() => setActive(null)}
+//                 >
+//                     <CloseIcon />
+//                 </motion.button>
+//                 <motion.div
+//                     layoutId={`image-${active.id}-${id}`}
+//                     className="w-full h-60 relative"
+//                 >
+//                     <Image
+//                         priority
+//                         src={active.posterLink}
+//                         alt={active.title}
+//                         layout="fill"
+//                         objectFit="cover"
+//                         className="rounded-t-3xl"
+//                     />
+//                 </motion.div>
 
-                <div
-                    className="overflow-y-auto"
-                    style={{
-                        maxHeight: `calc(${windowSize.height * 0.8}px - 15rem)`,
-                    }}
-                >
-                    <div className="p-4">
-                        <div className="flex justify-between">
-                            <motion.h3
-                                layoutId={`title-${active.title}-${id}`}
-                                className="font-medium text-white text-xl mb-2"
-                            >
-                                {active.title}
-                            </motion.h3>
+//                 <div
+//                     className="overflow-y-auto"
+//                     style={{
+//                         maxHeight: `calc(${windowSize.height * 0.8}px - 15rem)`,
+//                     }}
+//                 >
+//                     <div className="p-4">
+//                         <div className="flex justify-between">
+//                             <motion.h3
+//                                 layoutId={`title-${active.title}-${id}`}
+//                                 className="font-medium text-white text-xl mb-2"
+//                             >
+//                                 {active.title}
+//                             </motion.h3>
 
-                            <motion.a
-                                layout
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                href={active.formLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                                onClick={(e) => {
-                                    e.preventDefault();
+//                             <motion.a
+//                                 layout
+//                                 initial={{ opacity: 0 }}
+//                                 animate={{ opacity: 1 }}
+//                                 exit={{ opacity: 0 }}
+//                                 href={active.formLink}
+//                                 target="_blank"
+//                                 rel="noopener noreferrer"
+//                                 className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+//                                 onClick={(e) => {
+//                                     e.preventDefault();
 
-                                    window.open(
-                                        active.formLink,
-                                        "_blank",
-                                        "noopener,noreferrer"
-                                    );
-                                }}
-                            >
-                                Google Form
-                            </motion.a>
+//                                     window.open(
+//                                         active.formLink,
+//                                         "_blank",
+//                                         "noopener,noreferrer"
+//                                     );
+//                                 }}
+//                             >
+//                                 Google Form
+//                             </motion.a>
 
-                            {/* <motion.button className="bg-green-500 font-bold text-slate-100 p-2 rounded-full">
-                                    Google Form
-                                </motion.button> */}
-                        </div>
-                        <motion.h4
-                            layoutId={`title-${active.date}-${id}`}
-                            className="font-medium text-white text-xl mb-2"
-                        >
-                            {active.date}
-                        </motion.h4>
-                        {active.description && (
-                            <motion.p
-                                layoutId={`description-${active.description}-${id}`}
-                                className="text-white dark:text-gray-300 text-base mb-4"
-                            >
-                                {active.description}
-                            </motion.p>
-                        )}
-                    </div>
-                </div>
-            </motion.div>
-        </motion.div>
-    );
-});
-ExpandedCard.displayName = "ExpandedCard";
+//                             {/* <motion.button className="bg-green-500 font-bold text-slate-100 p-2 rounded-full">
+//                                     Google Form
+//                                 </motion.button> */}
+//                         </div>
+//                         <motion.h4
+//                             layoutId={`title-${active.date}-${id}`}
+//                             className="font-medium text-white text-xl mb-2"
+//                         >
+//                             {active.date}
+//                         </motion.h4>
+//                         {active.description && (
+//                             <motion.p
+//                                 layoutId={`description-${active.description}-${id}`}
+//                                 className="text-white dark:text-gray-300 text-base mb-4"
+//                             >
+//                                 {active.description}
+//                             </motion.p>
+//                         )}
+//                     </div>
+//                 </div>
+//             </motion.div>
+//         </motion.div>
+//     );
+// });
+// ExpandedCard.displayName = "ExpandedCard";
 
-const CloseIcon: React.FC = () => {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-6 w-6 text-white"
-        >
-            <path d="M18 6L6 18" />
-            <path d="M6 6l12 12" />
-        </svg>
-    );
-};
+// const CloseIcon: React.FC = () => {
+//     return (
+//         <svg
+//             xmlns="http://www.w3.org/2000/svg"
+//             width="24"
+//             height="24"
+//             viewBox="0 0 24 24"
+//             fill="none"
+//             stroke="currentColor"
+//             strokeWidth="2"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//             className="h-6 w-6 text-white"
+//         >
+//             <path d="M18 6L6 18" />
+//             <path d="M6 6l12 12" />
+//         </svg>
+//     );
+// };
