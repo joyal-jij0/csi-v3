@@ -14,43 +14,44 @@ export default function About() {
                     and its impact on society.
                 </p>
             </div>
-            <div className="mt-10 text-white flex flex-col lg:flex-row lg:justify-between lg:text-2xl gap-8 lg:gap-10 px-4 lg:px-16">
-                <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <div className="flex items-center text-4xl font-bold">
-                        <div>
-                            <NumberTicker className="text-white" value={50} />
-                        </div>
-                        <span className="ml-2 text-3xl">+</span>
-                    </div>
-                    <div className="text-sm lg:text-xl font-medium">MEMBERS</div>
-                </div>
-                <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <div className="flex items-center text-4xl font-bold">
-                        <div>
-                            <NumberTicker className="text-white" value={50} />
-                        </div>
-                        <span className="ml-2 text-3xl">+</span>
-                    </div>
-                    <div className="text-sm lg:text-xl font-medium">COLLABORATIONS</div>
-                </div>
-                <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <div className="flex items-center text-4xl font-bold">
-                        <div>
-                            <NumberTicker className="text-white" value={14} />
-                        </div>
-                    </div>
-                    <div className="text-sm lg:text-xl font-medium">YEARS OF CSI</div>
-                </div>
-                <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg">
-                    <div className="flex items-center text-4xl font-bold">
-                        <div>
-                            <NumberTicker className="text-white" value={1000} />
-                        </div>
-                        <span className="ml-2 text-3xl">+</span>
-                    </div>
-                    <div className="text-sm lg:text-xl font-medium">PARTICIPANTS</div>
-                </div>
+            <div className="mt-10 text-white flex flex-col lg:flex-row lg:justify-between lg:text-2xl gap-8 lg:gap-10 px-10 lg:px-16">
+    <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg w-full lg:w-[250px] h-[200px]">
+        <div className="flex items-center text-4xl font-bold justify-center h-full">
+            <div>
+                <NumberTicker className="text-white" value={50} />
             </div>
+            <span className="ml-2 text-3xl">+</span>
+        </div>
+        <div className="text-sm lg:text-xl font-medium">MEMBERS</div>
+    </div>
+    <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg w-full lg:w-[250px] h-[200px]">
+        <div className="flex items-center text-4xl font-bold justify-center h-full">
+            <div>
+                <NumberTicker className="text-white" value={50} />
+            </div>
+            <span className="ml-2 text-3xl">+</span>
+        </div>
+        <div className="text-sm lg:text-xl font-medium">COLLABORATIONS</div>
+    </div>
+    <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg w-full lg:w-[250px] h-[200px]">
+        <div className="flex items-center text-4xl font-bold justify-center h-full">
+            <div>
+                <NumberTicker className="text-white" value={14} />
+            </div>
+        </div>
+        <div className="text-sm lg:text-xl font-medium">YEARS OF CSI</div>
+    </div>
+    <div className="flex flex-col items-center space-y-5 bg-gray-800 p-6 rounded-lg shadow-lg w-full lg:w-[250px] h-[200px]">
+        <div className="flex items-center text-4xl font-bold justify-center h-full">
+            <div>
+                <NumberTicker className="text-white" value={1000} />
+            </div>
+            <span className="ml-2 text-3xl">+</span>
+        </div>
+        <div className="text-sm lg:text-xl font-medium">PARTICIPANTS</div>
+    </div>
+</div>
+
         </>
     );
 }

@@ -5,11 +5,14 @@ const InfiniteScrollBrand = () => {
   const logos = [
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239365/dolfy_okslvf.png", alt: "Dolfy Learning" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239908/awsap-modify_ogpqgc.jpg", alt: "Download" },
+    { src:"https://res.cloudinary.com/djhilzrxt/image/upload/v1722794702/Uno_eo5gl6.jpg",alt:"uno"},
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238954/festa-new_h4sim3.jpg", alt: "Festa Marketing" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238970/idp-new_iqlzgc.png", alt: "IDP" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238968/meta_space_xhg8di.png", alt: "Meta Space" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238965/momentum_ias_ptmdje.png", alt: "Momentum IAS" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238948/programming_pathshala_new_cpoipf.jpg", alt: "Programming Pathshala" },
+    { src:"https://res.cloudinary.com/djhilzrxt/image/upload/v1722794668/Zenzia_tfxldh.jpg",alt:"zenzia"}
+    
   ];
 
   return (
