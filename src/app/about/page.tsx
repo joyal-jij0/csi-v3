@@ -8,7 +8,7 @@ import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 
 const AboutCSI: React.FC = () => {
     return (
-        <div className="bg-black text-white p-8">
+        <div className=" text-white p-8">
             <div className="container mx-auto">
                 <h2 className="text-4xl font-bold mb-10 text-center">
                     ABOUT CSI
