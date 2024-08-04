@@ -19,7 +19,7 @@ const InfiniteScrollBrand = () => {
       </div>
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-marquee">
-          <ul className="flex items-center space-x-8 sm:space-x-12 md:space-x-20">
+          <ul className="flex items-center space-x-10 sm:space-x-12 md:space-x-20">
             {[...logos, ...logos].map((logo, index) => (
               <li key={index} className="flex-shrink-0">
                 <Image

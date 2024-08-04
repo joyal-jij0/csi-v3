@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useId, useRef } from "react";
-import Link from "next/link";
+
 import {
     motion,
     useScroll,
@@ -283,17 +283,31 @@ const ExpandedCard = React.forwardRef<
                                 {active.title}
                             </motion.h3>
 
-                            <Link
-                            key={`button-${active.title}-${id}`}
+                            <motion.a
+                                layout
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
                                 href={active.formLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                            >
-                                <motion.button className="bg-green-500 font-bold text-slate-100 p-2 rounded-full">
-                                    Google Form
-                                </motion.button>
-                            </Link>
+                                className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                                onClick={(e) => {
+                                    e.preventDefault();
 
+                                    window.open(
+                                        active.formLink,
+                                        "_blank",
+                                        "noopener,noreferrer"
+                                    );
+                                }}
+                            >
+                                Google Form
+                            </motion.a>
+
+                            {/* <motion.button className="bg-green-500 font-bold text-slate-100 p-2 rounded-full">
+                                    Google Form
+                                </motion.button> */}
                         </div>
                         <motion.h4
                             layoutId={`title-${active.date}-${id}`}

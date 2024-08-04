@@ -13,7 +13,7 @@ const eventData = [
         date: "2024-03-20",
         posterLink:
             "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg",
-        formLink: "www.google.com",
+        formLink: "https://www.google.com/",
     },
     {
         id: 11,
@@ -68,7 +68,7 @@ const eventData = [
         date: "2023-11-29",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/xt628dk1up9l2alwfpj5.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -81,7 +81,7 @@ const eventData = [
         date: "2023-04-29",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/qncrwoqxjtld0bqx2ypo.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -94,7 +94,7 @@ const eventData = [
         date: "2023-04-05",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/kuojyooxhy4jq9qcomgl.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -107,7 +107,7 @@ const eventData = [
         date: "2022-12-13",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130460/csi/events/eashgvimvriqpcq5purs.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -120,7 +120,7 @@ const eventData = [
         date: "2022-10-19",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130460/csi/events/wytmor9gkjedeku09zb1.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -133,7 +133,7 @@ const eventData = [
         date: "2022-07-24",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130460/csi/events/q3zl78uuanaxutuzhcc1.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -146,7 +146,7 @@ const eventData = [
         date: "2022-05-04",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/ykur45b0v5p19o0lpcod.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -159,7 +159,7 @@ const eventData = [
         date: "2022-04-23",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/t3lizhwmyfjz8ltcs9c9.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [],
     },
     {
@@ -172,7 +172,7 @@ const eventData = [
         date: "2022-04-28",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130459/csi/events/lwerhnvadmprczpqphii.jpg",
-        formLink: "",
+        formLink: "https://www.google.com/",
         eventPhotos: [
             "https://res.cloudinary.com/dmlles8pf/image/upload/v1708881950/csi/hibu1bcugcta7pzfo3xa.jpg",
         ],
