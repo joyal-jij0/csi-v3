@@ -26,7 +26,7 @@ const eventData = [
         date: "2024-02-22",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130459/csi/events/nddmal7dwtgavgpnbtjk.jpg",
-        formLink: "",
+        formLink:"https://www.google.com/",
         eventPhotos: [
             "https://res.cloudinary.com/dmlles8pf/image/upload/v1708883116/csi/vdwncicmrji2wago3pkt.jpg",
             "https://res.cloudinary.com/dmlles8pf/image/upload/v1708883055/csi/jum2pw0i8bqwxovmo2q1.jpg",
@@ -48,7 +48,7 @@ const eventData = [
         date: "2024-02-12",
         posterLink:
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709130458/csi/events/ri0ybuwmnjtlw8vzb7wa.jpg",
-        formLink: "",
+        formLink:"https://www.google.com/",
         eventPhotos: [
             "https://res.cloudinary.com/dmlles8pf/image/upload/v1708884016/csi/xjamg2upwi4nzqmn8bbq.jpg",
             "https://res.cloudinary.com/dmlles8pf/image/upload/v1708887402/csi/uxice7okhxodeza27qlx.jpg",

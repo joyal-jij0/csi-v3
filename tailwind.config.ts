@@ -14,6 +14,10 @@ const textGradientBorderPlugin: PluginCreator = function ({ addUtilities }) {
       'color': 'transparent',
       'display': 'inline-block',
     },
+    '.scrollbar-none': {
+          '::-webkit-scrollbar': { display: 'none' }, 
+          'scrollbar-width': 'none', 
+        },
     // '.text-gradient-border::before': {
     //   'content': 'attr(data-text)',
     //   'position': 'absolute',
