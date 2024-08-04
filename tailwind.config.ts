@@ -71,6 +71,7 @@ const config: Config = {
             "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
     },
       animation: {
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
         "spin-around": "spin-around calc(var(--speed) * 2) infinite linear",
         slide: "slide var(--speed) ease-in-out infinite alternate",
         "marquee": "marquee 60s linear infinite",
@@ -80,6 +81,16 @@ const config: Config = {
                 shimmer: "shimmer 2s linear infinite",
       },
       keyframes: {
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
         "spin-around": {
           "0%": {
             transform: "translateZ(0) rotate(0)",
