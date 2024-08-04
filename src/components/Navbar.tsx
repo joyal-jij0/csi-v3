@@ -38,12 +38,7 @@ export default function Navbar() {
           </div>
           <div className="">
             <div className="pl-2 z-10 w-8/12 items-center justify-center">
-              {/* <ShimmerButton borderRadius="15px" className="shadow-2xl">
-                <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                  BROCHURE
-                </span>
-              </ShimmerButton> */}
-              <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14 mx-2">BROCHURE</Button>
+              <Link target="_blank" rel="noopener nonreferrer" href="https://drive.google.com/file/d/1GVeWn4GE9DQkwQOEhKW10tApuoYgsR3U/view"><Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14 mx-2">BROCHURE</Button></Link>
             </div>
           </div>
         </nav>
