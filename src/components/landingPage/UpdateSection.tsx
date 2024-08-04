@@ -114,6 +114,7 @@ export function UpdateSection() {
                       exit={{ opacity: 0 }}
                       href={activeEvent.formLink}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="px-4 py-2 text-sm rounded-full font-bold bg-green-500 text-white"
                     >
                       Register
