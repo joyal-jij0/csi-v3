@@ -132,35 +132,68 @@ export const people2: Person[] = [
 
 export interface Department {
   name: string;
-  lead: string;
+  leads: string[];
   people: string[];
 }
 
 export const executivesData: Department[] = [
   {
     name: "Event Management Executives",
-    lead: "Ashish Jain",
+    leads: ["Ashish Jain"],
     people: ["Dhruv Mehra", "Lakshay Sharma", "Naveen Verma", "Nikhil Hatwal", "Niyati Chugh", "Ritvik Kant", "Samya Goel", "Shashwat Shankar", "Tinish", "Yash Lohia"]
   },
   {
     name: "Public Relations Executives",
-    lead: "",
-    people: ["MD AZAM SIDDIQUI", "Dhruv Goel", "Tanishq Sethi", "Garv goel", "Priyaanshu Sengupta", "Sameer Koli" ]
+    leads: ["Ansh Malik", "Naman Mangla",],
+    people: [
+      "MD Azam Siddiqui",
+      "Dhruv Goel",
+      "Tanishq Sethi",
+      "Garv Goel",
+      "Priyaanshu Sengupta",
+      "Sameer Koli",
+      "Samaksh Bhagi",
+      "Jiya",
+      "Kashvi Sharma",
+      "Shubham Mishra",
+      "Rishabh Tripathi",
+      "Sidhant Kumar"
+  ]
   },
   {
     name: "Photography Executives",
-    lead: "",
+    leads: ["Harsh Maurya"],
     people: ["Mridul Dutta", "Nipun Agrawal", "Vansh Puri"]
   },
   {
     name: "Content Executives",
-    lead: "",
-    people: ["Name 1", "Name 2", "Name 3", "Name 4"]
+    leads: ["Aryan Dutta"],
+    people: [
+      "Moksh",
+      "Sarthak Rawat",
+      "Yash",
+      "Ujjawal Gupta",
+      "MOHD KAIF",
+      "Kanika Ahlawat",
+      "Shubham Jha"
+  ]
+  
   },
   {
     name: "Coordinators",
-    lead: "",
-    people: ["Samaksh Bhagi", "Jiya", "Kashvi Sharma", "Shubham Mishra", "Rishabh Tripathi", "Sidhant Kumar"]
+    leads: ["Vidit"],
+    people: [
+      "Komal Tyagi",
+      "Muskan",
+      "Parth Goel",
+      "Parthsaarthie Sharma",
+      "Vishankh",
+      "Ravi Kumar",
+      "Ayush Sinha",
+      "Harshit Goel",
+      "Yakshit Wadhwa"
+  ]
+  
   }
 ];
 

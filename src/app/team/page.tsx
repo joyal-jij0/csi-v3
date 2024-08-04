@@ -103,17 +103,17 @@ export default function Team() {
           <div className="grid grid-cols-1 sm:grid-cols-4">
             {TechinalDeptData.map((dept, index) => (
               <div key={dept.name} className="p-4">
+                <ul className='text-center sm:text-center' >
                 <h2 className="text-xl text-center font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-orange-800 to-orange-300 cursor-default">
                   {dept.name}
                 </h2>
-                <ul className='text-center sm:text-center' >
-                <li className="text-white">
+                  <li>
                       <h2 className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-yellow-600 to-yellow-100 cursor-default">
                         {dept.lead}
                       </h2>
                   </li>
                   {dept.people.map((person) => (
-                    <li className="text-white" key={person}>
+                    <li key={person}>
                       <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-100 cursor-default">
                         {person}
                       </h2>
@@ -124,15 +124,22 @@ export default function Team() {
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 justify-items-center mt-10">
+        <div className="grid grid-cols-1 justify-items-center">
           {executivesData.map((dept, index) => (
-            <div key={dept.name} className="p-4">
-              <h2 className="text-xl text-center font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-orange-800 to-orange-300 cursor-default">
-                {dept.name}
-              </h2>
+            <div key={dept.name} className="mt-10">
+              <h1 className="text-3xl font-semibold text-center p-5 cursor-default">{dept.name}</h1>
               <ul className='text-center sm:text-center' >
+                {
+                  dept.leads.map((lead) => (
+                    <li key={lead}>
+                      <h2 className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-yellow-600 to-yellow-100 cursor-default">
+                        {lead}
+                      </h2>
+                    </li>
+                  ))
+                }
                 {dept.people.map((person) => (
-                  <li className="text-white" key={person}>
+                  <li key={person}>
                     <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-100 cursor-default">
                       {person}
                     </h2>
