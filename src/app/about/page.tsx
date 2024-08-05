@@ -10,7 +10,7 @@ const AboutCSI: React.FC = () => {
     return (
         <div className=" text-white p-8">
             <div className="container mx-auto">
-                <h2 className="text-4xl font-bold mb-10 text-center">
+                <h2 className="text-4xl font-bold mb-10 text-center ">
                     ABOUT CSI
                 </h2>
                 <p className="mb-20 text-center">
@@ -35,7 +35,7 @@ const AboutCSI: React.FC = () => {
                                     width={400} // Set the width to match the desired dimensions
                                     height={600} // Set the height to match the desired dimensions
                                     className="object-cover"
-                                    src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
+                                    src="https://res.cloudinary.com/du0mba5mz/image/upload/v1722879056/CSI/Screenshot_2024-08-05_230113_dmlxxc.png"
                                 />
                             </GlareCard>
                         </div>
@@ -44,13 +44,14 @@ const AboutCSI: React.FC = () => {
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:top-20 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
-                                <Image
-                                    alt=""
-                                    width={400} // Set the width to match the desired dimensions
-                                    height={600} // Set the height to match the desired dimensions
-                                    className="h-full w-full absolute inset-0 object-cover"
-                                    src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
-                                    // src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                <video
+                                    // src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722879138/CSI/WhatsApp_Video_2024-08-05_at_22.30.24_6dafd9b7_eycnkn.mp4"
+                                    src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722879138/CSI/WhatsApp_Video_2024-08-05_at_22.30.24_6dafd9b7_eycnkn.mp4"
+                                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
                                 />
                             </GlareCard>
                         </div>
@@ -63,8 +64,8 @@ const AboutCSI: React.FC = () => {
                                     width={400} // Set the width to match the desired dimensions
                                     height={600} // Set the height to match the desired dimensions
                                     className="h-full w-full absolute inset-0 object-cover"
-                                    src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
-                                    // src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    // src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1709569063/CSI%20Website/Events/hw7nppsn4j9l8qfvcstw.jpg"
+                                    src="https://res.cloudinary.com/du0mba5mz/image/upload/v1722878890/CSI/Screenshot_2024-08-05_225816_krpfvy.png"
                                 />
                             </GlareCard>
                         </div>
