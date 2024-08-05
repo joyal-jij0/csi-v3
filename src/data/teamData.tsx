@@ -67,7 +67,7 @@ export const people2: Person[] = [
   {
     id:4,
     image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Jain-fotor-20240805204147_tzo4za.jpg",
-    name: "Saksham Jain",
+    name: "Saksham Gupta",
     position: "Chairperson",
   },
   {
