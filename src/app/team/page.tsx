@@ -28,11 +28,11 @@ export default function Team() {
               </div>
         </div>
         {/* First row of rest of the faculty coordinators pics */}
-        <div className=' justify-items-center sm:gap-10 sm:grid sm:grid-cols-3 grid-cols-1 '>
+        <div className=' justify-items-center sm:gap-2 sm:grid sm:grid-cols-3 grid-cols-1 '>
           {people1.map((eachPerson) => (
             <div key={eachPerson.id} className='font-medium'> 
               <div className='flex justify-center overflow-hidden rounded-full'>
-                  <img className='h-auto sm:w-56 w-36 rounded-full sm:hover:scale-[1.1] transition-transform duration-500' src={eachPerson.image_source} />
+                  <img className='h-auto sm:w-52 w-36 rounded-full sm:hover:scale-[1.1] transition-transform duration-500' src={eachPerson.image_source} />
                   {/* <Image 
                   alt='TeamMemberImage' 
                   layout="responsive" 
@@ -63,37 +63,39 @@ export default function Team() {
           </h1>
         </div>
         {/* Earlier, the div below had this class:- {className='justify-items-center sm:gap-20 gap-10 p-4 m-2 sm:mt-20 mt-5 grid grid-cols-4'} */}
-        <div className='justify-items-center sm:gap-10 gap-10 mt-10 sm:grid sm:grid-cols-4 grid-cols-1'>
-          {people2.map((eachPerson) => (
-            <div key={eachPerson.id} className='font-medium flex flex-col items-center'>
-              <div className=' overflow-hidden sm:rounded-2xl rounded-xl max-w-fit max-h-fit '>
-                {/* sm:w-[150px] sm:h-[220px] h-[130px] w-[80px] */}
-                {/* Upon simply writing "w-35" mobile version width changes! And that in "sm:w-50" changes bigger screen's width */}
-                <img className='h-auto sm:w-50 w-36 sm:hover:scale-[1.1] transition-transform duration-500 sm:rounded-2xl rounded-xl' src={eachPerson.image_source} />
-                {/* <div className='sm:h-fit sm:w-[150px] h-fit w-[80px]'>
-                  <Image 
-                  alt='TeamMemberImage' 
-                  layout="responsive" 
-                  width={16} 
-                  height={9} 
-                  className='sm:hover:scale-[1.2] transition-transform duration-500' 
-                  src="https://res.cloudinary.com/dx5dlghqe/image/upload/v1722053621/gwlfy7f9oi1hcbdlczki.jpg" />
-                </div> */}
+        <div className="flex justify-center">
+          <div className='justify-items-center w-[80%] sm:gap-y-1 gap-10 mt-10 sm:grid sm:grid-cols-4 grid-cols-1'>
+            {people2.map((eachPerson) => (
+              <div key={eachPerson.id} className='font-medium flex flex-col items-center'>
+                <div className=' overflow-hidden sm:rounded-2xl rounded-xl max-w-fit max-h-fit '>
+                  {/* sm:w-[150px] sm:h-[220px] h-[130px] w-[80px] */}
+                  {/* Upon simply writing "w-35" mobile version width changes! And that in "sm:w-50" changes bigger screen's width */}
+                  <img className='h-auto sm:w-50 w-36 sm:hover:scale-[1.1] transition-transform duration-500 sm:rounded-2xl rounded-xl' src={eachPerson.image_source} />
+                  {/* <div className='sm:h-fit sm:w-[150px] h-fit w-[80px]'>
+                    <Image 
+                    alt='TeamMemberImage' 
+                    layout="responsive" 
+                    width={16} 
+                    height={9} 
+                    className='sm:hover:scale-[1.2] transition-transform duration-500' 
+                    src="https://res.cloudinary.com/dx5dlghqe/image/upload/v1722053621/gwlfy7f9oi1hcbdlczki.jpg" />
+                  </div> */}
+                </div>
+                <div className='text-xs sm:text-xl  text-center p-4'>
+                  <h2 
+                    className='bg-clip-text text-transparent bg-gradient-to-r from-red-200 to-rose-800 cursor-default'
+                    >
+                    {eachPerson.name}
+                  </h2>
+                  <h2 
+                    className='bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-indigo-300 cursor-default'
+                    >
+                    {eachPerson.position}
+                  </h2>
+                </div>
               </div>
-              <div className='text-xs sm:text-xl  text-center p-4'>
-                <h2 
-                  className='bg-clip-text text-transparent bg-gradient-to-r from-red-200 to-rose-800 cursor-default'
-                  >
-                  {eachPerson.name}
-                </h2>
-                <h2 
-                  className='bg-clip-text text-transparent bg-gradient-to-r from-blue-800 to-indigo-300 cursor-default'
-                  >
-                  {eachPerson.position}
-                </h2>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Pratham's Code -> Bootom Most Row of rest of the team member's names */}
