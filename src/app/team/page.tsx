@@ -32,7 +32,7 @@ export default function Team() {
           {people1.map((eachPerson) => (
             <div key={eachPerson.id} className='font-medium'> 
               <div className='flex justify-center overflow-hidden rounded-full'>
-                  <img className='h-auto sm:w-60 w-36 rounded-full sm:hover:scale-[1.1] transition-transform duration-500' src={eachPerson.image_source} />
+                  <img className='h-auto sm:w-56 w-36 rounded-full sm:hover:scale-[1.1] transition-transform duration-500' src={eachPerson.image_source} />
                   {/* <Image 
                   alt='TeamMemberImage' 
                   layout="responsive" 
@@ -56,7 +56,7 @@ export default function Team() {
             </div>
           ))}
         </div>
-        {/* Second row of multiple pics of core student team members */}
+        {/* Second row of multiple pics of core Head team members */}
         <div className=' sm:text-3xl text-2xl font-semibold flex w-screen justify-center px-5 mt-10 cursor-default'>
           <h1>
             OUR TEAM
@@ -65,11 +65,11 @@ export default function Team() {
         {/* Earlier, the div below had this class:- {className='justify-items-center sm:gap-20 gap-10 p-4 m-2 sm:mt-20 mt-5 grid grid-cols-4'} */}
         <div className='justify-items-center sm:gap-10 gap-10 mt-10 sm:grid sm:grid-cols-4 grid-cols-1'>
           {people2.map((eachPerson) => (
-            <div key={eachPerson.id} className='font-medium'> 
-              <div className='flex justify-center overflow-hidden sm:rounded-2xl rounded-xl '>
+            <div key={eachPerson.id} className='font-medium flex flex-col items-center'>
+              <div className=' overflow-hidden sm:rounded-2xl rounded-xl max-w-fit max-h-fit '>
                 {/* sm:w-[150px] sm:h-[220px] h-[130px] w-[80px] */}
                 {/* Upon simply writing "w-35" mobile version width changes! And that in "sm:w-50" changes bigger screen's width */}
-                <img className='h-auto sm:w-50 w-36 sm:hover:scale-[1.2] transition-transform duration-500' src={eachPerson.image_source} />
+                <img className='h-auto sm:w-50 w-36 sm:hover:scale-[1.1] transition-transform duration-500 sm:rounded-2xl rounded-xl' src={eachPerson.image_source} />
                 {/* <div className='sm:h-fit sm:w-[150px] h-fit w-[80px]'>
                   <Image 
                   alt='TeamMemberImage' 
