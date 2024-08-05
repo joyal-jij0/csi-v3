@@ -82,7 +82,7 @@ export const ParallaxScroll: React.FC<ParallaxScrollProps> = ({
       <motion.div style={{ y: translateY }} key={`grid-${idx}`}>
         <Image
           src={el}
-          className="lg:h-80 h-100 w-full lg:object-cover lg:object-left-top rounded-lg gap-10 !m-0 !p-0 cursor-pointer"
+          className="lg:h-80 h-100 w-full lg:object-cover  rounded-lg gap-10 !m-0 !p-0 cursor-pointer"
           height={400}
           width={400}
           alt="thumbnail"
