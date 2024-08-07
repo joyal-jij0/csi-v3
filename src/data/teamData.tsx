@@ -220,7 +220,7 @@ export const TechinalDeptData: TechnicalDepartment[] = [
   {
     name: "ML Team",
     lead: "Gaurish Kadian",
-    people: ["Nipun Agrawal", "Vansh Puri"]
+    people: ["Nipun Agrawal", "Vansh Puri", "Aditi", "Ayan Gairola"]
   },
   {
     name: "DSA Team",
