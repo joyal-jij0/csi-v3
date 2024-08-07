@@ -104,7 +104,7 @@ export const people2: Person[] = [
     id: 10, 
     image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
     name: "Deven Puri",
-    position: "Event Managemet Head"
+    position: "Event Management Head"
   },
   {
     id: 11,
