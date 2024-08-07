@@ -104,7 +104,7 @@ export const people2: Person[] = [
     id: 10, 
     image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
     name: "Deven Puri",
-    position: "Evet Managemet Head"
+    position: "Event Managemet Head"
   },
   {
     id: 11,
@@ -141,7 +141,7 @@ export interface Department {
 export const executivesData: Department[] = [
   {
     name: "Event Management Executives",
-    leads: ["Ashish Jain"],
+    leads: ["Deven Puri"],
     people: ["Dhruv Mehra", "Lakshay Sharma", "Naveen Verma", "Nikhil Hatwal", "Niyati Chugh", "Ritvik Kant", "Samya Goel", "Shashwat Shankar", "Tinish", "Yash Lohia"]
   },
   {
@@ -177,7 +177,8 @@ export const executivesData: Department[] = [
       "Ujjawal Gupta",
       "MOHD KAIF",
       "Kanika Ahlawat",
-      "Shubham Jha"
+      "Shubham Jha",
+      "Ashish Jain"
   ]
   
   },

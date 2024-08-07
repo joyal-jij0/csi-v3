@@ -101,7 +101,7 @@ export default function Team() {
         {/* Pratham's Code -> Bootom Most Row of rest of the team member's names */}
         {/* <div className="ml-8 mr-8 border-t-2 border-dashed border-white-600 pt-8"></div> */}
         <div className="justify-items-center mt-10">
-          <h1 className="text-3xl font-semibold text-center p-5 cursor-default">Technical Executives</h1>
+          <h1 className="text-3xl text-white font-semibold text-center p-5 cursor-default">Technical Executives</h1>
           <div className="grid grid-cols-1 sm:grid-cols-4">
             {TechinalDeptData.map((dept, index) => (
               <div key={dept.name} className="p-4">
@@ -129,7 +129,7 @@ export default function Team() {
         <div className="grid grid-cols-1 justify-items-center">
           {executivesData.map((dept, index) => (
             <div key={dept.name} className="mt-10">
-              <h1 className="text-3xl font-semibold text-center p-5 cursor-default">{dept.name}</h1>
+              <h1 className="text-3xl font-semibold text-white text-center p-5 cursor-default">{dept.name}</h1>
               <ul className='text-center sm:text-center' >
                 {
                   dept.leads.map((lead) => (
