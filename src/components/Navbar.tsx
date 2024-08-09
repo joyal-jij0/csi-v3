@@ -87,7 +87,7 @@ export default function Navbar() {
                         <Link
                             target="_blank"
                             rel="noopener nonreferrer"
-                            href="https://drive.google.com/file/d/1GVeWn4GE9DQkwQOEhKW10tApuoYgsR3U/view"
+                            href="https://drive.google.com/file/d/1vVOrrGA8Mlr0lUY0wBkKG12Pt9ZaQX7X/view"
                         >
                             <Button
                                 className="text-[0.7rem] md:text-lg"
