@@ -25,14 +25,23 @@ export default function Home() {
                         </h2>
                     </div>
                     {/* <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14">Join Us</Button> */}
-                    <ShimmerButton borderRadius="15px" className="shadow-2xl mt-6">
-                        <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                            JOIN US
-                        </span>
-                    </ShimmerButton>
-                   
-                        <OrbitingCirclesDemo />
-                   
+                    <a
+                        href="https://forms.gle/AKKuaGPyZgztVUwj7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <ShimmerButton
+                            borderRadius="15px"
+                            className="shadow-2xl mt-6"
+                        >
+                            <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                JOIN US
+                            </span>
+                        </ShimmerButton>
+                    </a>
+
+                    <OrbitingCirclesDemo />
+
                     <div className="mt-20">
                         <Infinitescrollbrand />
                     </div>
