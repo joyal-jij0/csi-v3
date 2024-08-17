@@ -49,7 +49,7 @@ export const people2: Person[] = [
   {
     id: 1,
     image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871013/KPA_Dharmanshu_Mahajan-fotor-2024080520398_vqe41z.jpg",
-    name: "KPA Dharmanshu Mahajan",
+    name: "Dharmanshu Mahajan",
     position: "Advisor",
   },
   {

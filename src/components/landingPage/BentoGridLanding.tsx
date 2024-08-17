@@ -24,8 +24,8 @@ export default function BentoGridLanding() {
             ),
         },
         {
-            title: "The Digital Revolution",
-            description: "Dive into the transformative power of technology.",
+            title: "THE SPIRIT OF ADVENTURE",
+            description: "Our Society proudly embraces the digial revolution by hosting a VR gaming station at Techsurge & Mridang",
             header: (
                 <Image
                     src="https://res.cloudinary.com/du0mba5mz/image/upload/v1722872876/CSI/WhatsApp_Image_2024-08-05_at_14.28.28_95e8cc38_oeaoze.jpg" // Path to your image file
@@ -38,7 +38,7 @@ export default function BentoGridLanding() {
             ),
         },
         {
-            title: "The Pursuit of VR Infusion",
+            title: "THE PURSUIT OF VR INFUSION",
             description:
                 "Join the quest for experiencing the thrill of bringing ideas to life.",
             header: (
