@@ -44,7 +44,7 @@ const AboutCSI: React.FC = () => {
                     <NeonGradientCard className="max-w-[370px] items-center justify-center text-center md:relative md:top-20 ">
                         <div className="">
                             <GlareCard className="flex flex-col items-center justify-center text-center">
-                                <video
+                                {/* <video
                                     // src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722879138/CSI/WhatsApp_Video_2024-08-05_at_22.30.24_6dafd9b7_eycnkn.mp4"
                                     src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722879138/CSI/WhatsApp_Video_2024-08-05_at_22.30.24_6dafd9b7_eycnkn.mp4"
                                     className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
@@ -52,6 +52,13 @@ const AboutCSI: React.FC = () => {
                                     muted
                                     loop
                                     playsInline
+                                /> */}
+                                <Image
+                                    alt="Event"
+                                    width={400} // Set the width to match the desired dimensions
+                                    height={600} // Set the height to match the desired dimensions
+                                    className="object-contain"
+                                    src="https://res.cloudinary.com/dfhj4i9hd/image/upload/v1723921999/CSI%20Website/WhatsApp_Image_2024-08-18_at_00.42.54_yx4ndj.jpg"
                                 />
                             </GlareCard>
                         </div>

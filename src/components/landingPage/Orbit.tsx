@@ -43,7 +43,7 @@ export function OrbitingCirclesDemo() {
                 <Icons.cpp />
             </OrbitingCircles>
             <OrbitingCircles
-                className="size-[50px] border-none bg-white"
+                className="size-[50px] border-none "
                 radius={190}
                 duration={20}
                 delay={15}

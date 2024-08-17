@@ -3,7 +3,9 @@ export const Icons = {
         <svg
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            fill="#000000"
+            fill="#000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -26,6 +28,8 @@ export const Icons = {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid"
             fill="#000000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -66,6 +70,8 @@ export const Icons = {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid"
             fill="#000000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -94,6 +100,8 @@ export const Icons = {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid"
             fill="#000000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -120,6 +128,8 @@ export const Icons = {
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
             fill="#000000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -231,6 +241,8 @@ export const Icons = {
         <svg
             viewBox="-118.513 4.399 540.906 540.906"
             xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
         >
             {/* <g id="SVGRepo_bgCarrier" stroke-width="10"></g> */}
             {/* <g
@@ -271,7 +283,13 @@ export const Icons = {
         </svg>
     ),
     js: () => (
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+        >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
@@ -296,6 +314,8 @@ export const Icons = {
             viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
             fill="#8CC84B"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -365,6 +385,8 @@ export const Icons = {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid"
             fill="#000000"
+            width="100%"
+            height="100%"
         >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
@@ -411,7 +433,13 @@ export const Icons = {
         </svg>
     ),
     vite: () => (
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <svg
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            fill="none"
+        >
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
