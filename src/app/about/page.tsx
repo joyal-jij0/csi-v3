@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { GlareCard } from "@/components/ui/glare-card";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import ShineBorder from "@/components/magicui/ShineBorder";
 
 const AboutCSI: React.FC = () => {
     return (
@@ -187,6 +188,7 @@ const AboutCSI: React.FC = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
