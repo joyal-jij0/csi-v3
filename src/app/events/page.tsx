@@ -73,15 +73,17 @@ const Card: React.FC<CardComponentProps> = ({ card }) => {
         >
             <ShineBorder
                 className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
-                color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+                color={["#fc0303", "#2563eb", "#FFBE7B"]}
             >
                 <div
                     style={{
+                        width: "443px",
+                        height: "495px",
                         backgroundImage: `url(${card.posterLink})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                     }}
-                    className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg "
+                    className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg mt-[2px] ml-[3px]  "
                 ></div>
             </ShineBorder>
         </motion.div>
