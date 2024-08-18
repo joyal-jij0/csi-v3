@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import eventData from "@/data/eventData";
 import ShineBorder from "@/components/magicui/ShineBorder";
 
@@ -37,16 +37,39 @@ const HorizontalScrollCarousel: React.FC = () => {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-77%"]);
+    // const x = useTransform(scrollYProgress, [0, 1], ["0%", "-77%"]);
+    // const x = useTransform(
+    //     scrollYProgress,
+    //     [0, 1],
+    //     ["0%", window.innerWidth < [768px] ? "-92%" : "-77%"]
+    // );
+
+     const [transformValue, setTransformValue] = useState("-77%");
+
+     useEffect(() => {
+         const handleResize = () => {
+             setTransformValue(window.innerWidth < 768 ? "-92%" : "-77%");
+         };
+
+         handleResize(); // Set the initial value
+         window.addEventListener("resize", handleResize);
+
+         return () => {
+             window.removeEventListener("resize", handleResize);
+         };
+     }, []);
+
+     const x = useTransform(scrollYProgress, [0, 1], ["0%", transformValue]);
+
 
     return (
         <>
             <section ref={targetRef} className="relative h-[300vh]">
                 <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
                     <motion.div style={{ x }} className="flex gap-4 ">
-                            {eventData.map((card) => (
-                                <Card card={card} key={card.id} />
-                            ))}
+                        {eventData.map((card) => (
+                            <Card card={card} key={card.id} />
+                        ))}
                     </motion.div>
                 </div>
             </section>
@@ -64,7 +87,7 @@ const Card: React.FC<CardComponentProps> = ({ card }) => {
     return (
         <motion.div
             onClick={handleClick}
-            className={`group relative h-[500px] w-[450px] overflow-hidden rounded-lg
+            className={`group relative h-[400px] w-[340px] md:h-[500px] md:w-[450px] overflow-hidden rounded-lg
                 ${
                     card.id % 2 === 0
                         ? "rotate-3 -translate-y-4"
@@ -76,19 +99,19 @@ const Card: React.FC<CardComponentProps> = ({ card }) => {
                 color={["#fc0303", "#2563eb", "#FFBE7B"]}
             >
                 <div
-                    style={{
-                        width: "443px",
-                        height: "495px",
-                        backgroundImage: `url(${card.posterLink})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                    }}
-                    className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg mt-[2px] ml-[3px]  "
+                    // style={{
+                    //     width: "340px",
+                    //     height: "380px",
+                    //     backgroundImage: `url(${card.posterLink})`,
+                    //     backgroundSize: "cover",
+                    //     backgroundPosition: "center",
+                    // }}
+                    className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg md:mt-[2px] md:ml-[3px] bg-cover bg-center mt-[3px] ml-[3px] w-[335px] h-[395px] md:w-[443px] md:h-[495px] "
+                    style={{ backgroundImage: `url(${card.posterLink})` }}
                 ></div>
             </ShineBorder>
         </motion.div>
     );
 };
-
 
 export default Example;
