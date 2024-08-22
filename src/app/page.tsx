@@ -5,10 +5,12 @@ import { UpdateSection } from "@/components/landingPage/UpdateSection";
 import BentoGridLanding from "@/components/landingPage/BentoGridLanding";
 import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { OrbitingCirclesDemo } from "@/components/landingPage/Orbit";
+import Popup from "@/components/PopupBanner/PopUp";
 
 export default function Home() {
     return (
         <>
+        <Popup/>
             <div>
                 <div className="flex flex-col justify-start items-center pt-6 md:pt-14">
                     <div>
