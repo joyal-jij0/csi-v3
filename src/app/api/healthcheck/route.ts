@@ -1,8 +1,8 @@
-import dbConnect from "@/lib/dbConnect";
+// import dbConnect from "@/lib/dbConnect";
 
 export async function GET(request: Request){
     try {
-        await dbConnect()
+        // await dbConnect()
 
         return Response.json({
             success: true,
