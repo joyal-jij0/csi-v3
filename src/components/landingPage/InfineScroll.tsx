@@ -6,6 +6,7 @@ const InfiniteScrollBrand = () => {
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239365/dolfy_okslvf.png", alt: "Dolfy Learning" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722239908/awsap-modify_ogpqgc.jpg", alt: "Download" },
     { src:"https://res.cloudinary.com/djhilzrxt/image/upload/v1722794702/Uno_eo5gl6.jpg",alt:"uno"},
+    {src:"https://res.cloudinary.com/dzvdh7yez/image/upload/v1724785424/pizza_hut_yss9fg.png",alt:"pizza hut"},
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238954/festa-new_h4sim3.jpg", alt: "Festa Marketing" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238970/idp-new_iqlzgc.png", alt: "IDP" },
     { src: "https://res.cloudinary.com/dzvdh7yez/image/upload/v1722238968/meta_space_xhg8di.png", alt: "Meta Space" },
@@ -22,7 +23,7 @@ const InfiniteScrollBrand = () => {
       </div>
       <div className="relative w-full overflow-hidden ">
         <div className="flex animate-marquee">
-          <ul className="flex items-center space-x-6 sm:space-x-16 md:space-x-20">
+          <ul className="flex items-center space-x-6 sm:space-x-14 md:space-x-16">
             {[...logos, ...logos].map((logo, index) => (
               <li key={index} className="flex-shrink-0">
                 <Image
