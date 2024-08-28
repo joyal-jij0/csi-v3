@@ -30,21 +30,24 @@ const Popup = () => {
       >
         <div
           ref={popupRef}
-          className=" rounded-lg shadow-lg relative w-[100%] max-w-md "
+          className="relative w-[100%] max-w-3xl mx-1 lg:p-1 bg-white rounded-lg shadow-lg"
+          onClick={(e) => e.stopPropagation()} 
         >
           <button
-            className="absolute top-2 right-5 text-gray-500 bg-black rounded-full p-2 hover:text-gray-700"
+            className="absolute top-1 lg:top-2 right-1 lg:right-2 text-gray-500 bg-black rounded-full p-2 hover:text-gray-700"
             onClick={handleClose}
           >
-            <span className="material-symbols-outlined text-white font-semibold text-4xl rounded-full">&#10005;  </span>
+            <span className="material-symbols-outlined text-white font-semibold text:xl lg:text-2xl">
+              &#10005;
+            </span>
           </button>
-          <div className="flex justify-center items-center mb-4">
+          <div className="flex justify-center items-center">
             <Link href="https://forms.gle/AKKuaGPyZgztVUwj7" target="_blank">
               <Image
-                src="https://res.cloudinary.com/dzvdh7yez/image/upload/v1724785330/zypher_24_ctre50.jpg"
+                src="https://res.cloudinary.com/dzvdh7yez/image/upload/v1724862916/_BANNER_3_PAGE_page-0001_swjjv9.jpg"
                 alt="Zypher"
-                height={60}  
-                width={380}  
+                height={800}
+                width={800}
                 className="object-contain rounded-xl cursor-pointer"
               />
             </Link>
