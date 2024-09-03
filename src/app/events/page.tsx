@@ -4,7 +4,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
 import eventData from "@/data/eventData";
 import ShineBorder from "@/components/magicui/ShineBorder";
-
+import prisma from "@/lib/prisma";
+import getEvents from "@/events.actions";
 // Define the type for the card object
 interface CardProps {
     id: number;
@@ -32,6 +33,7 @@ const Example: React.FC = () => {
 };
 
 const HorizontalScrollCarousel: React.FC = () => {
+    const [events,setevents]=useState()
     const targetRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: targetRef,
@@ -47,6 +49,11 @@ const HorizontalScrollCarousel: React.FC = () => {
      const [transformValue, setTransformValue] = useState("-77%");
 
      useEffect(() => {
+        async function getevent(){
+            const events = await getEvents()
+            setevents(events)
+        }
+        getevent()
          const handleResize = () => {
              setTransformValue(window.innerWidth < 768 ? "-92%" : "-77%");
          };
@@ -67,7 +74,8 @@ const HorizontalScrollCarousel: React.FC = () => {
             <section ref={targetRef} className="relative h-[300vh]">
                 <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
                     <motion.div style={{ x }} className="flex gap-4 ">
-                        {eventData.map((card) => (
+                        {
+                        events && events.map((card) => (
                             <Card card={card} key={card.id} />
                         ))}
                     </motion.div>
@@ -107,7 +115,7 @@ const Card: React.FC<CardComponentProps> = ({ card }) => {
                     //     backgroundPosition: "center",
                     // }}
                     className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg md:mt-[2px] md:ml-[3px] bg-cover bg-center mt-[3px] ml-[3px] w-[335px] h-[395px] md:w-[443px] md:h-[495px] "
-                    style={{ backgroundImage: `url(${card.posterLink})` }}
+                    style={{ backgroundImage: `url(${card.banner})` }}
                 ></div>
             </ShineBorder>
         </motion.div>
