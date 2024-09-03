@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { useRouter } from "next/navigation";
 import { motion, useTransform, useScroll } from "framer-motion";
@@ -51,6 +52,7 @@ const HorizontalScrollCarousel: React.FC = () => {
      useEffect(() => {
         async function getevent(){
             const events = await getEvents()
+
             setevents(events)
         }
         getevent()
