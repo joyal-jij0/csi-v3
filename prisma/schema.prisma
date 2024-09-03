@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id
+  name      String
+  branch    String
+  batch     String
+  position  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime
+}
+
+model Event {
+  id          String   @id
+  name        String
+  description String
+  venue       String
+  isPaid      Boolean
+  isOnline    Boolean
+  guest       String?
+  eventTime   String
+  imageUrls   String[]
+  isPrivate   Boolean
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  banner      String
+  eventDate   DateTime
+}
