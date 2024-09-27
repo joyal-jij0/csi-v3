@@ -139,7 +139,7 @@ export const people2: Person[] = [
     {
         id: 13,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871025/Harsh_Maurya-fotor-20240805203831_ovylt1.jpg",
+            "https://res.cloudinary.com/du0mba5mz/image/upload/v1727416816/CSI/6321017259627233825_kotexk.jpg",
         name: "Harsh Maurya",
         position: "Photography Head",
     },
