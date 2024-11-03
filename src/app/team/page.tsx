@@ -114,7 +114,7 @@ export default function Team() {
                         {dept.lead}
                       </h2>
                   </li>
-                  {dept.people.map((person) => (
+                  {dept.people?.map((person) => (
                     <li key={person}>
                       <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-100 cursor-default">
                         {person}
