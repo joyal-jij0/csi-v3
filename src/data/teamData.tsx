@@ -225,19 +225,18 @@ export const executivesData: Department[] = [
 export interface TechnicalDepartment {
     name: string;
     lead: string;
-    people: string[];
+    people?: string[];
 }
 
 export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "Dev Team",
         lead: "Joyal Jijo",
-        people: ["Adarsh Singh", "Ashish", "Kumar Harsh", "Vrishank Sharma"],
+        people: ["Adarsh Singh", "Ashish", "Kumar Harsh", "Vrishank Sharma", "Arpan Taneja", "Aditya Singh Khichi", "Tanishq Sethi"],
     },
     {
         name: "UI/UX Team",
         lead: "Tanishq Sagar",
-        people: ["Suhani Duggal"],
     },
     {
         name: "ML Team",
