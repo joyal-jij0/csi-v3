@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 
         const events = await prisma.event.findMany({
             orderBy: {
-                eventDate: 'asc'
+                eventDate: 'desc'
             },
             take: limit  // Fetch 3 most recent if limit is 3, otherwise fetch all
         });
