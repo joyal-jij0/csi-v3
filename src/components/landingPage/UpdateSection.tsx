@@ -118,7 +118,7 @@ export function UpdateSection() {
                 onOpenChange={(open) => setIsOpen(open)}
             >
                 <DialogContent
-                    className="max-w-4xl p-0 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-gray-700/50 shadow-2xl rounded-2xl text-white"
+                    className="overflow-hidden max-w-4xl p-0 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-gray-700/50 shadow-2xl rounded-2xl text-white"
                     onInteractOutside={() => setIsOpen(false)}
                     onEscapeKeyDown={() => setIsOpen(false)}
                 >
