@@ -2,27 +2,9 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import ShineBorder from "@/components/magicui/ShineBorder";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin, Users, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { EventsDataType } from "@/components/landingPage/UpdateSection";
 import EventDetailsDialog from "@/components/EventDetailsDialog";
-
-interface Event {
-    id: string;
-    name: string;
-    description: string;
-    venue: string;
-    isPaid: boolean;
-    isOnline: boolean;
-    guest: string | null;
-    eventTime: string;
-    imageUrls: string[];
-    isPrivate: boolean;
-    banner: string;
-    eventDate: Date;
-}
 
 export default function EventsPage() {
     const [events, setEvents] = useState<EventsDataType[]>([]);
@@ -87,7 +69,7 @@ export default function EventsPage() {
     );
 }
 
-const HorizontalScrollCarousel: React.FC<{ events: Event[] }> = ({
+const HorizontalScrollCarousel: React.FC<{ events: EventsDataType[] }> = ({
     events,
 }) => {
     const targetRef = useRef<HTMLDivElement>(null);
@@ -118,7 +100,7 @@ const HorizontalScrollCarousel: React.FC<{ events: Event[] }> = ({
     );
 };
 
-const Card: React.FC<{ event: Event }> = ({ event }) => {
+const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeEvent, setActiveEvent] = useState<EventsDataType | null>(null);
 
@@ -130,14 +112,6 @@ const Card: React.FC<{ event: Event }> = ({ event }) => {
     const handleCloseDialog = () => {
         setActiveEvent(null);
         setIsOpen(false);
-    };
-
-    const formatDate = (date: Date) => {
-        return new Date(date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-        });
     };
 
     return (
