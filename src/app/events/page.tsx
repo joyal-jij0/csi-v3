@@ -2,7 +2,10 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import ShineBorder from "@/components/magicui/ShineBorder";
-import { EventsDataType } from "@/components/landingPage/UpdateSection";
+import {
+    EventCard,
+    EventsDataType,
+} from "@/components/landingPage/UpdateSection";
 import EventDetailsDialog from "@/components/EventDetailsDialog";
 
 export default function EventsPage() {
@@ -62,41 +65,22 @@ export default function EventsPage() {
             <div className="font-bold relative text-[72px] text-center bg-gradient-to-r from-blue-600 to-indigo-200 bg-clip-text text-transparent">
                 Events
             </div>
-            <HorizontalScrollCarousel events={events} />
+            <div className="mt-8 mx-2 md:mx-0 flex items-center justify-center">
+                {events.length > 0 ? (
+                    <div className="max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                        {events.map((event) => (
+                            <Card event={event} key={event.id} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-xl text-gray-600">
+                        No events available
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
-
-const HorizontalScrollCarousel: React.FC<{ events: EventsDataType[] }> = ({
-    events,
-}) => {
-    const targetRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-    });
-
-    const [transformValue, setTransformValue] = useState("-77%");
-
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", transformValue]);
-
-    return (
-        <section ref={targetRef} className="relative h-[300vh]">
-            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-                <motion.div style={{ x }} className="flex gap-4">
-                    {events.length > 0 ? (
-                        events.map((event) => (
-                            <Card event={event} key={event.id} />
-                        ))
-                    ) : (
-                        <div className="text-xl text-gray-600">
-                            No events available
-                        </div>
-                    )}
-                </motion.div>
-            </div>
-        </section>
-    );
-};
 
 const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -114,28 +98,12 @@ const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
 
     return (
         <>
-            <motion.div
+            <EventCard
+                key={event.id}
+                event={event}
+                index={1}
                 onClick={() => handleOpenDialog(event)}
-                className={`group relative h-[400px] w-[340px] md:h-[500px] md:w-[450px] overflow-hidden rounded-lg
-                    ${
-                        Number(event.id) % 2 === 0
-                            ? "rotate-3 -translate-y-4"
-                            : "-rotate-3 translate-y-4"
-                    } m-8`}
-            >
-                <ShineBorder
-                    className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl"
-                    color={["#fc0303", "#2563eb", "#FFBE7B"]}
-                >
-                    <div
-                        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 rounded-lg md:mt-[2px] md:ml-[3px] bg-cover bg-center mt-[3px] ml-[3px] w-[335px] h-[395px] md:w-[443px] md:h-[495px]"
-                        style={{ backgroundImage: `url(${event.banner})` }}
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-                        <h3 className="text-xl font-semibold">{event.name}</h3>
-                    </div>
-                </ShineBorder>
-            </motion.div>
+            />
 
             <EventDetailsDialog
                 isOpen={isOpen}
