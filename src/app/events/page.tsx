@@ -146,7 +146,7 @@ const Card: React.FC<{ event: Event }> = ({ event }) => {
 
             <Dialog modal open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
                 <DialogContent 
-                    className="max-w-4xl p-0 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-gray-700/50 shadow-2xl rounded-2xl text-white"
+                    className="overflow-hidden max-w-4xl p-0 bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border border-gray-700/50 shadow-2xl rounded-2xl text-white"
                     onInteractOutside={() => setIsOpen(false)}
                     onEscapeKeyDown={() => setIsOpen(false)}
                 >
@@ -160,7 +160,7 @@ const Card: React.FC<{ event: Event }> = ({ event }) => {
 
                         {/* Banner image with gradient overlay */}
                         <div className="relative h-72">
-                            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent z-10" />
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent z-10" /> */}
                             <img 
                                 src={event.banner} 
                                 alt={event.name} 
