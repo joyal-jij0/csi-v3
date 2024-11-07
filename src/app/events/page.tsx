@@ -2,7 +2,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import ShineBorder from "@/components/magicui/ShineBorder";
-import { useRouter } from "next/navigation";
 import { EventsDataType } from "@/components/landingPage/UpdateSection";
 import EventDetailsDialog from "@/components/EventDetailsDialog";
 
@@ -10,7 +9,6 @@ export default function EventsPage() {
     const [events, setEvents] = useState<EventsDataType[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const router = useRouter();
 
     const fetchEvents = async () => {
         try {
