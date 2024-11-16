@@ -53,7 +53,6 @@ function Gallery() {
                             className="sm:h-[40rem] h-[20rem] rounded-2xl"
                             images={imagesOne}
                         >
-                            {/* Children -> Bug in production mode! */}
                             <motion.div
                                 initial={{
                                     opacity: 0,
@@ -66,7 +65,7 @@ function Gallery() {
                                 transition={{
                                     duration: 0.6,
                                 }}
-                                className="z-50 flex flex-col justify-center items-center"
+                                style={{ zIndex: 50, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
                             ></motion.div>
                         </ImagesSlider>
                     </div>
