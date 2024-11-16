@@ -1,18 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useId, useRef, useState } from "react";
+import React, { Suspense, useEffect, useId, useRef, useState } from "react";
 import { EventsDataType } from "@/types/EventData";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import EventDetailsDialog from "../EventDetailsDialog";
-import {
-    CalendarIcon,
-    ClockIcon,
-    DollarSignIcon,
-    GlobeIcon,
-    LockIcon,
-    MapPinIcon,
-    UsersIcon,
-} from "lucide-react";
+import { CalendarIcon, ClockIcon, GlobeIcon, MapPinIcon} from "lucide-react";
+import { unstable_noStore as noStore } from "next/cache";
 
 
 
@@ -45,6 +38,7 @@ export function UpdateSection() {
 
     const fetchEvents = async () => {
         try {
+            noStore();
             const response = await fetch("/api/events?limit=3", {
                 next: { tags: ["events"] },
                 headers: {
@@ -85,44 +79,15 @@ export function UpdateSection() {
                 activeEvent={activeEvent}
             />
 
+            <Suspense fallback={
+                <div className="flex items-center justify-center z-100">
+                <div className="text-xl text-gray-600">
+                    Loading events...
+                </div>
+            </div>
+            }>
             {events.length > 0 ? (
                 <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
-                    {/* {events.map((event) => (
-                        // <p>{event.name}</p>
-                        <motion.div
-                            layoutId={`event-${event.name}-${id}`}
-                            key={event.id}
-                            // onClick={() => setActiveEvent(event)}
-                            onClick={() => handleOpenDialog(event)}
-                            className="p-4 flex flex-col hover:bg-neutral-900 rounded-xl cursor-pointer w-full lg:w-1/3 border border-white mx-2 sm:mx-4 md:mx-6 lg:mx-6 mb-4 lg:mb-0 h-[500px]" // Ensure all cards have the same height
-                        >
-                            <motion.div
-                                layoutId={`image-${event.name}-${id}`}
-                                className="relative flex-shrink-0"
-                            >
-                                <Image
-                                    width={300}
-                                    height={200}
-                                    src={event.banner}
-                                    alt={event.name}
-                                    className="h-[400px] lg:h-auto w-full rounded-lg object-contain"
-                                />
-                            </motion.div>
-
-                            <div className="flex flex-col flex-grow justify-between mt-2">
-                                <motion.h3
-                                    layoutId={`title-${event.name}-${id}`}
-                                    className="font-medium text-white text-center text-lg"
-                                >
-                                    {event.name}
-                                </motion.h3>
-                                <p className="text-gray-300 text-center text-s mt-1">
-                                    {formatDate(event.eventDate)}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))} */}
-
                     {events.map((event, index) => (
                         <EventCard
                             key={event.id}
@@ -139,6 +104,7 @@ export function UpdateSection() {
                     </div>
                 </div>
             )}
+            </Suspense>
         </div>
     );
 }

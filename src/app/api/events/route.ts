@@ -19,7 +19,11 @@ export async function GET(request: Request) {
         
         revalidateTag('events');
         
-        return NextResponse.json(events);
+        return NextResponse.json(events, {
+            headers: {
+                'Cache-Control': 'public, s-maxage=10, stale-while-revalidate=59'
+            }
+        });
     } catch (error) {
         console.error('Database Error:', error);
         return NextResponse.json({ error: 'Failed to fetch events' }, { status: 500 });

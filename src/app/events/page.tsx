@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { EventsDataType } from "@/types/EventData";
 import {EventCard} from "@/components/landingPage/UpdateSection";
-import EventDetailsDialogNew from "@/components/EventDetailsDialogNew";
+import EventDetailsDialog from "@/components/EventDetailsDialog";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default function EventsPage() {
     const [events, setEvents] = useState<EventsDataType[]>([]);
@@ -11,6 +12,7 @@ export default function EventsPage() {
 
     const fetchEvents = async () => {
         try {
+            noStore()
             const response = await fetch("/api/events", {
                 next: { tags: ["events"] },
                 headers: {
@@ -61,6 +63,12 @@ export default function EventsPage() {
             <div className="font-bold relative text-[72px] text-center bg-gradient-to-r from-blue-600 to-indigo-200 bg-clip-text text-transparent">
                 Events
             </div>
+            <Suspense 
+                fallback={
+                    <div className="flex items-center justify-center h-screen">
+                        <div className="text-xl text-gray-600">Loading events...</div>
+                    </div>
+        }>
             <div className="mt-8 mx-4 flex  items-center justify-center">
                 {events.length > 0 ? (
                     <div className="max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
@@ -74,6 +82,7 @@ export default function EventsPage() {
                     </div>
                 )}
             </div>
+            </Suspense>
         </div>
     );
 }
@@ -101,7 +110,7 @@ const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
                 onClick={() => handleOpenDialog(event)}
             />
 
-            <EventDetailsDialogNew
+            <EventDetailsDialog
                 isOpen={isOpen}
                 onClose={handleCloseDialog}
                 activeEvent={activeEvent}
