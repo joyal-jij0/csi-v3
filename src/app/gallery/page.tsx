@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ImagesSlider } from "../../components/ui/images-slider";
 import { ParallaxScroll } from "../../components/ui/parallax-scroll";
 import { imagesOne, imagesTwo } from "@/data/galleryData";
-import { EventsDataType } from "@/components/landingPage/UpdateSection";
+import { EventsDataType } from "@/types/EventData";
 
 function Gallery() {
     const [eventImages, setEventImages] = useState<string[]>([]);
