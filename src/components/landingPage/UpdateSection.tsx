@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { Suspense, useEffect, useId, useRef, useState } from "react";
+import React, { useEffect, useId, useRef, useState } from "react";
 import { EventsDataType } from "@/types/EventData";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import EventDetailsDialog from "../EventDetailsDialog";
@@ -79,13 +79,6 @@ export function UpdateSection() {
                 activeEvent={activeEvent}
             />
 
-            <Suspense fallback={
-                <div className="flex items-center justify-center z-100">
-                <div className="text-xl text-gray-600">
-                    Loading events...
-                </div>
-            </div>
-            }>
             {events.length > 0 ? (
                 <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                     {events.map((event, index) => (
@@ -104,7 +97,6 @@ export function UpdateSection() {
                     </div>
                 </div>
             )}
-            </Suspense>
         </div>
     );
 }
