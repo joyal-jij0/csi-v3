@@ -6,7 +6,7 @@ import {
     EventCard,
     EventsDataType,
 } from "@/components/landingPage/UpdateSection";
-import EventDetailsDialog from "@/components/EventDetailsDialog";
+import EventDetailsDialogNew from "@/components/EventDetailsDialogNew";
 
 export default function EventsPage() {
     const [events, setEvents] = useState<EventsDataType[]>([]);
@@ -65,7 +65,7 @@ export default function EventsPage() {
             <div className="font-bold relative text-[72px] text-center bg-gradient-to-r from-blue-600 to-indigo-200 bg-clip-text text-transparent">
                 Events
             </div>
-            <div className="mt-8 mx-2 md:mx-0 flex items-center justify-center">
+            <div className="mt-8 mx-4 flex  items-center justify-center">
                 {events.length > 0 ? (
                     <div className="max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                         {events.map((event) => (
@@ -105,7 +105,7 @@ const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
                 onClick={() => handleOpenDialog(event)}
             />
 
-            <EventDetailsDialog
+            <EventDetailsDialogNew
                 isOpen={isOpen}
                 onClose={handleCloseDialog}
                 activeEvent={activeEvent}

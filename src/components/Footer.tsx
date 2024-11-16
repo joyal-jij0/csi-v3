@@ -63,14 +63,6 @@ function Footer() {
                         <h3 className="text-lg md:text-xl font-bold mb-4">
                             FOR MORE UPDATES
                         </h3>
-
-                        {/* <svg
-                                    className="w-8 h-8 fill-current mr-2"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
-                                </svg>
-                                <span>Subscribe</span> */}
                         <Link
                             target="_blank"
                             rel="noopener nonreferrer"
@@ -93,19 +85,6 @@ function Footer() {
                             </ShimmerButton>
                         </Link>
 
-                        {/* <Button
-                                    className="text-[0.7rem]  md:text-lg"
-                                    containerClassName="w-20  lg:w-40 lg:h-12"
-                                    borderClassName='red'
-                                >
-                                    <svg
-                                        className="w-8 h-8 fill-current mr-2"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M21.9 5.9c-.2-.7-.7-1.2-1.4-1.4C18.3 4 12 4 12 4s-6.3 0-8.5.5c-.7.2-1.2.7-1.4 1.4C2 8.1 2 12 2 12s0 3.9.5 5.1c.2.7.7 1.2 1.4 1.4 2.2.5 8.5.5 8.5.5s6.3 0 8.5-.5c.7-.2 1.2-.7 1.4-1.4.5-1.2.5-5.1.5-5.1s0-3.9-.5-5.1zM9.5 15.5V8.5l6.5 3z" />
-                                    </svg>
-                                    <span>Subscribe</span>
-                                </Button> */}
                     </div>
                 </div>
             </div>
@@ -117,7 +96,6 @@ function Footer() {
                 <p className="text-sm md:text-base">
                     COPYRIGHT © 2024 CSI-INNOVATION
                 </p>
-                {/* <div className="flex-grow"></div> */}
             </footer>
         </div>
     );

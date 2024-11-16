@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import ShimmerButton from "./magicui/ShimmerButton";
 import { Button } from "./ui/moving-border";
 
 export default function Navbar() {

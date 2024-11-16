@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { EventsDataType } from "@/types/EventData";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import EventDetailsDialog from "../EventDetailsDialog";
 import {
@@ -14,20 +14,7 @@ import {
     UsersIcon,
 } from "lucide-react";
 
-export interface EventsDataType {
-    id: string;
-    name: string;
-    description: string;
-    venue: string;
-    isPaid: boolean;
-    isOnline: boolean;
-    guest: string | null;
-    eventTime: string;
-    imageUrls: string[];
-    isPrivate: boolean;
-    banner: string;
-    eventDate: Date;
-}
+
 
 function formatDate(isoString: Date): string {
     const date: Date = new Date(isoString);
