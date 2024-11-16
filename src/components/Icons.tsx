@@ -7,11 +7,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -31,11 +31,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -73,11 +73,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -103,11 +103,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -131,11 +131,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 <defs>
@@ -148,8 +148,8 @@ export const Icons = {
                         gradientTransform="translate(25243.061 38519.17) scale(189.38 189.81)"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0" stop-color="#387eb8"></stop>
-                        <stop offset="1" stop-color="#366994"></stop>
+                        <stop offset="0" stopColor="#387eb8"></stop>
+                        <stop offset="1" stopColor="#366994"></stop>
                     </linearGradient>
                     <linearGradient
                         id="b"
@@ -160,8 +160,8 @@ export const Icons = {
                         gradientTransform="translate(25309.061 38583.42) scale(189.38 189.81)"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0" stop-color="#ffe052"></stop>
-                        <stop offset="1" stop-color="#ffc331"></stop>
+                        <stop offset="0" stopColor="#ffe052"></stop>
+                        <stop offset="1" stopColor="#ffc331"></stop>
                     </linearGradient>
                 </defs>
                 <title>file_type_python</title>
@@ -244,11 +244,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            {/* <g id="SVGRepo_bgCarrier" stroke-width="10"></g> */}
+            {/* <g id="SVGRepo_bgCarrier" strokeWidth="10"></g> */}
             {/* <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g> */}
             <g id="">
                 <path
@@ -290,11 +290,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -317,11 +317,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 <defs>
@@ -334,15 +334,15 @@ export const Icons = {
                         gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0.231" stop-color="#999875"></stop>
-                        <stop offset="0.563" stop-color="#9b9977"></stop>
-                        <stop offset="0.683" stop-color="#a09f7e"></stop>
-                        <stop offset="0.768" stop-color="#a9a889"></stop>
-                        <stop offset="0.837" stop-color="#b7b69a"></stop>
-                        <stop offset="0.896" stop-color="#c9c7b0"></stop>
-                        <stop offset="0.948" stop-color="#deddcb"></stop>
-                        <stop offset="0.994" stop-color="#f8f6eb"></stop>
-                        <stop offset="1" stop-color="#fbf9ef"></stop>
+                        <stop offset="0.231" stopColor="#999875"></stop>
+                        <stop offset="0.563" stopColor="#9b9977"></stop>
+                        <stop offset="0.683" stopColor="#a09f7e"></stop>
+                        <stop offset="0.768" stopColor="#a9a889"></stop>
+                        <stop offset="0.837" stopColor="#b7b69a"></stop>
+                        <stop offset="0.896" stopColor="#c9c7b0"></stop>
+                        <stop offset="0.948" stopColor="#deddcb"></stop>
+                        <stop offset="0.994" stopColor="#f8f6eb"></stop>
+                        <stop offset="1" stopColor="#fbf9ef"></stop>
                     </linearGradient>
                     <linearGradient
                         id="b"
@@ -353,8 +353,8 @@ export const Icons = {
                         gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0" stop-color="#48a547"></stop>
-                        <stop offset="1" stop-color="#3f9143"></stop>
+                        <stop offset="0" stopColor="#48a547"></stop>
+                        <stop offset="1" stopColor="#3f9143"></stop>
                     </linearGradient>
                     <linearGradient
                         id="c"
@@ -365,10 +365,10 @@ export const Icons = {
                         gradientTransform="matrix(-0.977, -0.323, -0.29, 0.877, -375.944, -928.287)"
                         gradientUnits="userSpaceOnUse"
                     >
-                        <stop offset="0" stop-color="#41a247"></stop>
-                        <stop offset="0.352" stop-color="#4ba74b"></stop>
-                        <stop offset="0.956" stop-color="#67b554"></stop>
-                        <stop offset="1" stop-color="#69b655"></stop>
+                        <stop offset="0" stopColor="#41a247"></stop>
+                        <stop offset="0.352" stopColor="#4ba74b"></stop>
+                        <stop offset="0.956" stopColor="#67b554"></stop>
+                        <stop offset="1" stopColor="#69b655"></stop>
                     </linearGradient>
                 </defs>
                 <title>file_type_mongo</title>
@@ -388,11 +388,11 @@ export const Icons = {
             width="100%"
             height="100%"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 {" "}
@@ -440,11 +440,11 @@ export const Icons = {
             height="100%"
             fill="none"
         >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
                 <title>file_type_vite</title>
@@ -466,12 +466,8 @@ export const Icons = {
                         gradientUnits="userSpaceOnUse"
                         gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"
                     >
-                        <stop stop-color="#41D1FF" id="stop38"></stop>
-                        <stop
-                            offset="1"
-                            stop-color="#BD34FE"
-                            id="stop40"
-                        ></stop>
+                        <stop stopColor="#41D1FF" id="stop38"></stop>
+                        <stop offset="1" stopColor="#BD34FE" id="stop40"></stop>
                     </linearGradient>
                     <linearGradient
                         id="paint1_linear"
@@ -482,17 +478,13 @@ export const Icons = {
                         gradientUnits="userSpaceOnUse"
                         gradientTransform="matrix(.07142 0 0 .07142 1.3398 1.8944)"
                     >
-                        <stop stop-color="#FFEA83" id="stop43"></stop>
+                        <stop stopColor="#FFEA83" id="stop43"></stop>
                         <stop
                             offset=".0833"
-                            stop-color="#FFDD35"
+                            stopColor="#FFDD35"
                             id="stop45"
                         ></stop>
-                        <stop
-                            offset="1"
-                            stop-color="#FFA800"
-                            id="stop47"
-                        ></stop>
+                        <stop offset="1" stopColor="#FFA800" id="stop47"></stop>
                     </linearGradient>
                 </defs>
             </g>

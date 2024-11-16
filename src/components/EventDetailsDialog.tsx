@@ -46,7 +46,7 @@ function formatDate(dateInput: string | Date): string {
                         <DialogTitle className="text-2xl font-bold">
                             {activeEvent.name}
                         </DialogTitle>
-                        <DialogDescription>
+                        <DialogDescription asChild>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                                 <div className="w-full">
                                     <ImageCarousel images={activeEvent.imageUrls} />

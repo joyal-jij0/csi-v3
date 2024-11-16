@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
@@ -25,11 +25,11 @@
     "framer-motion": "^11.3.21",
     "lucide-react": "^0.417.0",
     "mongoose": "^8.5.3",
-    "next": "14.2.5",
+    "next": "15.0.3",
     "prisma": "^5.19.1",
-    "react": "^18.3.1",
+    "react": "19.0.0-rc-66855b96-20241106",
     "react-day-picker": "^9.2.1",
-    "react-dom": "^18",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-hook-form": "^7.53.1",
     "react-icon": "^1.0.0",
     "react-icons": "^5.2.1",
@@ -42,12 +42,16 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5",
+    "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   }
 }
