@@ -1,11 +1,7 @@
 "use client";
-import { motion, useTransform, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import ShineBorder from "@/components/magicui/ShineBorder";
-import {
-    EventCard,
-    EventsDataType,
-} from "@/components/landingPage/UpdateSection";
+import { EventsDataType } from "@/types/EventData";
+import {EventCard} from "@/components/landingPage/UpdateSection";
 import EventDetailsDialogNew from "@/components/EventDetailsDialogNew";
 
 export default function EventsPage() {
