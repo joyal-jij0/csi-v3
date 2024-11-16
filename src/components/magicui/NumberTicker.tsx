@@ -16,7 +16,7 @@ export default function NumberTicker({
   className?: string;
   delay?: number; // delay in s
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = useRef<HTMLSpanElement>(null!);
   const motionValue = useMotionValue(direction === "down" ? value : 0);
   const springValue = useSpring(motionValue, {
     damping: 60,

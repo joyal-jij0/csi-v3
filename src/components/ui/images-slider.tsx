@@ -1,7 +1,9 @@
 "use client";
 import { cn } from '../../lib/utils';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionProps } from "framer-motion";
 import React, { useEffect, useState } from "react";
+
+const MotionImage = motion.img as React.FC<React.ImgHTMLAttributes<HTMLImageElement> & MotionProps>;
 
 export const  ImagesSlider = ({
   images,
@@ -137,7 +139,7 @@ export const  ImagesSlider = ({
 
       {areImagesLoaded && (
         <AnimatePresence>
-          <motion.img
+          <MotionImage
             key={currentIndex}
             src={loadedImages[currentIndex]}
             initial="initial"

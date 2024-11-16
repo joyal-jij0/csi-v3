@@ -12,12 +12,23 @@ interface PopupImageProps {
 
 const PopupImage: React.FC<PopupImageProps> = ({ src, onClose }) => {
   return (
+    <div onClick={onClose}>
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-      onClick={onClose}
+      style={{
+        position: 'fixed', // Equivalent to `fixed`
+        top: 0, // Part of `inset-0`
+        right: 0, // Part of `inset-0`
+        bottom: 0, // Part of `inset-0`
+        left: 0, // Part of `inset-0`
+        zIndex: 50, // Equivalent to `z-50`
+        display: 'flex', // Equivalent to `flex`
+        alignItems: 'center', // Equivalent to `items-center`
+        justifyContent: 'center', // Equivalent to `justify-center`
+        backgroundColor: 'rgba(0, 0, 0, 0.75)', // Combines `bg-black` and `bg-opacity-75`
+      }}
     >
       <Image
         src={src}
@@ -27,6 +38,7 @@ const PopupImage: React.FC<PopupImageProps> = ({ src, onClose }) => {
         alt="popup thumbnail"
       />
     </motion.div>
+    </div>
   );
 };
 
@@ -40,7 +52,7 @@ export const ParallaxScroll: React.FC<ParallaxScrollProps> = ({
   className,
 }) => {
   const [popupImage, setPopupImage] = useState<string | null>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null!);
   const { scrollYProgress } = useScroll({
     target: gridRef,
     offset: ["start end", "end start"],

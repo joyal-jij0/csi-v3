@@ -30,8 +30,9 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
 
     const firstRow = products.slice(0, products.length / 2);
     const secondRow = products.slice(products.length / 2, products.length);
-
-    const scrollRef = React.useRef(null);
+    
+    const scrollRef = React.useRef<HTMLDivElement>(null!);
+    
     const { scrollYProgress } = useScroll({
         target: scrollRef,
         offset: ["start start", "end start"],
@@ -104,7 +105,14 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
                     opacity,
                 }}
             >
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+                <motion.div 
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row-reverse',
+                    gap: '5rem', // Equivalent to `space-x-20` in Tailwind (20 * 0.25rem)
+                    marginBottom: '5rem', // Equivalent to `mb-20` in Tailwind (20 * 0.25rem)
+                }}
+                >
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -117,7 +125,14 @@ export const HeroParallax = ({ products }: { products: Product[] }) => {
 
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row mb-20 space-x-20 ">
+                <motion.div 
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        marginBottom: '5rem', // Equivalent to `mb-20` (20 * 0.25rem = 5rem)
+                        gap: '5rem', // Equivalent to `space-x-20` (20 * 0.25rem = 5rem)
+                    }}
+                >
                     {secondRow.map((product) => (
 
                         <ProductCard
@@ -186,13 +201,17 @@ const ProductCard = ({
     };
 
     return (
+        <div onClick={handleClick}>
         <motion.div
             style={{
                 x: translate,
+                height: '24rem', // Equivalent to `h-96` (96 * 0.25rem = 24rem)
+                width: '30rem', // Equivalent to `w-[30rem]`
+                position: 'relative', // Equivalent to `relative`
+                flexShrink: 0, // Equivalent to `flex-shrink-0`
             }}
             key={product.id}
-            className="group/product h-96 w-[30rem] relative flex-shrink-0"
-            onClick={handleClick}
+            // className="group/product h-96 w-[30rem] relative flex-shrink-0"
         >
             <div className="block">
                 <Image
@@ -205,6 +224,7 @@ const ProductCard = ({
             </div>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
         </motion.div>
+        </div>
     );
 };
 
