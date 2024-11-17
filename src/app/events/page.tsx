@@ -1,62 +1,20 @@
-"use client";
-import { useEffect, useState } from "react";
+import { EventCard } from "@/components/landingPage/UpdateSection";
 import { EventsDataType } from "@/types/EventData";
-import {EventCard} from "@/components/landingPage/UpdateSection";
-import EventDetailsDialog from "@/components/EventDetailsDialog";
-import { unstable_noStore as noStore } from "next/cache";
 
-export default function EventsPage() {
-    const [events, setEvents] = useState<EventsDataType[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
+async function getEvents() {
+    let res = await fetch(`http://${process.env.VERCEL_URL}/api/events`, {
+        cache: "force-cache",
+        next: { revalidate: 60 },
+    });
+    let post: EventsDataType[] = await res.json();
+    return post;
+}
 
-    const fetchEvents = async () => {
-        try {
-            noStore()
-            const response = await fetch("/api/events", {
-                next: { tags: ["events"] },
-                headers: {
-                    "Cache-Control": "no-cache",
-                },
-            });
-            if (!response.ok) {
-                throw new Error("Failed to fetch events");
-            }
-            const data = await response.json();
-            setEvents(data);
-        } catch (error) {
-            console.error("Error:", error);
-            setError("Failed to load events");
-        } finally {
-            setLoading(false);
-        }
-    };
+export default async function EventsPage() {
+    console.log(`http://${process.env.VERCEL_URL}/api/events`);
+    let events = await getEvents();
 
-    useEffect(() => {
-        fetchEvents();
-        const interval = setInterval(() => {
-            if (document.visibilityState === "visible") {
-                fetchEvents();
-            }
-        }, 60000);
-        return () => clearInterval(interval);
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center h-screen">
-                <div className="text-xl text-gray-600">Loading events...</div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center h-screen">
-                <div className="text-xl text-red-600">{error}</div>
-            </div>
-        );
-    }
+    if (!events) return <div>Loading...</div>;
 
     return (
         <div>
@@ -67,7 +25,7 @@ export default function EventsPage() {
                 {events.length > 0 ? (
                     <div className="max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                         {events.map((event) => (
-                            <Card event={event} key={event.id} />
+                            <EventCard key={event.id} event={event} index={1} />
                         ))}
                     </div>
                 ) : (
@@ -79,35 +37,3 @@ export default function EventsPage() {
         </div>
     );
 }
-
-const Card: React.FC<{ event: EventsDataType }> = ({ event }) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeEvent, setActiveEvent] = useState<EventsDataType | null>(null);
-
-    const handleOpenDialog = (event: EventsDataType) => {
-        setActiveEvent(event);
-        setIsOpen(true);
-    };
-
-    const handleCloseDialog = () => {
-        setActiveEvent(null);
-        setIsOpen(false);
-    };
-
-    return (
-        <>
-            <EventCard
-                key={event.id}
-                event={event}
-                index={1}
-                onClick={() => handleOpenDialog(event)}
-            />
-
-            <EventDetailsDialog
-                isOpen={isOpen}
-                onClose={handleCloseDialog}
-                activeEvent={activeEvent}
-            />
-        </>
-    );
-};

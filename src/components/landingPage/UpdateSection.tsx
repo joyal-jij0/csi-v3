@@ -4,10 +4,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { EventsDataType } from "@/types/EventData";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import EventDetailsDialog from "../EventDetailsDialog";
-import { CalendarIcon, ClockIcon, GlobeIcon, MapPinIcon} from "lucide-react";
+import { CalendarIcon, ClockIcon, GlobeIcon, MapPinIcon } from "lucide-react";
 import { unstable_noStore as noStore } from "next/cache";
-
-
 
 function formatDate(isoString: Date): string {
     const date: Date = new Date(isoString);
@@ -82,12 +80,7 @@ export function UpdateSection() {
             {events.length > 0 ? (
                 <ul className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                     {events.map((event, index) => (
-                        <EventCard
-                            key={event.id}
-                            event={event}
-                            index={index}
-                            onClick={() => handleOpenDialog(event)}
-                        />
+                        <EventCard key={event.id} event={event} index={index} />
                     ))}
                 </ul>
             ) : (
@@ -104,57 +97,76 @@ export function UpdateSection() {
 export function EventCard({
     event,
     index,
-    onClick,
 }: {
     event: EventsDataType;
     index: number;
-    onClick: (event: EventsDataType) => void;
 }) {
+    const [activeEvent, setActiveEvent] = useState<EventsDataType | null>(null);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleOpenDialog = (event: EventsDataType) => {
+        setActiveEvent(event);
+        setIsOpen(true);
+    };
+
+    const handleCloseDialog = () => {
+        setActiveEvent(null);
+        setIsOpen(false);
+    };
+
     return (
-        <div
-            className="bg-neutral-900 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
-            onClick={() => onClick(event)}
-        >
-            <div className="relative h-48">
-                <Image
-                    src={event.banner}
-                    alt={event.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform group-hover:scale-[1.025] duration-300 w-full h-full object-cover"
-                />
-            </div>
-            <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-purple-300 line-clamp-1">
-                    {event.name}
-                </h3>
-                <p className="text-gray-400 mb-4 line-clamp-2">
-                    {event.description}
-                </p>
-                <div className="space-y-2 text-sm">
-                    <div className="flex items-center text-gray-500">
-                        <CalendarIcon className="w-4 h-4 mr-2" />
-                        <span>{formatDate(event.eventDate)}</span>
-                    </div>
-                    <div className="flex items-center text-gray-500">
-                        <ClockIcon className="w-4 h-4 mr-2" />
-                        <span>{event.eventTime}</span>
-                    </div>
-                    <div className="flex items-center text-gray-500">
-                        {event.isOnline ? (
-                            <>
-                                <GlobeIcon className="w-4 h-4 mr-2" />
-                                <span>Online Event</span>
-                            </>
-                        ) : (
-                            <>
-                                <MapPinIcon className="w-4 h-4 mr-2" />
-                                <span>{event.venue}</span>
-                            </>
-                        )}
+        <>
+            <EventDetailsDialog
+                isOpen={isOpen}
+                onClose={handleCloseDialog}
+                activeEvent={activeEvent}
+            />
+
+            <div
+                className="bg-neutral-900 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
+                onClick={() => handleOpenDialog(event)}
+            >
+                <div className="relative h-48">
+                    <Image
+                        src={event.banner}
+                        alt={event.name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="transition-transform group-hover:scale-[1.025] duration-300 w-full h-full object-cover"
+                    />
+                </div>
+                <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-2 text-purple-300 line-clamp-1">
+                        {event.name}
+                    </h3>
+                    <p className="text-gray-400 mb-4 line-clamp-2">
+                        {event.description}
+                    </p>
+                    <div className="space-y-2 text-sm">
+                        <div className="flex items-center text-gray-500">
+                            <CalendarIcon className="w-4 h-4 mr-2" />
+                            <span>{formatDate(event.eventDate)}</span>
+                        </div>
+                        <div className="flex items-center text-gray-500">
+                            <ClockIcon className="w-4 h-4 mr-2" />
+                            <span>{event.eventTime}</span>
+                        </div>
+                        <div className="flex items-center text-gray-500">
+                            {event.isOnline ? (
+                                <>
+                                    <GlobeIcon className="w-4 h-4 mr-2" />
+                                    <span>Online Event</span>
+                                </>
+                            ) : (
+                                <>
+                                    <MapPinIcon className="w-4 h-4 mr-2" />
+                                    <span>{event.venue}</span>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
