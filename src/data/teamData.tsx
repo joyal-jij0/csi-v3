@@ -55,96 +55,75 @@ export const people2: Person[] = [
     {
         id: 1,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871013/KPA_Dharmanshu_Mahajan-fotor-2024080520398_vqe41z.jpg",
-        name: "Dharmanshu Mahajan",
-        position: "Advisor",
-    },
-    {
-        id: 2,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871007/Asmi_Goyal-fotor-20240805203659_yqrmqg.jpg",
-        name: "Asmi Goyal",
-        position: "Advisor",
-    },
-    {
-        id: 3,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Aryan_Goyal-fotor-2024080520351_xyscdc.jpg",
-        name: "Aryan Goyal",
-        position: "Advisor",
-    },
-    {
-        id: 4,
-        image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Jain-fotor-20240805204147_tzo4za.jpg",
         name: "Saksham Gupta",
         position: "Chairperson",
     },
     {
-        id: 5,
+        id: 2,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Vidhi_Jain-fotor-20240805204258_f1s3wi.jpg",
         name: "Vidhi Jain",
         position: "Vice-Chairperson",
     },
     {
-        id: 6,
+        id: 3,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Agarwal-fotor-2024080520410_g3ug6h.jpg",
         name: "Saksham Agarwal",
         position: "Secretary",
     },
     {
-        id: 7,
+        id: 4,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871022/Yash_Gupta-fotor-2024080520447_tmuw7q.jpg",
         name: "Yash Gupta",
         position: "Joint Secretary",
     },
     {
-        id: 8,
+        id: 5,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871023/Prajjwal_Sharma-fotor-20240805204020_q4dq1z.jpg",
         name: "Prajjwal Sharma",
         position: "Technical Head",
     },
     {
-        id: 9,
+        id: 6,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871007/Aryan_Dutta-fotor-20240805203429_aqpw49.jpg",
         name: "Aryan Dutta",
         position: "Content Head",
     },
     {
-        id: 10,
+        id: 7,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
         name: "Deven Puri",
         position: "Event Management Head",
     },
     {
-        id: 11,
+        id: 8,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Ansh_Malik-fotor-20240805203113_cvukvu.jpg",
         name: "Ansh Malik",
         position: "PR Co-Head",
     },
     {
-        id: 12,
+        id: 9,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871021/Naman_Mangla-fotor-20240805203952_xkpys2.jpg",
         name: "Naman Mangla",
         position: "PR Co-Head",
     },
     {
-        id: 13,
+        id: 10,
         image_source:
             "https://res.cloudinary.com/du0mba5mz/image/upload/v1727416816/CSI/6321017259627233825_kotexk.jpg",
         name: "Harsh Maurya",
         position: "Photography Head",
     },
     {
-        id: 14,
+        id: 11,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
         name: "Vidit Kaushik",
