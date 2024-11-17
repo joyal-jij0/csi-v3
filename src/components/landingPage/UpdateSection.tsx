@@ -112,7 +112,7 @@ export function EventCard({
 }) {
     return (
         <div
-            className="bg-neutral-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
+            className="bg-neutral-900 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
             onClick={() => onClick(event)}
         >
             <div className="relative h-48">
@@ -121,22 +121,8 @@ export function EventCard({
                     alt={event.name}
                     layout="fill"
                     objectFit="cover"
-                    className="transition-transform duration-300 hover:scale-110 w-full h-full object-cover"
+                    className="transition-transform group-hover:scale-[1.025] duration-300 w-full h-full object-cover"
                 />
-                {/* <div className="absolute top-2 right-2 flex space-x-2">
-                    {event.isPaid && (
-                        <span className="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded-full">
-                            <DollarSignIcon className="w-3 h-3 inline-block mr-1" />
-                            Paid
-                        </span>
-                    )}
-                    {event.isPrivate && (
-                        <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 txt-ce rounded-full">
-                            <MapPinIcon className="w-3.5 h-3.5 inline-block mr-1" />
-                            MAIT
-                        </span>
-                    )}
-                </div> */}
             </div>
             <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-purple-300 line-clamp-1">
@@ -167,12 +153,6 @@ export function EventCard({
                             </>
                         )}
                     </div>
-                    {/* {event.guest && (
-                        <div className="flex items-center text-gray-500">
-                            <UsersIcon className="w-4 h-4 mr-2" />
-                            <span>Guest: {event.guest}</span>
-                        </div>
-                    )} */}
                 </div>
             </div>
         </div>
