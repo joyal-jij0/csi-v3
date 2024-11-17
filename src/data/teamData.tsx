@@ -191,7 +191,7 @@ export const executivesData: Department[] = [
     {
         name: "Photography Executives",
         leads: ["Harsh Maurya"],
-        people: ["Mridul Dutta", "Nipun Agrawal",],
+        people: ["Mridul Dutta", "Nipun Agrawal"],
     },
     {
         name: "Content Executives",
@@ -232,7 +232,15 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "Dev Team",
         lead: "Joyal Jijo",
-        people: ["Adarsh Singh", "Ashish", "Kumar Harsh", "Vrishank Sharma", "Arpan Taneja", "Aditya Singh Khichi", "Tanishq Sethi"],
+        people: [
+            "Adarsh Singh",
+            "Ashish",
+            "Kumar Harsh",
+            "Vrishank Sharma",
+            "Arpan Taneja",
+            "Aditya Singh Khichi",
+            "Tanishq Sethi",
+        ],
     },
     {
         name: "UI/UX Team",
@@ -246,7 +254,7 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "DSA Team",
         lead: "Devesh Tuteja",
-        people: ["Pratham Gupta", "Nikita Bansal"],
+        people: ["Pratham Gupta", "Nikita Bansal", "Himanshu Gupta"],
     },
 ];
 
