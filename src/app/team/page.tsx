@@ -11,7 +11,7 @@ export default function TeamPage() {
     return (
         <div className="flex flex-col space-y-12">
             <div className="flex flex-col items-center text-center">
-                <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+                <h2 className="mt-6 mx-4 text-pretty font-bold text-2xl lg:text-4xl">
                     FACULTY COORDINATORS
                 </h2>
             </div>
@@ -34,7 +34,7 @@ export default function TeamPage() {
                     </p>
                 </div>
             </div>
-            <div className="mt-12 mx-12 grid gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-6">
+            <div className="mt-12 mx-4 md:mx-12 grid gap-x-2 gap-y-6 md:gap-y-16 grid-cols-3 lg:grid-cols-6">
                 {people1.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
                         <Avatar className="mb-4 size-20 md:mb-5 lg:size-36">
@@ -44,8 +44,10 @@ export default function TeamPage() {
                             />
                             <AvatarFallback>{person.name}</AvatarFallback>
                         </Avatar>
-                        <p className="text-center font-medium">{person.name}</p>
-                        <p className="text-center text-sm font-light text-muted-foreground">
+                        <p className="text-center text-sm font-medium">
+                            {person.name}
+                        </p>
+                        <p className="text-center text-xs font-light text-muted-foreground">
                             {person.position}
                         </p>
                     </div>
@@ -53,22 +55,24 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl">
                     OUR TEAM
                 </h2>
             </div>
-            <div className="mt-12 mx-12 grid gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-12 mx-8 md:mx-12 grid gap-x-4 gap-y-6 md:gap-y-16 grid-cols-2 lg:grid-cols-5">
                 {people2.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
-                        <Avatar className="mb-4 size-20 md:mb-5 lg:size-36 rounded-3xl">
+                        <Avatar className="mb-4 size-32 md:mb-5 lg:size-36 rounded-3xl">
                             <AvatarImage
                                 src={person.image_source}
                                 className="object-cover object-top"
                             />
                             <AvatarFallback>{person.name}</AvatarFallback>
                         </Avatar>
-                        <p className="text-center font-medium">{person.name}</p>
-                        <p className="text-center font-light text-muted-foreground">
+                        <p className="text-center text-sm font-medium">
+                            {person.name}
+                        </p>
+                        <p className="text-center text-xs font-light text-muted-foreground">
                             {person.position}
                         </p>
                     </div>
@@ -76,12 +80,12 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl">
                     Technical Executives
                 </h2>
             </div>
 
-            <div className="mt-12 mx-12 md:mx-40 justify-between grid gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 mx-6 md:mx-40 justify-between grid gap-x-4 gap-y-6 md:gap-y-16 grid-cols-2 lg:grid-cols-4">
                 {TechinalDeptData.map((executive) => (
                     <div
                         key={executive.name}
@@ -108,12 +112,12 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl">
                     Executives
                 </h2>
             </div>
 
-            <div className="mt-12 mx-12 md:mx-40 grid gap-x-4 gap-y-16 md:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-12 mx-6 md:mx-40 grid gap-x-4 gap-y-16 grid-cols-2 lg:grid-cols-5">
                 {executivesData.map((executive) => (
                     <div
                         key={executive.name}

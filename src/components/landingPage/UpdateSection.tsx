@@ -126,40 +126,40 @@ export function EventCard({
                 className="bg-neutral-900 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
                 onClick={() => handleOpenDialog(event)}
             >
-                <div className="relative h-48">
+                <div className="relative w-full aspect-video">
                     <Image
                         src={event.banner}
                         alt={event.name}
-                        layout="fill"
-                        objectFit="cover"
+                        height={150}
+                        width={250}
                         className="transition-transform group-hover:scale-[1.025] duration-300 w-full h-full object-cover"
                     />
                 </div>
-                <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-purple-300 line-clamp-1">
+                <div className="pl-3 pr-2 py-2 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-0.5 md:mb-2 text-purple-300 line-clamp-1">
                         {event.name}
                     </h3>
-                    <p className="text-gray-400 mb-4 line-clamp-2">
+                    <p className="text-sm md:text-md text-gray-400 mb-1.5 md:mb-2 line-clamp-2">
                         {event.description}
                     </p>
-                    <div className="space-y-2 text-sm">
+                    <div className="space-y-2 text-xs md:text-sm">
                         <div className="flex items-center text-gray-500">
-                            <CalendarIcon className="w-4 h-4 mr-2" />
+                            <CalendarIcon className="size-3 md:size-4 mr-2" />
                             <span>{formatDate(event.eventDate)}</span>
                         </div>
                         <div className="flex items-center text-gray-500">
-                            <ClockIcon className="w-4 h-4 mr-2" />
+                            <ClockIcon className="size-3 md:size-4 mr-2" />
                             <span>{event.eventTime}</span>
                         </div>
                         <div className="flex items-center text-gray-500">
                             {event.isOnline ? (
                                 <>
-                                    <GlobeIcon className="w-4 h-4 mr-2" />
+                                    <GlobeIcon className="size-3 md:size-4 mr-2" />
                                     <span>Online Event</span>
                                 </>
                             ) : (
                                 <>
-                                    <MapPinIcon className="w-4 h-4 mr-2" />
+                                    <MapPinIcon className="size-3 md:size-4 mr-2 line-clamp-2" />
                                     <span>{event.venue}</span>
                                 </>
                             )}
