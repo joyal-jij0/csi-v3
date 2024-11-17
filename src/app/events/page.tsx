@@ -2,7 +2,7 @@ import { EventCard } from "@/components/landingPage/UpdateSection";
 import { EventsDataType } from "@/types/EventData";
 
 async function getEvents() {
-    let res = await fetch(`http://${process.env.VERCEL_URL}/api/events`, {
+    let res = await fetch(`https://csiinnowave.com/api/events`, {
         cache: "force-cache",
         next: { revalidate: 60 },
     });
