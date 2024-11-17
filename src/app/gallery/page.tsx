@@ -12,10 +12,8 @@ function Gallery() {
     const fetchEvents = async () => {
         try {
             const response = await fetch("/api/events", {
-                next: { tags: ["events"] },
-                headers: {
-                    "Cache-Control": "no-cache",
-                },
+                cache: "force-cache",
+                next: { tags: ['events'], revalidate: 60 },
             });
             if (!response.ok) {
                 throw new Error("Failed to fetch events");

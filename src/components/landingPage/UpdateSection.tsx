@@ -38,10 +38,8 @@ export function UpdateSection() {
         try {
             noStore();
             const response = await fetch("/api/events?limit=3", {
-                next: { tags: ["events"] },
-                headers: {
-                    "Cache-Control": "no-cache",
-                },
+                cache: "force-cache",
+                next: { tags: ['events'], revalidate: 60 },
             });
             if (!response.ok) {
                 throw new Error("Failed to fetch events");

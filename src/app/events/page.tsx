@@ -4,7 +4,7 @@ import { EventsDataType } from "@/types/EventData";
 async function getEvents() {
     let res = await fetch(`https://csiinnowave.com/api/events`, {
         cache: "force-cache",
-        next: { revalidate: 60 },
+        next: { tags: ['events'], revalidate: 60 },
     });
     let post: EventsDataType[] = await res.json();
     return post;
