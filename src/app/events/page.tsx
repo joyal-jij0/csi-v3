@@ -11,7 +11,6 @@ async function getEvents() {
 }
 
 export default async function EventsPage() {
-    console.log(`http://${process.env.VERCEL_URL}/api/events`);
     let events = await getEvents();
 
     if (!events) return <div>Loading...</div>;
