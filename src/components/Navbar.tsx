@@ -89,7 +89,7 @@ export default function Navbar() {
                             href="https://drive.google.com/file/d/1vVOrrGA8Mlr0lUY0wBkKG12Pt9ZaQX7X/view"
                         >
                             <Button
-                                className="text-[0.7rem] md:text-lg"
+                                className="text-[0.7rem] lg:text-lg"
                                 containerClassName="w-20 lg:w-40 lg:h-14 mx-2"
                             >
                                 BROCHURE
