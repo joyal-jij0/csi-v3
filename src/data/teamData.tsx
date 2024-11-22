@@ -179,8 +179,6 @@ export const executivesData: Department[] = [
             "Sarthak Rawat",
             "Yash",
             "Ujjawal Gupta",
-            "MOHD KAIF",
-            "Kanika Ahlawat",
             "Shubham Jha",
         ],
     },
