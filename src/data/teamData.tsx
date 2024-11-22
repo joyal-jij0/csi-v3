@@ -184,21 +184,6 @@ export const executivesData: Department[] = [
             "Shubham Jha",
         ],
     },
-    {
-        name: "Coordinators",
-        leads: ["Vidit"],
-        people: [
-            "Komal Tyagi",
-            "Muskan",
-            "Parth Goel",
-            "Parthsaarthie Sharma",
-            "Vishankh",
-            "Ravi Kumar",
-            "Ayush Sinha",
-            "Harshit Goel",
-            "Yakshit Wadhwa",
-        ],
-    },
 ];
 
 export interface TechnicalDepartment {
