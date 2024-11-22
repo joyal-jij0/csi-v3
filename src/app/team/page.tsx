@@ -117,7 +117,7 @@ export default function TeamPage() {
                 </h2>
             </div>
 
-            <div className="mt-12 mx-6 md:mx-40 grid gap-x-4 gap-y-16 grid-cols-2 lg:grid-cols-5">
+            <div className="mt-12 mx-6 md:mx-40 grid gap-x-4 gap-y-16 grid-cols-2 lg:grid-cols-4">
                 {executivesData.map((executive) => (
                     <div
                         key={executive.name}
