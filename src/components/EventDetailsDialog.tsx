@@ -11,6 +11,7 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { EventsDataType } from "@/types/EventData";
+import Image from "next/image";
 
 interface EventDetailsDialogProps {
     isOpen: boolean;
@@ -48,9 +49,23 @@ export default function EventDetailsDialog({
                     </DialogTitle>
                     <DialogDescription asChild>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-                            <div className="w-full">
-                                <ImageCarousel images={activeEvent.imageUrls} />
-                            </div>
+                            {activeEvent.imageUrls.length == 0 ? (
+                                <div className="w-full">
+                                    <Image
+                                        src={activeEvent.banner}
+                                        alt={activeEvent.name}
+                                        height={500}
+                                        width={500}
+                                        className="rounded-lg aspect-square"
+                                    />
+                                </div>
+                            ) : (
+                                <div className="w-full">
+                                    <ImageCarousel
+                                        images={activeEvent.imageUrls}
+                                    />
+                                </div>
+                            )}
 
                             <div className="space-y-4">
                                 <div>
