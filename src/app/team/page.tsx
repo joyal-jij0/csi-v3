@@ -37,7 +37,7 @@ export default function TeamPage() {
             <div className="mt-12 mx-4 md:mx-12 grid gap-x-2 gap-y-6 md:gap-y-16 grid-cols-3 lg:grid-cols-6">
                 {people1.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
-                        <Avatar className="mb-4 size-20 md:mb-5 lg:size-36 border border-purple-500">
+                        <Avatar className="mb-4 size-20 md:mb-5 md:size-28 lg:size-36 border border-purple-500">
                             <AvatarImage
                                 src={person.image_source}
                                 className="object-cover object-top"
@@ -59,7 +59,7 @@ export default function TeamPage() {
                     OUR TEAM
                 </h2>
             </div>
-            <div className="mt-12 mx-8 md:mx-12 grid gap-x-4 gap-y-6 md:gap-y-16 grid-cols-2 lg:grid-cols-5">
+            <div className="mt-12 mx-8 md:mx-12 flex gap-x-12 md:gap-x-20 lg:gap-x-28 gap-y-6 md:gap-y-16 items-center justify-center flex-wrap">
                 {people2.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
                         <Avatar className="mb-4 size-32 md:mb-5 lg:size-36 rounded-3xl border border-purple-500">

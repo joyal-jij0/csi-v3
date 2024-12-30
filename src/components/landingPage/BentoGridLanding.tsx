@@ -15,7 +15,7 @@ export default function BentoGridLanding() {
             header: (
                 <video
                     src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722877017/CSI/Untitled_design3_cvfszb.mp4"
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                     autoPlay
                     muted
                     loop
@@ -33,7 +33,7 @@ export default function BentoGridLanding() {
                     width={400}
                     height={600}
                     // layout="fill" // Adjust layout as needed
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
             ),
         },
@@ -48,7 +48,7 @@ export default function BentoGridLanding() {
                     width={400}
                     height={600}
                     // layout="fill" // Adjust layout as needed
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
             ),
         },
@@ -63,7 +63,7 @@ export default function BentoGridLanding() {
                     width={400}
                     height={600}
                     // layout="fill" // Adjust layout as needed
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
             ),
         },
@@ -74,7 +74,7 @@ export default function BentoGridLanding() {
             header: (
                 <video
                     src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722875836/CSI/Untitled_design2_y9ylh7.mp4"
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                     autoPlay
                     muted
                     loop
@@ -89,7 +89,7 @@ export default function BentoGridLanding() {
             header: (
                 <video
                     src="https://res.cloudinary.com/du0mba5mz/video/upload/v1722875071/CSI/Recording_2024-08-05_215455_anz67d.mp4"
-                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-full h-full min-h-[6rem] rounded-lg object-cover bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                     autoPlay
                     muted
                     loop
@@ -108,7 +108,7 @@ export default function BentoGridLanding() {
                     width={400}
                     height={600}
                     // layout="fill" // Adjust layout as needed
-                    className="flex flex-1 w-[550px] h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
+                    className="flex flex-1 w-[550px] h-full min-h-[6rem] rounded-lg bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"
                 />
             ),
         },
@@ -124,7 +124,8 @@ export default function BentoGridLanding() {
                         title={item.title}
                         description={item.description}
                         header={item.header}
-                        className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                        className={i === 3 || i === 6 ? "md:col-span-2" : " "}
+                        
                     />
                 ))}
             </BentoGrid>
