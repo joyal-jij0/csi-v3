@@ -39,7 +39,7 @@ export default function EventDetailsDialog({
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
             <DialogContent
-                className="md:max-w-4xl overflow-y-auto bg-gradient-to-br from-gray-900/95 to-gray-800/95 backdrop-blur-xl border-gray-700/50 shadow-2xl text-white rounded-2xl max-h-[90vh] p-6"
+                className="md:max-w-4xl overflow-y-auto bg-gradient-to-br from-zinc-950/10 to-zinc-800/10 backdrop-blur-xl border-gray-800/50 shadow-2xl text-white rounded-2xl max-h-[90vh] p-6"
                 onInteractOutside={onClose}
                 onEscapeKeyDown={onClose}
             >
@@ -103,7 +103,7 @@ export default function EventDetailsDialog({
                                 </div>
 
                                 <div className="space-y-2 text-sm">
-                                    <div className="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg transition-all hover:bg-gray-700/50">
+                                    <div className="flex items-center space-x-4 p-3 bg-zinc-700/30 rounded-lg transition-all hover:bg-gray-700/50">
                                         <Calendar className="w-6 h-6 text-blue-400" />
                                         <div>
                                             <p className="text-sm text-gray-400">
@@ -116,7 +116,7 @@ export default function EventDetailsDialog({
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg transition-all hover:bg-gray-700/50">
+                                    <div className="flex items-center space-x-4 p-3 bg-zinc-700/30 rounded-lg transition-all hover:bg-gray-700/50">
                                         <Clock className="w-6 h-6 text-blue-400" />
                                         <div>
                                             <p className="text-sm text-gray-400">
@@ -127,7 +127,7 @@ export default function EventDetailsDialog({
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg transition-all hover:bg-gray-700/50">
+                                    <div className="flex items-center space-x-4 p-3 bg-zinc-700/30 rounded-lg transition-all hover:bg-gray-700/50">
                                         <MapPin className="w-6 h-6 text-blue-400" />
                                         <div>
                                             <p className="text-sm text-gray-400">
@@ -141,7 +141,7 @@ export default function EventDetailsDialog({
                                 </div>
 
                                 {activeEvent.guest && (
-                                    <div className="w-full p-3 bg-gray-800/50 rounded-lg border border-gray-700">
+                                    <div className="w-full p-3 bg-zinc-600/30 rounded-lg border border-gray-700">
                                         <div className="flex items-center gap-2 text-emerald-400">
                                             <Users className="w-4 h-4" />
                                             <span className="font-semibold ">
