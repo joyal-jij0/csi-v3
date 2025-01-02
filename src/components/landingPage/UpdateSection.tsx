@@ -121,7 +121,7 @@ export function EventCard({
             />
 
             <div
-                className="bg-neutral-900 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
+                className="bg-gradient-to-br from-zinc-800/10 via-zinc-900 to-zinc-950 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
                 onClick={() => handleOpenDialog(event)}
             >
                 <div className="relative w-full aspect-video">
@@ -134,7 +134,7 @@ export function EventCard({
                     />
                 </div>
                 <div className="pl-3 pr-2 py-2 md:p-6">
-                    <h3 className="text-lg md:text-xl font-semibold mb-0.5 md:mb-2 text-purple-300 line-clamp-1">
+                    <h3 className="text-lg md:text-xl font-semibold mb-0.5 md:mb-2 bg-gradient-to-b from-violet-500 to-blue-500 bg-clip-text text-transparent line-clamp-1">
                         {event.name}
                     </h3>
                     <p className="text-sm md:text-md text-gray-400 mb-1.5 md:mb-2 line-clamp-2">

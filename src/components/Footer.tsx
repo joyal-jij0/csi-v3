@@ -11,8 +11,8 @@ import Link from "next/link";
 
 function Footer() {
     return (
-        <div>
-            <div className="mt-20 text-white md:mt-40 flex flex-col md:flex-row justify-between mx-10 items-start mb-12 px-4 md:px-10 lg:px-20">
+        <div className="bg-gradient-to-br from-zinc-950 via-black/80 to-zinc-900 backdrop-blur-sm">
+            <div className="mt-20 text-white md:mt-40 flex flex-col md:flex-row justify-between mx-10 items-start mb-12 px-4 md:px-10 lg:px-20 pt-4 ">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0">
                     <h3 className="text-xl md:text-2xl font-bold mb-6">
                         CONTACT US
@@ -48,14 +48,14 @@ function Footer() {
                             rel="noopener nonreferrer"
                             href="https://www.instagram.com/mait_csi_innowave/"
                         >
-                            <FaInstagram size={20} className="md:text-2xl" />
+                            <FaInstagram size={24} className="md:text-2xl" />
                         </Link>
                         <Link
                             target="_blank"
                             rel="noopener nonreferrer"
                             href="https://www.linkedin.com/company/csi-innowave/"
                         >
-                            <FaLinkedin size={20} className="md:text-2xl" />
+                            <FaLinkedin size={24} className="md:text-2xl" />
                         </Link>
                     </div>
                     <hr className="border my-4 md:my-5"></hr>

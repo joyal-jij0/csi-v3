@@ -19,11 +19,11 @@ export default function Navbar() {
                     />
                 </Link>
                 <div className="flex items-center  space-x-4">
-                    <div className="flex justify-center  text-white space-x-4 md:space-x-10">
+                    <div className="flex justify-center  font-medium bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-600  text-transparent bg-clip-text space-x-4 md:space-x-10">
                         <Link href="/">
                             <div
                                 className={`${
-                                    pathname === "/" ? "" : "text-gray-400"
+                                    pathname === "/" ? "" : "text-gray-500"
                                 } hidden md:block`}
                             >
                                 {
@@ -34,7 +34,7 @@ export default function Navbar() {
                         <Link href="/team">
                             <div
                                 className={
-                                    pathname === "/team" ? "" : "text-gray-400"
+                                    pathname === "/team" ? "" : "text-gray-500"
                                 }
                             >
                                 {
@@ -47,7 +47,7 @@ export default function Navbar() {
                                 className={
                                     pathname === "/events"
                                         ? ""
-                                        : "text-gray-400"
+                                        : "text-gray-500"
                                 }
                             >
                                 {
@@ -60,7 +60,7 @@ export default function Navbar() {
                                 className={
                                     pathname === "/gallery"
                                         ? ""
-                                        : "text-gray-400"
+                                        : "text-gray-500"
                                 }
                             >
                                 {
@@ -71,7 +71,7 @@ export default function Navbar() {
                         <Link href="/about">
                             <div
                                 className={
-                                    pathname === "/about" ? "" : "text-gray-400"
+                                    pathname === "/about" ? "" : "text-gray-500"
                                 }
                             >
                                 {
@@ -89,8 +89,8 @@ export default function Navbar() {
                             href="https://drive.google.com/file/d/1vVOrrGA8Mlr0lUY0wBkKG12Pt9ZaQX7X/view"
                         >
                             <Button
-                                className="text-[0.7rem] lg:text-lg"
-                                containerClassName="w-20 lg:w-40 lg:h-14 mx-2"
+                                className="text-[0.7rem] lg:text-lg bg-gradient-to-b from-black to-zinc-950 hover:to-zinc-900 transition-all  duration-500"
+                                containerClassName="w-20 lg:w-40 lg:h-14 mx-2 "
                             >
                                 BROCHURE
                             </Button>
