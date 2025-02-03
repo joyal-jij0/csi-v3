@@ -1,8 +1,50 @@
+export const metadata = {
+    title: "About CSI V3 - Maharaja Agrasen Institute of Technology",
+    description: "Learn about the Computer Society of India (CSI) at Maharaja Agrasen Institute of Technology. Discover our mission, achievements, and how we explore the intersection of technology and society.",
+    keywords: [
+        "CSI",
+        "Computer Society of India",
+        "Maharaja Agrasen Institute of Technology",
+        "Technology Society",
+        "Student Society",
+        "Tech Events",
+        "Collaborations",
+      ],
+      openGraph: {
+        title: "About CSI V3 - Maharaja Agrasen Institute of Technology",
+        description:
+          "Discover the mission, achievements, and impact of the Computer Society of India (CSI) at MAIT.",
+        url: "https://csi-v3.vercel.app/about", 
+        type: "website",
+        images: [
+          {
+            url: "https://yourwebsite.com/about-og-image.jpg", // Replace with the actual image URL
+            width: 1200,
+            height: 630,
+            alt: "CSI MAIT About Page Open Graph Image",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "About CSI V3 - Maharaja Agrasen Institute of Technology",
+        description:
+          "Discover the mission, achievements, and impact of the Computer Society of India (CSI) at MAIT.",
+        images: ["https://yourwebsite.com/about-og-image.jpg"], // Replace with the actual image URL
+      },
+};
+
 import NumberTicker from "../magicui/NumberTicker";
 
 export default function About() {
     return (
         <>
+            {/* <Head>
+                <title>About CSI V3 - Maharaja Agrasen Institute of Technology</title>
+                <meta name="description" content="Learn about the Computer Society of India (CSI) at Maharaja Agrasen Institute of Technology." />
+                <meta name="keywords" content="CSI, MAIT, Computer Society, Technology, Students" />
+                <meta name="author" content="CSI MAIT" />
+            </Head> */}
             <div className="text-white px-4 lg:px-16 py-8 bg-black">
                 <h2 className="text-4xl font-bold text-center mb-4">ABOUT</h2>
                 <p className="text-center text-lg lg:text-xl leading-relaxed">
