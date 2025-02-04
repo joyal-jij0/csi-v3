@@ -153,6 +153,7 @@ export const executivesData: Department[] = [
             "Parth Goel",
             "Parthsaarthie Sharma",
             "Yakshit Wadhwa",
+            "Leisha",
         ],
     },
     {
@@ -165,6 +166,7 @@ export const executivesData: Department[] = [
             "Jiya",
             "Kashvi Sharma",
             "Rishabh Tripathi",
+            "Anmol",
         ],
     },
     {
@@ -201,7 +203,6 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             "Vrishank Sharma",
             "Arpan Taneja",
             "Aditya Singh Khichi",
-            "Tanishq Sethi",
         ],
     },
     {
