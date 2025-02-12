@@ -195,9 +195,8 @@ export interface TechnicalDepartment {
 export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "Dev Team",
-        lead: "Joyal Jijo",
+        lead: "Adarsh Singh",
         people: [
-            "Adarsh Singh",
             "Ashish",
             "Kumar Harsh",
             "Vrishank Sharma",
@@ -206,8 +205,9 @@ export const TechinalDeptData: TechnicalDepartment[] = [
         ],
     },
     {
-        name: "UI/UX Team",
-        lead: "Tanishq Sagar",
+        name: "Research Team",
+        lead: "Joyal Jijo",
+        people: ["Pratham Gupta"]
     },
     {
         name: "ML Team",
@@ -217,7 +217,7 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "DSA Team",
         lead: "Devesh Tuteja",
-        people: ["Pratham Gupta", "Nikita Bansal", "Himanshu Gupta"],
+        people: ["Nikita Bansal", "Himanshu Gupta"],
     },
 ];
 
