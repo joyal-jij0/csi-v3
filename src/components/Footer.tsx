@@ -94,7 +94,7 @@ function Footer() {
             <footer className="text-white text-center py-2">
                 <div className="flex-grow mt-3"></div>
                 <p className="text-sm md:text-base">
-                    COPYRIGHT © 2024 CSI-INNOVATION
+                    COPYRIGHT © 2025 CSI-INNOWAVE
                 </p>
             </footer>
         </div>
