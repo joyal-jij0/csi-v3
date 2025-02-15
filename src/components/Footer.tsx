@@ -6,6 +6,7 @@ import {
     FaMapMarkerAlt,
     FaPhone,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import ShimmerButton from "./magicui/ShimmerButton";
 import Link from "next/link";
 
@@ -56,6 +57,13 @@ function Footer() {
                             href="https://www.linkedin.com/company/csi-innowave/"
                         >
                             <FaLinkedin size={24} className="md:text-2xl" />
+                        </Link>
+                        <Link
+                            target="_blank"
+                            rel="noopener nonreferrer"
+                            href="https://x.com/CsiInnowave"
+                        >
+                            <FaXTwitter size={24} className="md:text-2xl" />
                         </Link>
                     </div>
                     <hr className="border my-4 md:my-5"></hr>
