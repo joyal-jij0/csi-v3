@@ -70,11 +70,6 @@ export default function TeamPage() {
                     <p className="text-center text-sm font-light text-muted-foreground text-gray-300">
                         Chief Patron
                     </p>
-                    <div className="flex flex-row justify-center space-x-2 mt-1">
-                        <Link href="https://www.linkedin.com/posts/delhi-university_dr-nand-kishore-garg-alumni-of-university-activity-7065601419998863360-G7l-/">
-                            <LinkedinIcon className="size-4" />
-                        </Link>
-                    </div>
                 </div>
             </div>
             <div className="mt-12 mx-4 md:mx-12 grid gap-x-2 gap-y-6 md:gap-y-16 grid-cols-3 lg:grid-cols-6">
