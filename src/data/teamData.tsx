@@ -3,6 +3,10 @@ export interface Person {
     image_source: string;
     name: string;
     position: string;
+    links?: {
+        twitter?: string;
+        linkedin?: string;
+    };
 }
 
 export const people1: Person[] = [
@@ -12,6 +16,9 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709131248/csi/team/llgn4s6xwckilkumschq.png",
         name: "Prof. Neelam Sharma",
         position: "Patron",
+        links: {
+            linkedin: "https://in.linkedin.com/in/prof-neelam-sharma-291792257",
+        },
     },
     {
         id: 2,
@@ -19,6 +26,10 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709131288/csi/team/ov4sqvmtmkqejhvyufag.png",
         name: "Prof. S.S. Deswal",
         position: "Patron",
+        links: {
+            linkedin:
+                "https://www.linkedin.com/in/prof-dr-satvir-deswal-b94079a",
+        },
     },
     {
         id: 3,
@@ -26,6 +37,9 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709131324/csi/team/bttwzako6b0qhvhm2xmi.jpg",
         name: "Prof. Sachin Gupta",
         position: "Patron",
+        links: {
+            linkedin: "https://www.linkedin.com/in/drsachingupta",
+        },
     },
     {
         id: 4,
@@ -33,6 +47,9 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/dpp2rltxx/image/upload/v1709131324/csi/team/zbnwrkews8ahtnavdjcj.jpg",
         name: "Dr. Vinay Kumar Saini",
         position: "Faculty Coordinator",
+        links: {
+            linkedin: "https://www.linkedin.com/in/vinaykumarsaini",
+        },
     },
     {
         id: 5,
@@ -40,6 +57,9 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722872645/zisr7smueyjxu6nhgkui.jpg",
         name: "Prof. Bhaskar Kapoor",
         position: "Faculty Coordinator",
+        links: {
+            linkedin: "https://in.linkedin.com/in/dr-bhaskar-kapoor-6b4b7819",
+        },
     },
     {
         id: 6,
@@ -47,6 +67,9 @@ export const people1: Person[] = [
             "https://res.cloudinary.com/dfhj4i9hd/image/upload/v1716394844/CSI%20Website/Team/dkafmzugaexyltcxcjrb.png",
         name: "Mr. Arun Garg",
         position: "Mentor",
+        links: {
+            linkedin: "https://www.linkedin.com/in/arungargofficial",
+        },
     },
 ];
 
@@ -175,12 +198,7 @@ export const executivesData: Department[] = [
     {
         name: "Content Executives",
         leads: ["Aryan Dutta"],
-        people: [
-            "Sarthak Rawat",
-            "Yash",
-            "Ujjawal Gupta",
-            "Shubham Jha",
-        ],
+        people: ["Sarthak Rawat", "Yash", "Ujjawal Gupta", "Shubham Jha"],
     },
 ];
 

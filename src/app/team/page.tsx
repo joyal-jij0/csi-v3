@@ -6,6 +6,8 @@ import {
     TechinalDeptData,
     executivesData,
 } from "@/data/teamData";
+import { LinkedinIcon, TwitterIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function TeamPage() {
     return (
@@ -32,6 +34,11 @@ export default function TeamPage() {
                     <p className="text-center text-sm font-light text-muted-foreground text-gray-300">
                         Chief Patron
                     </p>
+                    <div className="flex flex-row justify-center space-x-2 mt-1">
+                        <Link href="https://www.linkedin.com/posts/delhi-university_dr-nand-kishore-garg-alumni-of-university-activity-7065601419998863360-G7l-/">
+                            <LinkedinIcon className="size-4" />
+                        </Link>
+                    </div>
                 </div>
             </div>
             <div className="mt-12 mx-4 md:mx-12 grid gap-x-2 gap-y-6 md:gap-y-16 grid-cols-3 lg:grid-cols-6">
@@ -50,6 +57,18 @@ export default function TeamPage() {
                         <p className="text-center text-xs font-light text-muted-foreground text-gray-300">
                             {person.position}
                         </p>
+                        <div className="flex flex-row justify-center space-x-2 mt-1">
+                            {person.links?.linkedin && (
+                                <Link href={person.links?.linkedin}>
+                                    <LinkedinIcon className="size-4" />
+                                </Link>
+                            )}
+                            {person.links?.twitter && (
+                                <Link href={person.links?.twitter}>
+                                    <TwitterIcon className="size-4" />
+                                </Link>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
