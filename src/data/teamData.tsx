@@ -200,14 +200,10 @@ export const executivesData: Department[] = [
     {
         name: "Content Executives",
         leads: ["Aryan Dutta"],
-
-
-
         people: [
             "Shubham Jha",
             "Yash",
         ],
-
     },
 ];
 
