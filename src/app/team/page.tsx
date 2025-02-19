@@ -9,6 +9,42 @@ import {
 import { LinkedinIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+    title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
+    description:
+      "Meet the talented team behind the Computer Society of India (CSI) at Maharaja Agrasen Institute of Technology. Learn about our faculty coordinators, executives, and technical team.",
+    keywords: [
+      "CSI Team",
+      "Computer Society of India",
+      "MAIT Faculty Coordinators",
+      "CSI Executives",
+      "Technical Team",
+      "Student Leaders",
+    ],
+    openGraph: {
+        title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
+        description:
+          "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
+        url: "https://www.csiinnowave.com/team", 
+        type: "website",
+        images: [
+          {
+            url: "/public/csi-innowave.jpg", 
+            width: 1200,
+            height: 630,
+            alt: "CSI MAIT Team Open Graph Image",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
+        description:
+          "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
+        images: ["/public/csi-innowave.jpg"], 
+      },
+};
+
 export default function TeamPage() {
     return (
         <div className="flex flex-col space-y-12 overflow-x-hidden">
@@ -44,7 +80,7 @@ export default function TeamPage() {
             <div className="mt-12 mx-4 md:mx-12 grid gap-x-2 gap-y-6 md:gap-y-16 grid-cols-3 lg:grid-cols-6">
                 {people1.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
-                        <Avatar className="mb-4 size-20 md:mb-5 lg:size-36 border border-purple-500">
+                        <Avatar className="mb-4 size-20 md:mb-5 md:size-28 lg:size-36 border border-purple-500">
                             <AvatarImage
                                 src={person.image_source}
                                 className="object-cover object-top"
@@ -78,7 +114,7 @@ export default function TeamPage() {
                     OUR TEAM
                 </h2>
             </div>
-            <div className="mt-12 mx-8 md:mx-12 grid gap-x-4 gap-y-6 md:gap-y-16 grid-cols-2 lg:grid-cols-5">
+            <div className="mt-12 mx-8 md:mx-12 flex gap-x-12 md:gap-x-20 lg:gap-x-28 gap-y-6 md:gap-y-16 items-center justify-center flex-wrap">
                 {people2.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
                         <Avatar className="mb-4 size-32 md:mb-5 lg:size-36 rounded-3xl border border-purple-500">

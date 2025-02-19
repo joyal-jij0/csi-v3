@@ -117,13 +117,13 @@ export const people2: Person[] = [
         name: "Aryan Dutta",
         position: "Content Head",
     },
-    {
-        id: 7,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
-        name: "Deven Puri",
-        position: "Event Management Head",
-    },
+    // {
+    //     id: 7,
+    //     image_source:
+    //         "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
+    //     name: "Deven Puri",
+    //     position: "Event Management Head",
+    // },
     {
         id: 8,
         image_source:
@@ -165,40 +165,49 @@ export const executivesData: Department[] = [
         name: "Event Management Executives",
         leads: ["Deven Puri"],
         people: [
-            "Vidit",
-            "Dhruv Mehra",
+            "Parthsaarthie Sharma",
+            "Shashwat Shankar",
+            "Yakshit Wadhwa",
             "Lakshay Sharma",
             "Naveen Verma",
             "Nikhil Hatwal",
             "Niyati Chugh",
-            "Shashwat Shankar",
-            "Tinish",
+            "Dhruv Mehra",
             "Parth Goel",
-            "Parthsaarthie Sharma",
-            "Yakshit Wadhwa",
+            "Liesha",
+            "Tinish",
+            "Vidit",
         ],
     },
     {
         name: "Public Relations Executives",
         leads: ["Ansh Malik", "Naman Mangla"],
         people: [
+            "Priyaanshu Sengupta",
+            "Rishabh Tripathi",
+            "Kashvi Sharma",
             "Dhruv Goel",
             "Garv Goel",
-            "Priyaanshu Sengupta",
-            "Jiya",
-            "Kashvi Sharma",
-            "Rishabh Tripathi",
+            "Neeyati",
+            "Anmol",
         ],
     },
     {
         name: "Photography Executives",
         leads: ["Harsh Maurya"],
-        people: ["Mridul Dutta", "Nipun Agrawal"],
+        people: ["Nipun Agrawal", "Mridul Dutta", ],
     },
     {
         name: "Content Executives",
         leads: ["Aryan Dutta"],
-        people: ["Sarthak Rawat", "Yash", "Ujjawal Gupta", "Shubham Jha"],
+
+
+
+        people: [
+            "Shubham Jha",
+            "Yash",
+        ],
+
     },
 ];
 
@@ -211,30 +220,29 @@ export interface TechnicalDepartment {
 export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "Dev Team",
-        lead: "Joyal Jijo",
+        lead: "Adarsh Singh",
         people: [
-            "Adarsh Singh",
-            "Ashish",
-            "Kumar Harsh",
             "Vrishank Sharma",
+            "Kumar Harsh",
             "Arpan Taneja",
-            "Aditya Singh Khichi",
-            "Tanishq Sethi",
+            "Aditya Singh",
+            "Ashish",
         ],
     },
     {
-        name: "UI/UX Team",
-        lead: "Tanishq Sagar",
+        name: "Research Team",
+        lead: "Joyal Jijo",
+        people: ["Pratham Gupta"]
     },
     {
         name: "ML Team",
         lead: "Gaurish Kadian",
-        people: ["Aditi", "Ayan Gairola"],
+        people: ["Ayan Gairola","Aditi"],
     },
     {
         name: "DSA Team",
         lead: "Devesh Tuteja",
-        people: ["Pratham Gupta", "Nikita Bansal", "Himanshu Gupta"],
+        people: ["Nikita Bansal"],
     },
 ];
 

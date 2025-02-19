@@ -7,6 +7,46 @@ import OrbitingCircles from "@/components/magicui/orbiting-circles";
 import { OrbitingCirclesDemo } from "@/components/landingPage/Orbit";
 // import Popup from "@/components/PopupBanner/PopUp";
 
+export const metadata = {
+    title: "CSI - INNOWAVE | Technocultural Society of MAIT",
+    description: "Join MAIT's premier technocultural society. Experience workshops, internships, and innovative initiatives fostering skill development and entrepreneurial spirit.",
+    keywords: [
+        "CSI INNOWAVE",
+        "Computer Society of India",
+        "MAIT",
+        "hackathon",
+        "internships",
+        "innovation",
+        "Tech Workshops",
+        "Seminars",
+        "Tech Competitions",
+        "Student Events",
+        "technocultural society",
+      ],
+    openGraph: {
+        title: "CSI - INNOWAVE | Beyond the Known, Journey to the Unexplored",
+        description:
+          "🚀 MAIT's Technocultural Society fostering innovation and sustainable progress. Join us for workshops, internships, and transformative initiatives. ✨",
+        url: "https://www.csiinnowave.com/", 
+        type: "website",
+        images: [
+          {
+            url: "/public/csi-innowave.jpg", 
+            width: 1200,
+            height: 630,
+            alt: "CSI MAIT Open Graph Image",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "CSI - INNOWAVE | Beyond the Known, Journey to the Unexplored",
+        description:
+          "🚀 MAIT's Technocultural Society fostering innovation and sustainable progress. Join us for workshops, internships, and transformative initiatives.✨",
+        images: ["/public/csi-innowave.jpg"], 
+      },
+  };
+
 export default function Home() {
     return (
         <>
