@@ -90,12 +90,12 @@ export default function TeamPage() {
                         </p>
                         <div className="flex flex-row justify-center space-x-2 mt-1">
                             {person.links?.linkedin && (
-                                <Link href={person.links?.linkedin}>
+                                <Link href={person.links?.linkedin} target="_blank">
                                     <LinkedinIcon className="size-4" />
                                 </Link>
                             )}
                             {person.links?.twitter && (
-                                <Link href={person.links?.twitter}>
+                                <Link href={person.links?.twitter} target="_blank">
                                     <TwitterIcon className="size-4" />
                                 </Link>
                             )}
@@ -125,6 +125,18 @@ export default function TeamPage() {
                         <p className="text-center text-xs font-light text-muted-foreground text-gray-300">
                             {person.position}
                         </p>
+                        <div className="flex flex-row justify-center space-x-2 mt-1">
+                            {person.links?.linkedin && (
+                                <Link href={person.links?.linkedin} target="_blank">
+                                    <LinkedinIcon className="size-4" />
+                                </Link>
+                            )}
+                            {person.links?.twitter && (
+                                <Link href={person.links?.twitter} target="_blank">
+                                    <TwitterIcon className="size-4" />
+                                </Link>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
@@ -145,15 +157,19 @@ export default function TeamPage() {
                             <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600  text-transparent bg-clip-text">
                                 {executive.name}
                             </p>
-                            <p className="font-semibold text-md text-muted-foreground">
-                                {executive.lead}
-                            </p>
+                                <a href={executive.leads[0].links?.linkedin} target="_blank" className="hover:underline">
+                                    <p className="font-semibold text-md text-muted-foreground">
+                                        {executive.leads[0].name /* There must be only one lead per team in Technical Department */} 
+                                    </p>
+                                </a>
                             <div className="font-light text-md text-muted-foreground">
                                 {executive.people &&
                                     executive.people.map((eachExecutive) => (
-                                        <p key={eachExecutive}>
-                                            {eachExecutive}
-                                        </p>
+                                        <a href={eachExecutive.links?.linkedin} target="_blank" key={eachExecutive.name} className="hover:underline">
+                                            <p key={eachExecutive.name}>
+                                                {eachExecutive.name}
+                                            </p>
+                                        </a>
                                     ))}
                             </div>
                         </div>
@@ -179,7 +195,11 @@ export default function TeamPage() {
                             </p>
                             <div className="text-muted-foreground">
                                 {executive.people.map((people) => (
-                                    <p key={people}>{people}</p>
+                                    <a href={people.links?.linkedin} target="_blank" key={people.name} className="hover:underline">
+                                        <p key={people.name}>
+                                            {people.name}
+                                        </p>
+                                    </a>
                                 ))}
                             </div>
                         </div>
