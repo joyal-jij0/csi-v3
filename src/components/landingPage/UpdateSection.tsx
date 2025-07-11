@@ -38,16 +38,17 @@ export function UpdateSection() {
         try {
             noStore();
             const response = await fetch("/api/events?limit=3", {
-                cache: "force-cache",
-                next: { tags: ['events'], revalidate: 60 },
+                cache: "no-store",
             });
             if (!response.ok) {
-                throw new Error("Failed to fetch events");
+                const errorText = await response.text();
+                console.error(`HTTP ${response.status}: ${errorText}`);
+                throw new Error(`Failed to fetch events: ${response.status} ${response.statusText}`);
             }
             const data = await response.json();
             setEvents(data);
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error fetching events:", error);
         }
     };
 
