@@ -155,7 +155,7 @@ export const people2: Person[] = [
         name: "Harsh Maurya",
         position: "Photography Head",
         links: { linkedin: "https://www.linkedin.com/in/harsh-mauryaa/"}
-    }*/,
+    }*/
     {
         id: 11,
         image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
