@@ -98,17 +98,17 @@ export const people2: Person[] = [
         id: 3,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Agarwal-fotor-2024080520410_g3ug6h.jpg",
-        name: "Saksham Agarwal",
+        name: "Saksham Aggarwal",
         position: "Secretary",
         links: { linkedin: "https://www.linkedin.com/in/saksham-aggarwal-6b9276260/"}
     },
     {
         id: 4,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871022/Yash_Gupta-fotor-2024080520447_tmuw7q.jpg",
-        name: "Yash Gupta",
+            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Ansh_Malik-fotor-20240805203113_cvukvu.jpg",
+        name: "Ansh Malik",
         position: "Joint Secretary",
-        links: { linkedin: "https://www.linkedin.com/in/thisisyashgupta/"}
+        links: { linkedin: "https://www.linkedin.com/in/ansh-malik-b476b0261/"}
     },
     {
         id: 5,
@@ -126,6 +126,14 @@ export const people2: Person[] = [
         position: "Content Head",
         links: { linkedin: "https://www.linkedin.com/in/aryan-dutta-134b66257/"}
     },
+    {
+        id: 7,
+        image_source:
+            "",
+        name: "Nipun Agrawal",
+        position: "Treasurer",
+        links: { linkedin: ""}
+    }
     // {
     //     id: 7,
     //     image_source:
@@ -133,36 +141,36 @@ export const people2: Person[] = [
     //     name: "Deven Puri",
     //     position: "Event Management Head",
     // },
-    {
+    /*{
         id: 8,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Ansh_Malik-fotor-20240805203113_cvukvu.jpg",
+            "",
         name: "Ansh Malik",
         position: "PR Co-Head",
-        links: { linkedin: "https://www.linkedin.com/in/ansh-malik-b476b0261/"}
-    },
+        links: { linkedin: ""}
+    }*/,
     {
         id: 9,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871021/Naman_Mangla-fotor-20240805203952_xkpys2.jpg",
         name: "Naman Mangla",
-        position: "PR Co-Head",
+        position: "PR Head",
         links: { linkedin: "https://www.linkedin.com/in/naman-mangla-533aa9246/"}
     },
-    {
+    /*{
         id: 10,
         image_source:
             "https://res.cloudinary.com/du0mba5mz/image/upload/v1727416816/CSI/6321017259627233825_kotexk.jpg",
         name: "Harsh Maurya",
         position: "Photography Head",
         links: { linkedin: "https://www.linkedin.com/in/harsh-mauryaa/"}
-    },
+    }*/,
     {
         id: 11,
         image_source:
             "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
         name: "Vidit Kaushik",
-        position: "Coordiator Head",
+        position: "Logistics and Hospitality Head",
         links: { linkedin: "https://www.linkedin.com/in/vidit-kaushik-92618b2b5/"}
     },
 ];
@@ -177,13 +185,13 @@ export const executivesData: Department[] = [
     {
         name: "Event Management Executives",
         leads: [
-            { name: "Deven Puri", links: { linkedin: "https://www.linkedin.com/in/deven-puri-76a898257/" }  }
+            { name: "", links: { linkedin: "" }  }
         ],
         people: [
             { name: "Parthsaarthie Sharma", links: { linkedin: "https://www.linkedin.com/in/parthsaarthie-sharma/" } },
-            { name: "Shashwat Shankar", links: { linkedin: "https://www.linkedin.com/in/shashwat-shankar-852b4925b/" } },
+            { name: "Bhumi Rajbhar", links: { linkedin: "" } },
             { name: "Yakshit Wadhwa", links: { linkedin: "https://www.linkedin.com/in/yakshit-wadhwa-52246228b/" } },
-            { name: "Lakshay Sharma", links: { linkedin: "https://www.linkedin.com/in/lakshays140604/" } },
+            { name: "Ashwani Kumar", links: { linkedin: "" } },
             { name: "Naveen Verma", links: { linkedin: "https://www.linkedin.com/in/naveen-verma-396b93276/" } },
             { name: "Nikhil Hatwal", links: { linkedin: "https://www.linkedin.com/in/nikhil-hatwal-932b952b3/" } },
             { name: "Niyati Chugh", links: { linkedin: "https://www.linkedin.com/in/niyati-chugh-8098a1286/" } },
@@ -191,34 +199,58 @@ export const executivesData: Department[] = [
             { name: "Parth Goel", links: { linkedin: "https://www.linkedin.com/in/parth-goel-0512a82b0/" } },
             { name: "Liesha", links: { linkedin: "https://www.linkedin.com/in/liesha-gupta/" } },
             { name: "Tinish", links: { linkedin: "https://www.linkedin.com/in/tinish-k-550aa32a3/" } },
-            { name: "Vidit", links: { linkedin: "https://www.linkedin.com/in/vidit-kaushik-92618b2b5/" } },
+            { name: "Krish", links: { linkedin: "" } },
+            { name: "Devansh Malik", links: { linkedin: "" } },
+            { name: "Yatin Kumar", links: { linkedin: "" } },
+            { name: "Krish Vishwakarma", links: { linkedin: "" } },
+            { name: "Tiya Arora", links: { linkedin: "" } },
+            { name: "Arjun Jain", links: { linkedin: "" } },
+            { name: "Aniket Gupta", links: { linkedin: "" } },
+            { name: "Navya Gupta", links: { linkedin: "" } },
+            { name: "Sidhant Malik", links: { linkedin: "" } },
         ],
     },
     {
         name: "Public Relations Executives",
         leads: [
-            { name: "Ansh Malik", links: { linkedin: "https://www.linkedin.com/in/ansh-malik-b476b0261/" } },
             { name: "Naman Mangla", links: { linkedin: "https://www.linkedin.com/in/naman-mangla-533aa9246/" } }
         ],
         people: [
             { name: "Rishabh Tripathi", links: { linkedin: "https://www.linkedin.com/in/rishabh-tripathi-9985aa319/" } },
-            { name: "Priyaanshu Sengupta", links: { linkedin: "https://www.linkedin.com/in/priyaanshu-sengupta-bb262b208/" } },
+            { name: "Dakshata", links: { linkedin: "" } },
             { name: "Kashvi Sharma", links: { linkedin: "https://www.linkedin.com/in/kashvi-sharma-27063523b/" } },
-            { name: "Dhruv Goel", links: { linkedin: "https://www.linkedin.com/in/dhruv-goel-b9a346202/" } },
+            { name: "Tanisha Bihani", links: { linkedin: "" } },
             { name: "Garv Goel", links: { linkedin: "https://www.linkedin.com/in/garv-goel/" } },
-            { name: "Neeyati", links: { linkedin: "https://www.linkedin.com/in/neeyati-kalra-01734b310/" } },
-            { name: "Anmol", links: { linkedin: "https://www.linkedin.com/in/anmolkumar05/" } },
+            { name: "Mridul Pandey", links: { linkedin: "" } },
+            { name: "Anmol Kumar", links: { linkedin: "https://www.linkedin.com/in/anmolkumar05/" } },
+            { name: "Pari Goel", links: { linkedin: "" } },
+            { name: "Paarth Chhabra", links: { linkedin: "" } },
+            { name: "Bhavit Anand", links: { linkedin: "" } },
+            { name: "Shreya Chaudhary", links: { linkedin: "" } },
+            { name: "Harsh Manocha", links: { linkedin: "" } },
+            { name: "Harshit", links: { linkedin: "" } },
+            { name: "Sahib Singh Sodhi", links: { linkedin: "" } },
+            { name: "Yashmit Kamal", links: { linkedin: "" } },
+            { name: "Gunjika Adhikari", links: { linkedin: "" } },
+            { name: "Nishtha Jain", links: { linkedin: "" } },
         ],
         
     },
     {
-        name: "Photography Executives",
+        name: "Social Media and Photography Executives",
         leads: [
-            { name: "Harsh Maurya", links: { linkedin: "https://www.linkedin.com/in/harsh-mauryaa/"}}
+            { name: "", links: { linkedin: ""}}
         ],
         people: [
-            {name: "Nipun Agrawal", links: { linkedin: "https://www.linkedin.com/in/nipun-agrawal-527168266/"}}, 
-            {name: "Mridul Dutta", links: { linkedin: "https://www.linkedin.com/company/csi-innowave"} } 
+            {name: "Lakshay Gupta", links: { linkedin: ""}}, 
+            {name: "Daksh Dua", links: { linkedin: ""} },
+            {name: "Pradyumn Kumar", links: { linkedin: ""} },
+            {name: "Ridhi Garg", links: { linkedin: ""} },
+            {name: "Ansh Chaudhary", links: { linkedin: ""} },
+            {name: "Lakshay Jain", links: { linkedin: ""} },
+            {name: "Vansh Nanda", links: { linkedin: ""} },
+            {name: "Reva Verma", links: { linkedin: ""} },
+             
         ],
     },
     {
@@ -228,7 +260,33 @@ export const executivesData: Department[] = [
         ],
         people: [
             { name: "Shubham Jha", links: { linkedin: "https://www.linkedin.com/in/shubham-jha-a37a49263/"} },
-            { name: "Yash", links: { linkedin: "https://www.linkedin.com/in/yash-yash-b941742b9/"} }
+            { name: "Yash", links: { linkedin: "https://www.linkedin.com/in/yash-yash-b941742b9/"} },
+            { name: "Krish Anand", links: { linkedin: ""} },
+            { name: "Aarav Singh", links: { linkedin: ""} },
+            { name: "Kareena Grover", links: { linkedin: ""} },
+            { name: "Ashutosh", links: { linkedin: ""} },
+            { name: "Aryan Kaushik", links: { linkedin: ""} },
+            { name: "Suhani Gupta", links: { linkedin: ""} },
+            { name: "Richa Garg", links: { linkedin: ""} },
+        ],
+    },
+    {
+        name: "Logistics and Hospitality Executives",
+        leads: [
+            { name: "Vidit Kaushik", links: { linkedin: "https://www.linkedin.com/in/vidit-kaushik-92618b2b5/"} }
+        ],
+        people: [
+            { name: "Hari Pratap", links: { linkedin: ""} },
+            { name: "Vipin Sharma", links: { linkedin: ""} },
+            { name: "Mayank", links: { linkedin: ""} },
+            { name: "Somya", links: { linkedin: ""} },
+            { name: "Suvir Sarabhai", links: { linkedin: ""} },
+            { name: "Prathak Gupta", links: { linkedin: ""} },
+            { name: "Piyush Kar", links: { linkedin: ""} },
+            { name: "Juhi", links: { linkedin: ""} },
+            { name: "Sushant Rishi", links: { linkedin: ""} },
+            { name: "Hansika Gupta", links: { linkedin: ""} },
+            { name: "Avani Basra", links: { linkedin: ""} },
         ],
     },
 ];
@@ -244,14 +302,13 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "Dev Team",
         leads: [
-            { name: "Adarsh Singh", links: { linkedin: "https://www.linkedin.com/in/adarsh-singh-183357262/" } }
+            { name: "", links: { linkedin: "" } }
         ],
         people: [
             { name: "Vrishank Sharma", links: { linkedin: ""} },
             { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
-            { name: "Arpan Taneja", links: {linkedin: "https://www.linkedin.com/in/arpantaneja/"} },
-            { name: "Aditya Singh", links: {linkedin: "https://www.linkedin.com/in/aditya-singh-khichi-943901324/"} },
-            { name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
+            { name: "Adarsh Singh", links: {linkedin: ""} },
+            //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
         ],
     },
     {
@@ -260,7 +317,10 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "Joyal Jijo", links: { linkedin: "https://www.linkedin.com/in/joyal-jijo/"} }
         ],
         people: [
-            { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } }
+            { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } },
+            { name: "Ashish", links: { linkedin: "" } },
+            { name: "Himanshu", links: { linkedin: "" } },
+            { name: "Kshitij", links: { linkedin: "" } },
         ]
     },
     {
@@ -276,10 +336,24 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     {
         name: "DSA Team",
         leads:[
-            { name: "Devesh Tuteja", links: { linkedin: "https://www.linkedin.com/in/devesh-tuteja/"} }
+            { name: "", links: { linkedin: ""} }
         ],
         people: [
-            { name: "Nikita Bansal", links: { linkedin: "https://www.linkedin.com/in/nikita-bansal-66bb33227/" } }
+           // { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } }
+        ],
+    },
+    {
+        name: "Technical Team",
+        leads:[
+            { name: "Prajjwal Sharma", links: { linkedin: "https://www.linkedin.com/in/prajjwaldev/"} }
+        ],
+        people: [
+            { name: "Aryan Kaushik", links: { linkedin: "" } },
+            { name: "Akshit Malia", links: { linkedin: "https://www.linkedin.com/in/akshit-malia-6b35b0256/" } },
+            { name: "Anish Sabharwal", links: { linkedin: "" } },
+            { name: "Lakshit Goyal", links: { linkedin: "" } },
+            { name: "Chaitanya Kumar Jadaun", links: { linkedin: "" } },
+            { name: "Chirag Rajput", links: { linkedin: "" } },
         ],
     },
 ];
