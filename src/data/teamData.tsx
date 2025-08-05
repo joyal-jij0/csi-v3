@@ -80,60 +80,53 @@ export const people1: Person[] = [
 export const people2: Person[] = [
     {
         id: 1,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Jain-fotor-20240805204147_tzo4za.jpg",
+        image_source: "https://res.cloudinary.com/dop6gul0f/image/upload/v1754420295/saksham_gupta_pkpr36.jpg",
         name: "Saksham Gupta",
         position: "Chairperson",
         links: { linkedin: "https://www.linkedin.com/in/saksham-gupta-057669126/"}
     },
     {
         id: 2,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Vidhi_Jain-fotor-20240805204258_f1s3wi.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Vidhi_Jain-fotor-20240805204258_f1s3wi.jpg",
         name: "Vidhi Jain",
         position: "Vice-Chairperson",
         links: { linkedin: "https://www.linkedin.com/in/vidhi-jain-vee27032004/"}
     },
     {
         id: 3,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Agarwal-fotor-2024080520410_g3ug6h.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Saksham_Agarwal-fotor-2024080520410_g3ug6h.jpg",
         name: "Saksham Aggarwal",
         position: "Secretary",
         links: { linkedin: "https://www.linkedin.com/in/saksham-aggarwal-6b9276260/"}
     },
     {
         id: 4,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Ansh_Malik-fotor-20240805203113_cvukvu.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871010/Ansh_Malik-fotor-20240805203113_cvukvu.jpg",
         name: "Ansh Malik",
         position: "Joint Secretary",
         links: { linkedin: "https://www.linkedin.com/in/ansh-malik-b476b0261/"}
     },
     {
         id: 5,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871023/Prajjwal_Sharma-fotor-20240805204020_q4dq1z.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871023/Prajjwal_Sharma-fotor-20240805204020_q4dq1z.jpg",
         name: "Prajjwal Sharma",
         position: "Technical Head",
         links: { linkedin: "https://www.linkedin.com/in/prajjwaldev/"}
     },
     {
         id: 6,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871007/Aryan_Dutta-fotor-20240805203429_aqpw49.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871007/Aryan_Dutta-fotor-20240805203429_aqpw49.jpg",
         name: "Aryan Dutta",
         position: "Content Head",
         links: { linkedin: "https://www.linkedin.com/in/aryan-dutta-134b66257/"}
     },
     {
         id: 7,
-        image_source:
-            "",
+        image_source: "https://res.cloudinary.com/dop6gul0f/image/upload/v1754420295/nipun_fu2mzz.jpg",
         name: "Nipun Agrawal",
         position: "Treasurer",
         links: { linkedin: ""}
-    }
+    },
     // {
     //     id: 7,
     //     image_source:
@@ -141,18 +134,16 @@ export const people2: Person[] = [
     //     name: "Deven Puri",
     //     position: "Event Management Head",
     // },
-    /*{
+    {
         id: 8,
-        image_source:
-            "",
-        name: "Ansh Malik",
-        position: "PR Co-Head",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871022/Yash_Gupta-fotor-2024080520447_tmuw7q.jpg",
+        name: "Yash Gupta",
+        position: "Advisor",
         links: { linkedin: ""}
-    }*/,
+    },
     {
         id: 9,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871021/Naman_Mangla-fotor-20240805203952_xkpys2.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871021/Naman_Mangla-fotor-20240805203952_xkpys2.jpg",
         name: "Naman Mangla",
         position: "PR Head",
         links: { linkedin: "https://www.linkedin.com/in/naman-mangla-533aa9246/"}
@@ -164,11 +155,10 @@ export const people2: Person[] = [
         name: "Harsh Maurya",
         position: "Photography Head",
         links: { linkedin: "https://www.linkedin.com/in/harsh-mauryaa/"}
-    }*/,
+    }*/
     {
         id: 11,
-        image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
+        image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
         name: "Vidit Kaushik",
         position: "Logistics and Hospitality Head",
         links: { linkedin: "https://www.linkedin.com/in/vidit-kaushik-92618b2b5/"}
