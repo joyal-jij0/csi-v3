@@ -12,37 +12,37 @@ import Link from "next/link";
 export const metadata = {
     title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
     description:
-      "Meet the talented team behind the Computer Society of India (CSI) at Maharaja Agrasen Institute of Technology. Learn about our faculty coordinators, executives, and technical team.",
+        "Meet the talented team behind the Computer Society of India (CSI) at Maharaja Agrasen Institute of Technology. Learn about our faculty coordinators, executives, and technical team.",
     keywords: [
-      "CSI Team",
-      "Computer Society of India",
-      "MAIT Faculty Coordinators",
-      "CSI Executives",
-      "Technical Team",
-      "Student Leaders",
+        "CSI Team",
+        "Computer Society of India",
+        "MAIT Faculty Coordinators",
+        "CSI Executives",
+        "Technical Team",
+        "Student Leaders",
     ],
     openGraph: {
         title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
         description:
-          "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
-        url: "https://www.csiinnowave.com/team", 
+            "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
+        url: "https://www.csiinnowave.com/team",
         type: "website",
         images: [
-          {
-            url: "/public/csi-innowave.jpg", 
-            width: 1200,
-            height: 630,
-            alt: "CSI MAIT Team Open Graph Image",
-          },
+            {
+                url: "/public/csi-innowave.jpg",
+                width: 1200,
+                height: 630,
+                alt: "CSI MAIT Team Open Graph Image",
+            },
         ],
-      },
-      twitter: {
+    },
+    twitter: {
         card: "summary_large_image",
         title: "Team - CSI V3 | Maharaja Agrasen Institute of Technology",
         description:
-          "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
-        images: ["/public/csi-innowave.jpg"], 
-      },
+            "Meet the talented team behind CSI MAIT, including faculty coordinators, executives, and the technical team.",
+        images: ["/public/csi-innowave.jpg"],
+    },
 };
 
 export default function TeamPage() {
@@ -90,12 +90,18 @@ export default function TeamPage() {
                         </p>
                         <div className="flex flex-row justify-center space-x-2 mt-1">
                             {person.links?.linkedin && (
-                                <Link href={person.links?.linkedin} target="_blank">
+                                <Link
+                                    href={person.links?.linkedin}
+                                    target="_blank"
+                                >
                                     <LinkedinIcon className="size-4" />
                                 </Link>
                             )}
                             {person.links?.twitter && (
-                                <Link href={person.links?.twitter} target="_blank">
+                                <Link
+                                    href={person.links?.twitter}
+                                    target="_blank"
+                                >
                                     <TwitterIcon className="size-4" />
                                 </Link>
                             )}
@@ -127,12 +133,18 @@ export default function TeamPage() {
                         </p>
                         <div className="flex flex-row justify-center space-x-2 mt-1">
                             {person.links?.linkedin && (
-                                <Link href={person.links?.linkedin} target="_blank">
+                                <Link
+                                    href={person.links?.linkedin}
+                                    target="_blank"
+                                >
                                     <LinkedinIcon className="size-4" />
                                 </Link>
                             )}
                             {person.links?.twitter && (
-                                <Link href={person.links?.twitter} target="_blank">
+                                <Link
+                                    href={person.links?.twitter}
+                                    target="_blank"
+                                >
                                     <TwitterIcon className="size-4" />
                                 </Link>
                             )}
@@ -157,15 +169,27 @@ export default function TeamPage() {
                             <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600  text-transparent bg-clip-text">
                                 {executive.name}
                             </p>
-                                <a href={executive.leads[0].links?.linkedin} target="_blank" className="hover:underline">
-                                    <p className="font-semibold text-md text-muted-foreground">
-                                        {executive.leads[0].name /* There must be only one lead per team in Technical Department */} 
-                                    </p>
-                                </a>
+                            <a
+                                href={executive.leads[0].links?.linkedin}
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                <p className="font-semibold text-md text-muted-foreground">
+                                    {
+                                        executive.leads[0]
+                                            .name /* There must be only one lead per team in Technical Department */
+                                    }
+                                </p>
+                            </a>
                             <div className="font-light text-md text-muted-foreground">
                                 {executive.people &&
                                     executive.people.map((eachExecutive) => (
-                                        <a href={eachExecutive.links?.linkedin} target="_blank" key={eachExecutive.name} className="hover:underline">
+                                        <a
+                                            href={eachExecutive.links?.linkedin}
+                                            target="_blank"
+                                            key={eachExecutive.name}
+                                            className="hover:underline"
+                                        >
                                             <p key={eachExecutive.name}>
                                                 {eachExecutive.name}
                                             </p>
@@ -195,10 +219,13 @@ export default function TeamPage() {
                             </p>
                             <div className="text-muted-foreground">
                                 {executive.people.map((people) => (
-                                    <a href={people.links?.linkedin} target="_blank" key={people.name} className="hover:underline">
-                                        <p key={people.name}>
-                                            {people.name}
-                                        </p>
+                                    <a
+                                        href={people.links?.linkedin}
+                                        target="_blank"
+                                        key={people.name}
+                                        className="hover:underline"
+                                    >
+                                        <p key={people.name}>{people.name}</p>
                                     </a>
                                 ))}
                             </div>
