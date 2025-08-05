@@ -39,7 +39,11 @@ export const metadata = {
 };
 
 async function getEvents() {
-    let res = await fetch(`${process.env.NODE_ENV === 'production' ? 'https://csiinnowave.com' : ''}/api/events`, {
+    const baseUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://csiinnowave.com' 
+        : 'http://localhost:3000';
+    
+    let res = await fetch(`${baseUrl}/api/events`, {
         cache: "force-cache",
         next: { tags: ['events'], revalidate: 60 },
     });
