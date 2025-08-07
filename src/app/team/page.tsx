@@ -183,7 +183,10 @@ export default function TeamPage() {
                 </h2>
             </div>
 
-            <div className="mt-12 mx-6 md:mx-40 grid gap-x-4 gap-y-16 grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 mx-6 md:mx-40 grid gap-x-10 gap-y-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
+
+
+
                 {executivesData.map((executive) => (
                     <div
                         key={executive.name}

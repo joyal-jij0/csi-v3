@@ -127,13 +127,6 @@ export const people2: Person[] = [
         position: "Treasurer",
         links: { linkedin: ""}
     },
-    // {
-    //     id: 7,
-    //     image_source:
-    //         "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871017/Deven_Puri-fotor-20240805203737_ybb2sd.jpg",
-    //     name: "Deven Puri",
-    //     position: "Event Management Head",
-    // },
     {
         id: 8,
         image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871022/Yash_Gupta-fotor-2024080520447_tmuw7q.jpg",
@@ -148,14 +141,6 @@ export const people2: Person[] = [
         position: "PR Head",
         links: { linkedin: "https://www.linkedin.com/in/naman-mangla-533aa9246/"}
     },
-    /*{
-        id: 10,
-        image_source:
-            "https://res.cloudinary.com/du0mba5mz/image/upload/v1727416816/CSI/6321017259627233825_kotexk.jpg",
-        name: "Harsh Maurya",
-        position: "Photography Head",
-        links: { linkedin: "https://www.linkedin.com/in/harsh-mauryaa/"}
-    }*/
     {
         id: 11,
         image_source: "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871020/Vidit_Kaushik-fotor-20240805204338_gyktgs.jpg",
@@ -298,7 +283,6 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "Vrishank Sharma", links: { linkedin: ""} },
             { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
             { name: "Adarsh Singh", links: {linkedin: ""} },
-            //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
         ],
     },
     {
@@ -321,15 +305,6 @@ export const TechinalDeptData: TechnicalDepartment[] = [
         people: [
             { name :"Ayan Gairola", links: { linkedin: "https://www.linkedin.com/in/ayan-gairola-a18a59189/" } },
             { name: "Aditi", links: { linkedin: "https://www.linkedin.com/in/aditi-karn-29b5a6245/"} } 
-        ],
-    },
-    {
-        name: "DSA Team",
-        leads:[
-            { name: "", links: { linkedin: ""} }
-        ],
-        people: [
-           // { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } }
         ],
     },
     {
