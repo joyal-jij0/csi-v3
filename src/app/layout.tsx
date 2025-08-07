@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-backgroud";
+import CursorTrail from "@/components/CursorTrail";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,23 +15,24 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`bg-black ${inter.className}`}>
-      <div className="fixed inset-0 z-0">
-          <ShootingStars/>
-          <StarsBackground starDensity={0.0004}/>
-        </div>
-      <div className="relative z-10">
-          <Navbar/>
-          {children}
-          <Footer/>
-          </div>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`bg-black ${inter.className}`}>
+                <div className="fixed inset-0 z-0">
+                    <ShootingStars />
+                    <StarsBackground starDensity={0.0004} />
+                </div>
+                <div className="relative z-10">
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </div>
+                <CursorTrail />
+            </body>
+        </html>
+    );
 }
