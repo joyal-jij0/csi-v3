@@ -280,7 +280,7 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "", links: { linkedin: "" } }
         ],
         people: [
-            { name: "Vrishank Sharma", links: { linkedin: ""} },
+            //{ name: "Vrishank Sharma", links: { linkedin: ""} },
             { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
             { name: "Adarsh Singh", links: {linkedin: ""} },
         ],
@@ -293,7 +293,7 @@ export const TechinalDeptData: TechnicalDepartment[] = [
         people: [
             { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } },
             { name: "Ashish", links: { linkedin: "" } },
-            { name: "Himanshu", links: { linkedin: "" } },
+            { name: "Vrishank Sharma", links: { linkedin: "" } },
             { name: "Kshitij", links: { linkedin: "" } },
         ]
     },
