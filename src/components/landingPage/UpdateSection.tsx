@@ -43,7 +43,9 @@ export function UpdateSection() {
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error(`HTTP ${response.status}: ${errorText}`);
-                throw new Error(`Failed to fetch events: ${response.status} ${response.statusText}`);
+                throw new Error(
+                    `Failed to fetch events: ${response.status} ${response.statusText}`
+                );
             }
             const data = await response.json();
             setEvents(data);
@@ -122,7 +124,7 @@ export function EventCard({
             />
 
             <div
-                className="bg-gradient-to-br from-zinc-800/10 via-zinc-900 to-zinc-950 rounded-lg group hover:scale-[1.025] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform cursor-pointer"
+                className="bg-gradient-to-br from-purple-800/20 via-violet-900/40 to-indigo-950/20 rounded-lg group overflow-hidden shadow-lg transition-all duration-300 transform cursor-pointer border border-zinc-800 hover:border-purple-500 hover:border-2 hover:shadow-md hover:scale-[1.025]"
                 onClick={() => handleOpenDialog(event)}
             >
                 <div className="relative w-full aspect-video">
