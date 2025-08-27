@@ -4,17 +4,14 @@ import { motion } from "framer-motion";
 import { ImagesSlider } from "../../components/ui/images-slider";
 import { imagesOne } from "@/data/galleryData";
 import { EventsDataType } from "@/types/EventData";
-
-
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 function Gallery() {
   const [eventImages, setEventImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [lightboxIndex, setLightboxIndex] = useState(-1); // For the lightbox
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
 
-  // --- This data fetching logic stays exactly the same ---
   const fetchEvents = async () => {
     try {
       const response = await fetch("/api/events", { cache: "no-store" });
@@ -46,17 +43,9 @@ function Gallery() {
               Our Memories
             </div>
             <div>
-              {/* This slider is untouched */}
-              // Find this component in your file and replace it with this corrected version.
-
-            <ImagesSlider className="sm:h-[40rem] h-[20rem] rounded-2xl" images={imagesOne}>
-              <motion.div
-                initial={{ opacity: 0, y: -80 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                style={{ zIndex: 50, display: 'flex' }}
-              ></motion.div>
-            </ImagesSlider>
+              <ImagesSlider className="sm:h-[40rem] h-[20rem] rounded-2xl" images={imagesOne}>
+                <motion.div initial={{ opacity: 0, y: -80 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} style={{ zIndex: 50, display: 'flex' }}></motion.div>
+              </ImagesSlider>
             </div>
 
             <div className="py-20">
@@ -64,25 +53,21 @@ function Gallery() {
                 Photos
               </div>
 
-              
               {loading ? (
                 <p className="text-center text-white text-xl">Loading Photos...</p>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 grid-flow-dense">
                   {eventImages.map((imageUrl, index) => {
                     let itemClasses = "";
-                    // Make every 5th image wide (span 2 columns)
                     if ((index + 1) % 5 === 0) {
                       itemClasses = "md:col-span-2";
                     }
-                    // Make every 7th image tall (span 2 rows)
                     if ((index + 1) % 7 === 0) {
                       itemClasses = "md:row-span-2";
                     }
-
                     return (
                       <div
-                        key={index}
+                        key={imageUrl + index}
                         className={`cursor-pointer overflow-hidden rounded-lg group ${itemClasses}`}
                         onClick={() => setLightboxIndex(index)}
                       >
@@ -101,7 +86,6 @@ function Gallery() {
         </div>
       </div>
 
-      {/* --- This is the Lightbox component with the fix --- */}
       <Lightbox
         index={lightboxIndex}
         open={lightboxIndex >= 0}
