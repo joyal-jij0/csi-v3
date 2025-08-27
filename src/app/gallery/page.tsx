@@ -47,8 +47,16 @@ function Gallery() {
             </div>
             <div>
               {/* This slider is untouched */}
-              <ImagesSlider className="sm:h-[40rem] h-[20rem] rounded-2xl" images={imagesOne}>
-              </ImagesSlider>
+              // Find this component in your file and replace it with this corrected version.
+
+            <ImagesSlider className="sm:h-[40rem] h-[20rem] rounded-2xl" images={imagesOne}>
+              <motion.div
+                initial={{ opacity: 0, y: -80 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                style={{ zIndex: 50, display: 'flex' }}
+              ></motion.div>
+            </ImagesSlider>
             </div>
 
             <div className="py-20">
