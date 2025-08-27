@@ -1,5 +1,3 @@
-// src/app/gallery/page.tsx
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -7,7 +5,7 @@ import { ImagesSlider } from "../../components/ui/images-slider";
 import { imagesOne } from "@/data/galleryData";
 import { EventsDataType } from "@/types/EventData";
 
-// We need the lightbox for the fullscreen pop-up
+
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -59,7 +57,7 @@ function Gallery() {
                 Photos
               </div>
 
-              {/* --- HERE IS THE DYNAMIC COLLAGE GRID --- */}
+              
               {loading ? (
                 <p className="text-center text-white text-xl">Loading Photos...</p>
               ) : (
