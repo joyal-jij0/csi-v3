@@ -97,7 +97,7 @@ export default function Navbar() {
                    hover:animate-pulse"
                                 containerClassName="w-20 lg:w-40 lg:h-14 mx-2 rounded-lg overflow-hidden"
                             >
-                                <span className="transition-colors duration-300 ease-in-out hover:text-white-300">
+                                <span className="transition-colors duration-300 ease-in-out hover:text-white">
                                     BROCHURE
                                 </span>
                             </Button>
