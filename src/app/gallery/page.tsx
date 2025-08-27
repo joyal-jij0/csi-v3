@@ -75,7 +75,7 @@ function Gallery() {
 
                     return (
                       <div
-                        key={imageUrl + index}
+                        key={index}
                         className={`cursor-pointer overflow-hidden rounded-lg group ${itemClasses}`}
                         onClick={() => setLightboxIndex(index)}
                       >
