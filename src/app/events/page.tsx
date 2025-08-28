@@ -58,7 +58,8 @@ export default async function EventsPage() {
 
     return (
         <div>
-            <div className="font-bold relative text-[72px] text-center bg-gradient-to-r from-blue-600 to-indigo-200 bg-clip-text text-transparent">
+           <div className="font-bold relative text-[72px] text-center bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+
                 Events
             </div>
             <div className="mt-8 mx-4 flex  items-center justify-center">

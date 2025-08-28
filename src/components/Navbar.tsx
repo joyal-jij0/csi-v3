@@ -19,7 +19,7 @@ export default function Navbar() {
                     />
                 </Link>
                 <div className="flex items-center  space-x-4">
-                    <div className="flex justify-center  font-medium bg-gradient-to-br from-purple-500 via-blue-500 to-cyan-600  text-transparent bg-clip-text space-x-4 md:space-x-10">
+                    <div className="flex justify-center font-medium bg-gradient-to-br from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text space-x-4 md:space-x-10">
                         <Link href="/">
                             <div
                                 className={`${
