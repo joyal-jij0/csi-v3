@@ -22,9 +22,8 @@ export default function Navbar() {
                     <div className="flex justify-center font-medium bg-gradient-to-br from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text space-x-4 md:space-x-10">
                         <Link href="/">
                             <div
-                                className={`${
-                                    pathname === "/" ? "" : "text-gray-500"
-                                } hidden md:block`}
+                                className={`${pathname === "/" ? "" : "text-gray-500"
+                                    } hidden md:block`}
                             >
                                 {
                                     pathname === "/" ? "HOME" : "HOME"
@@ -85,14 +84,22 @@ export default function Navbar() {
                     <div className="pl-2 z-10 w-8/12 items-center justify-center">
                         <Link
                             target="_blank"
-                            rel="noopener nonreferrer"
-                            href="https://drive.google.com/file/d/1vVOrrGA8Mlr0lUY0wBkKG12Pt9ZaQX7X/view"
+                            rel="noopener noreferrer"
+                            href="https://drive.google.com/file/d/1BgcnhzFb_Q0ed2aLFJKaH5rwMzs1DLvL/view"
                         >
                             <Button
-                                className="text-[0.7rem] lg:text-lg bg-gradient-to-b from-black to-zinc-950 hover:to-zinc-900 transition-all  duration-500"
-                                containerClassName="w-20 lg:w-40 lg:h-14 mx-2 "
+                                className="text-[0.7rem] lg:text-lg bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 
+                   hover:from-pink-500 hover:via-red-500 hover:to-purple-600
+                   text-white font-semibold 
+                   transform transition-all duration-500 ease-in-out 
+                   hover:scale-110 hover:rotate-2 hover:shadow-3xl hover:brightness-125 
+                   hover:ring-2 hover:ring-purple-400 hover:ring-offset-2
+                   hover:animate-pulse"
+                                containerClassName="w-20 lg:w-40 lg:h-14 mx-2 rounded-lg overflow-hidden"
                             >
-                                BROCHURE
+                                <span className="transition-colors duration-300 ease-in-out hover:text-white">
+                                    BROCHURE
+                                </span>
                             </Button>
                         </Link>
                     </div>
