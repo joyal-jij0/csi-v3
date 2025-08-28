@@ -12,7 +12,7 @@ export const ObjectivesSection: React.FC = () => (
             </div>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
                 <div className="group flex-1 max-w-xl flex flex-col">
-                    <div className="bg-purple-900/60 p-8 rounded-lg transform transition-all duration-300 hover:-translate-y-2 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-purple-500 before:to-indigo-400 shadow-lg h-full flex flex-col">
+                    <div className="bg-purple-900/60 p-8 rounded-lg transform transition-all duration-300 hover:-translate-y-2 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-green-500 before:to-indigo-400 shadow-lg h-full flex flex-col">
                         <div className="relative w-[250px] h-[200px] mb-4 mx-auto z-10">
                             <Image
                                 src="/about/image1.png"
@@ -30,7 +30,7 @@ export const ObjectivesSection: React.FC = () => (
                     </div>
                 </div>
                 <div className="group flex-1 max-w-xl flex flex-col">
-                    <div className="bg-purple-900/60 p-8 rounded-lg transform transition-all duration-300 hover:-translate-y-2 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-purple-500 before:to-indigo-400 shadow-lg h-full flex flex-col">
+                    <div className="bg-purple-900/60 p-8 rounded-lg transform transition-all duration-300 hover:-translate-y-2 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-green-500 before:to-indigo-400 shadow-lg h-full flex flex-col">
                         <div className="relative w-[250px] h-[200px] mb-4 mx-auto z-10">
                             <Image
                                 src="/about/image2.png"

@@ -12,12 +12,13 @@ export const VisionMissionSection: React.FC = () => (
                 <h2 className="text-4xl font-bold text-white mb-4">
                     Vision & Mission
                 </h2>
-                <div className="h-1 w-24 bg-gradient-to-r from-purple-700 to-indigo-400 mx-auto"></div>
+                <div className="h-1 w-24 bg-gradient-to-r from-[rgba(29,51,9,0.99)] to-[#41d324ff] mx-auto"></div>
+
             </div>
 
             <div className="flex flex-col md:flex-row gap-8">
                 <div className="group w-full md:w-1/2">
-                    <div className="bg-purple-900/60 p-6 rounded-lg transform transition-all hover:-translate-y-2 duration-300 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-purple-500 before:to-indigo-400">
+                    <div className="bg-green-900/60 p-6 rounded-lg transform transition-all hover:-translate-y-2 duration-300 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-green-500 before:to-indigo-400">
                         <div className="flex items-center mb-4 relative z-10">
                             <div className="bg-gradient-to-br from-purple-700 to-indigo-400 p-3 rounded-full mr-4">
                                 <Users className="text-indigo-200" size={24} />
@@ -41,7 +42,7 @@ export const VisionMissionSection: React.FC = () => (
                     </div>
                 </div>
                 <div className="group w-full md:w-1/2">
-                    <div className="bg-purple-900/60 p-6 rounded-lg transform transition-all hover:-translate-y-2 duration-300 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-purple-500 before:to-indigo-400">
+                    <div className="bg-green-900/60 p-6 rounded-lg transform transition-all hover:-translate-y-2 duration-300 relative before:absolute before:-inset-1 before:rounded-lg before:pointer-events-none before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-300 before:bg-gradient-to-r before:from-green-500 before:to-indigo-400">
                         <div className="flex items-center mb-4 relative z-10">
                             <div className="bg-gradient-to-br from-purple-700 to-indigo-400 p-3 rounded-full mr-4">
                                 <Heart className="text-indigo-200" size={24} />
