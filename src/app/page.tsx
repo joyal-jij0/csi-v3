@@ -90,7 +90,7 @@ export default function Home() {
 
                     <OrbitingCirclesDemo />
 
-                    <div className="mt-20">
+                    <div className="mt-20 w-full overflow-x-hidden">
                         <Infinitescrollbrand />
                     </div>
                     <div className="mt-24 mb-28">
