@@ -395,7 +395,12 @@ export const TechinalDeptData: TechnicalDepartment[] = [
     /* There must be only one lead per team in Technical Department */
     {
         name: "Dev Team",
-        leads: [{ name: "", links: { linkedin: "" } }],
+        leads: [
+                { 
+                    name: "Adarsh Singh",
+                    links: {linkedin: "https://www.linkedin.com/in/adarshsingh9540/"} 
+                },
+        ],
         people: [
 
             { name: "Vrishank Sharma", links: { linkedin: "" } },
@@ -408,7 +413,6 @@ export const TechinalDeptData: TechnicalDepartment[] = [
 
             //{ name: "Vrishank Sharma", links: { linkedin: ""} },
             { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
-            { name: "Adarsh Singh", links: {linkedin: ""} },
         //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
 
         ],
