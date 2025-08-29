@@ -59,7 +59,7 @@ export const VisionMissionSection: React.FC = () => (
                             spirit, and champion environmental conservation.
                         </p>
                         <div className="mt-6 flex justify-end relative z-10">
-                            <div className="text-4xl text-indigo-300 opacity-30"></div>
+                            <div className="text-4xl text-green-300 opacity-30"></div>
                         </div>
                     </div>
                 </div>
