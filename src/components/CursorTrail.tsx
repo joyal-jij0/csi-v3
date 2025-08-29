@@ -14,28 +14,28 @@ class CursorTrailCore {
     private coords: Coordinates = { x: 0, y: 0 };
     private circles: CircleElement[] = [];
     private colors: string[] = [
-        "#e0c3fc",
-        "#d4a0f7",
-        "#c77dff",
-        "#b85cff",
-        "#a855f7",
-        "#9333ea",
-        "#8b1aff",
-        "#7c3aed",
-        "#6d28d9",
-        "#5b21b6",
-        "#4c1d95",
-        "#3730a3",
-        "#312e81",
-        "#2d1b69",
-        "#1e1b4b",
-        "#1a1a2e",
-        "#16213e",
-        "#0f0f23",
-        "#0d0d21",
-        "#0a0a1e",
-        "#07071a",
-        "#000000",
+        "#e0fcd3", // very light green
+        "#c3fcb8",
+        "#a6f79d",
+        "#8af282",
+        "#6fec67",
+        "#54e74c",
+        "#41d324", // your bright green
+        "#2bbf3a",
+        "#1d7a16", // your dark green
+        "#176312",
+        "#11510e",
+        "#0b3f0a",
+        "#072e07",
+        "#052205",
+        "#031803",
+        "#021202",
+        "#010a01",
+        "#010701",
+        "#010501",
+        "#010301",
+        "#000200",
+        "#000000", // black
     ];
     private animationId: number | null = null;
 
