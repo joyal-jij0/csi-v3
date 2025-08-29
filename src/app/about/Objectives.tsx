@@ -52,5 +52,3 @@ export const ObjectivesSection: React.FC = () => (
         </div>
     </section>
 );
-
-export default ObjectivesSection;
