@@ -49,7 +49,8 @@ export default function TeamPage() {
     return (
         <div className="flex flex-col space-y-12 overflow-x-hidden">
             <div className="flex flex-col items-center text-center">
-                <h2 className="mt-6 mx-4 text-pretty font-bold text-2xl lg:text-4xl bg-gradient-to-b from-violet-500 via-blue-500 to-purple-500 text-transparent bg-clip-text">
+                <h2 className="mt-6 mx-4 text-pretty font-bold text-2xl lg:text-4xl bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+
                     FACULTY COORDINATORS
                 </h2>
             </div>
@@ -111,7 +112,8 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-b from-violet-500 via-blue-500 to-purple-500 text-transparent bg-clip-text">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+
                     OUR TEAM
                 </h2>
             </div>
@@ -154,7 +156,8 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-violet-500 via-blue-500 to-purple-500 text-transparent bg-clip-text">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-[#1d7a16] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+
                     Technical Executives
                 </h2>
             </div>
@@ -202,7 +205,8 @@ export default function TeamPage() {
             </div>
 
             <div className="flex flex-col items-center text-center">
-                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-violet-500 via-blue-500 to-purple-500 text-transparent bg-clip-text">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-[#1d7a16] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+
                     Executives
                 </h2>
             </div>

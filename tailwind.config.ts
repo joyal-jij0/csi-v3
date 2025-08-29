@@ -8,7 +8,7 @@ const textGradientBorderPlugin: PluginCreator = function ({ addUtilities }) {
   addUtilities({
     '.text-gradient-border': {
       'position': 'relative',
-      'background-image': 'linear-gradient(0deg, rgba(0, 0, 0, 0.82) 18.4%, rgba(146, 128, 255, 0.73) 53.4%, #BC4FFF 72.4%)',
+      'background-image': 'linear-gradient(0deg, rgba(29, 51, 9, 0.99) 18.4%, #4dff00ff 100%, #41d324ff 53.4%)',
       '-webkit-background-clip': 'text',
       'background-clip': 'text',
       'color': 'transparent',

@@ -4,7 +4,7 @@ export function OrbitingCirclesDemo() {
     return (
         <div className="relative flex h-[48rem] w-full flex-col items-center justify-center overflow-hidden rounded-lg  bg-background md:shadow-xl">
             <span className="pointer-events-none hidden whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black"></span>
-            <div className="bg-gradient-radial from-[#AF54B1] from-10% via-[#1E1033] via-30% to-transparent to-80% h-[800px] w-[800px] blur-lg rounded-full flex justify-center items-center"></div>
+            <div className="bg-gradient-radial from-[#218d06] from-10% via-[#1b4908] via-30% to-transparent to-80% h-[800px] w-[800px] blur-lg rounded-full flex justify-center items-center"></div>
             <div className="absolute w-40 h-40 bg-gradient-to-t rounded-full from-blue-600 to-white rotate-45"></div>
             {/* Orbit 1 */}
             <OrbitingCircles
