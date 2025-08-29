@@ -6,7 +6,7 @@ export const VisionMissionSection: React.FC = () => (
         <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
                 <BookOpen
-                    className="inline-block text-indigo-200 mb-2"
+                    className="inline-block text-green-200 mb-2"
                     size={32}
                 />
                 <h2 className="text-4xl font-bold text-white mb-4">
