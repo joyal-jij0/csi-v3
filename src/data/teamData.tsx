@@ -121,7 +121,7 @@ export const people2: Person[] = [
     {
         id: 5,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871023/Prajjwal_Sharma-fotor-20240805204020_q4dq1z.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758140119/IMG-20250824-WA0176_url1bi.jpg",
         name: "Pratham Gupta",
         position: "Technical Head",
         links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" },
@@ -155,7 +155,7 @@ export const people2: Person[] = [
     {
         id: 9,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871021/Naman_Mangla-fotor-20240805203952_xkpys2.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758140243/WhatsApp_Image_2025-09-06_at_13.48.03_3f63dc75_e2noye_525200.jpg",
         name: "Rishabh Tripathi",
         position: "PR Head",
         links: {
@@ -359,17 +359,45 @@ export const executivesData: Department[] = [
             { name: "Mayank", links: { linkedin: "" } },
         ],
     },
+    {
+        name: "Technical Team",
+        leads: [
+            {
+                name: "Pratham Gupta",
+                links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" },
+            },
+        ],
+        people: [
+            { name: "Aryan Kaushik", links: { linkedin: "" } },
+            {
+                name: "Akshit Malia",
+                links: {
+                    linkedin:
+                        "https://www.linkedin.com/in/akshit-malia-6b35b0256/",
+                },
+            },
+            { name: "Lakshit Goyal", links: { linkedin: "" } },
+            { name: "Kshitij Dahiya", links: { linkedin: "" } },
+            { name: "Chaitanya Kumar Jadaun", links: { linkedin: "" } },
+            { name: "Chirag Rajput", links: { linkedin: "https://www.linkedin.com/in/chirag-rajput-8b31602bb/" } },
+            {
+                name: "Dakshata",
+                links: { linkedin: "https://www.linkedin.com/in/daky2024/" },
+            },
+            { name: "Ashi", links: { linkedin: "" } },
+        ],
+    },
 ];
 
-export interface TechnicalDepartment {
+/*export interface TechnicalDepartment {
     name: string;
     leads: Person[];
     people?: Person[];
 }
 
 export const TechinalDeptData: TechnicalDepartment[] = [
-    /* There must be only one lead per team in Technical Department */
-    /*{
+     There must be only one lead per team in Technical Department 
+    {
         name: "Dev Team",
         leads: [
                 { 
@@ -382,8 +410,8 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
         //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
         ],
-    },*/
-    /*{
+    },
+    {
         name: "Research Team",
         leads: [
             {
@@ -402,8 +430,8 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "Vrishank Sharma", links: { linkedin: "" } },
             { name: "Kshitij", links: { linkedin: "" } },
         ],
-    },*/
-    /*{
+    },
+    {
         name: "ML Team",
         leads: [
             {
@@ -459,6 +487,6 @@ export const TechinalDeptData: TechnicalDepartment[] = [
             { name: "Ashi", links: { linkedin: "" } },
         ],
     },
-];
+];*/
 
 export default executivesData;

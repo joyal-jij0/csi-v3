@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
     people1,
     people2,
-    TechinalDeptData,
+    // TechinalDeptData, // Fixed typo in comment
     executivesData,
 } from "@/data/teamData";
 import { LinkedinIcon, TwitterIcon } from "lucide-react";
@@ -50,7 +50,6 @@ export default function TeamPage() {
         <div className="flex flex-col space-y-12 overflow-x-hidden">
             <div className="flex flex-col items-center text-center">
                 <h2 className="mt-6 mx-4 text-pretty font-bold text-2xl lg:text-4xl bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
-
                     FACULTY COORDINATORS
                 </h2>
             </div>
@@ -113,7 +112,6 @@ export default function TeamPage() {
 
             <div className="flex flex-col items-center text-center">
                 <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
-
                     OUR TEAM
                 </h2>
             </div>
@@ -155,9 +153,10 @@ export default function TeamPage() {
                 ))}
             </div>
 
+            {/* Technical Executives Section - Commented out but properly formatted */}
+            {/*
             <div className="flex flex-col items-center text-center">
                 <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-[#1d7a16] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
-
                     Technical Executives
                 </h2>
             </div>
@@ -169,7 +168,7 @@ export default function TeamPage() {
                         className="flex flex-col items-center"
                     >
                         <div className="text-center">
-                            <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600  text-transparent bg-clip-text">
+                            <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600 text-transparent bg-clip-text">
                                 {executive.name}
                             </p>
                             <a
@@ -178,10 +177,7 @@ export default function TeamPage() {
                                 className="hover:underline"
                             >
                                 <p className="font-semibold text-md text-muted-foreground">
-                                    {
-                                        executive.leads[0]
-                                            .name /* There must be only one lead per team in Technical Department */
-                                    }
+                                    {executive.leads[0].name}
                                 </p>
                             </a>
                             <div className="font-light text-md text-muted-foreground">
@@ -203,25 +199,22 @@ export default function TeamPage() {
                     </div>
                 ))}
             </div>
+            */}
 
             <div className="flex flex-col items-center text-center">
                 <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-r from-[#1d7a16] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
-
                     Executives
                 </h2>
             </div>
 
             <div className="mt-12 mx-6 md:mx-40 grid gap-x-10 gap-y-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-items-center">
-
-
-
                 {executivesData.map((executive) => (
                     <div
                         key={executive.name}
                         className="flex flex-col items-center"
                     >
                         <div className="text-center">
-                            <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600  text-transparent bg-clip-text">
+                            <p className="font-mono font-bold text-2xl mb-2 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-600 text-transparent bg-clip-text">
                                 {executive.name.replace("Executives", "")}
                             </p>
                             <div className="text-muted-foreground">
