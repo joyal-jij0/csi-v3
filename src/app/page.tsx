@@ -62,7 +62,7 @@ export default function Home() {
                         </h1>
                     </div>
                     <div>
-                        <h2 className="text-[#ABABAB] text-[0.7rem] -mt-2 mb-3 md:text-lg md:-mt-3 md:mb-5">
+                        <h2 className="text-[#ABABAB] text-[0.7rem] -mt-2 mb-3 md:text-lg md:mt-5 md:mb-5">
                             WHERE INNOVATON MEETS EXCELLENCE
                         </h2>
                     </div>

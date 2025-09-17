@@ -1,5 +1,3 @@
-// src/app/gallery/page.tsx
-
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -41,7 +39,7 @@ function Gallery() {
       <div>
         <div className="sm:h-auto h-aut z-50 w-full dark:bg-grid-white/[0.2] bg-grid-black/[0.2] flex py-2 justify-center">
           <div className="text-3xl sm:text-7xl w-8/12">
-            <div className="font-bold relative z-20 bg-clip-text pb-10 text-transparent text-center bg-gradient-to-r from-blue-600 to-indigo-200 ">
+            <div className="font-bold relative z-20 bg-clip-text pb-10 text-transparent text-center bg-gradient-to-r from-[#1d7a16] to-[#41d324ff]">
               Our Memories
             </div>
             <div>
@@ -51,7 +49,7 @@ function Gallery() {
             </div>
 
             <div className="py-20">
-              <div className="font-bold relative z-20 bg-clip-text mb-10 text-transparent text-center bg-gradient-to-r from-blue-600 to-indigo-200 ">
+              <div className="font-bold relative z-20 bg-clip-text pb-10 text-transparent text-center bg-gradient-to-r from-[#1d7a16] to-[#41d324ff] ">
                 Photos
               </div>
 

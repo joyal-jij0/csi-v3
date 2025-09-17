@@ -378,19 +378,9 @@ export const TechinalDeptData: TechnicalDepartment[] = [
                 },
         ],
         people: [
-
-            // { name: "Vrishank Sharma", links: { linkedin: "" } },
-            {
-                name: "Kumar Harsh",
-                links: { linkedin: "https://www.linkedin.com/in/kharsh560/" },
-            },
-        //     { name: "Adarsh Singh", links: { linkedin: "" } },
-        //     //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
-
-        //     //{ name: "Vrishank Sharma", links: { linkedin: ""} },
-        //     { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
-        // //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
-
+            //{ name: "Vrishank Sharma", links: { linkedin: ""} },
+            { name: "Kumar Harsh", links: {linkedin: "https://www.linkedin.com/in/kharsh560/" } },
+        //{ name: "Ashish", links: {linkedin: "https://www.linkedin.com/in/ashish-k-750815316/"} }
         ],
     },*/
     /*{
@@ -439,17 +429,8 @@ export const TechinalDeptData: TechnicalDepartment[] = [
                         "https://www.linkedin.com/in/aditi-karn-29b5a6245/",
                 },
             },
-
         ],
-    },*/
-    // {
-    //     name: "DSA Team",
-    //     leads: [{ name: "", links: { linkedin: "" } }],
-    //     people: [
-    //         // { name: "Pratham Gupta", links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" } }
-
-    //     ],
-    // },
+    },
     {
         name: "Technical Team",
         leads: [
