@@ -129,7 +129,7 @@ export const people2: Person[] = [
     {
         id: 6,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871007/Aryan_Dutta-fotor-20240805203429_aqpw49.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758211274/Screenshot_2025-09-18_213054_f2tkwy.png",
         name: "Shubham Jha",
         position: "Content Head",
         links: {
