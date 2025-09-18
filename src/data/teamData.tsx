@@ -105,7 +105,7 @@ export const people2: Person[] = [
         name: "Kashvi Sharma",
         position: "Secretary",
         links: {
-            linkedin: "https://www.linkedin.com/in/kashvi-sharma-27063523b//",
+            linkedin: "https://www.linkedin.com/in/kashvi-sharma-27063523b/",
         },
     },
     {
