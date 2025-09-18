@@ -111,17 +111,17 @@ export const people2: Person[] = [
     {
         id: 4,
         image_source:
-            "https://res.cloudinary.com/drt5gi5mx/image/upload/v1722871022/Yash_Gupta-fotor-2024080520447_tmuw7q.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758210049/Screenshot_2025-09-18_211027_nte1mm.png",
         name: "Yash",
         position: "Joint Secretary",
         links: {
-            linkedin: "https://www.linkedin.com/in/thisisyashgupta/",
+            linkedin: "https://www.linkedin.com/in/yash243/",
         },
     },
     {
         id: 5,
         image_source:
-            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758140119/IMG-20250824-WA0176_url1bi.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758195576/Pratham_Gupta_qht7c1.jpg",
         name: "Pratham Gupta",
         position: "Technical Head",
         links: { linkedin: "https://www.linkedin.com/in/prathamgupta006/" },
@@ -147,7 +147,7 @@ export const people2: Person[] = [
     {
         id: 8,
         image_source:
-            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758140243/WhatsApp_Image_2025-09-06_at_13.48.03_3f63dc75_e2noye_525200.jpg",
+            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758209858/Rishabh_final_2_toql10_98af6c.jpg",
         name: "Rishabh Tripathi",
         position: "PR Head",
         links: {
