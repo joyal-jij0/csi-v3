@@ -111,7 +111,7 @@ export const people2: Person[] = [
     {
         id: 4,
         image_source:
-            "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758210049/Screenshot_2025-09-18_211027_nte1mm.png",
+            "https://res.cloudinary.com/dbokcixdi/image/upload/v1758443965/WhatsApp_Image_2025-09-21_at_14.09.10_vuuvfg.jpg",
         name: "Yash",
         position: "Joint Secretary",
         links: {
