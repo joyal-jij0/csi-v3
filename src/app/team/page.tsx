@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
     people1,
     people2,
+    people3,
     // TechinalDeptData, // Fixed typo in comment
     executivesData,
 } from "@/data/teamData";
@@ -76,6 +77,49 @@ export default function TeamPage() {
                 {people1.map((person) => (
                     <div key={person.id} className="flex flex-col items-center">
                         <Avatar className="mb-4 size-20 md:mb-5 md:size-28 lg:size-36 border border-purple-500">
+                            <AvatarImage
+                                src={person.image_source}
+                                className="object-cover object-top"
+                            />
+                            <AvatarFallback>{person.name}</AvatarFallback>
+                        </Avatar>
+                        <p className="text-center text-sm font-medium">
+                            {person.name}
+                        </p>
+                        <p className="text-center text-xs font-light text-muted-foreground text-gray-300">
+                            {person.position}
+                        </p>
+                        <div className="flex flex-row justify-center space-x-2 mt-1">
+                            {person.links?.linkedin && (
+                                <Link
+                                    href={person.links?.linkedin}
+                                    target="_blank"
+                                >
+                                    <LinkedinIcon className="size-4" />
+                                </Link>
+                            )}
+                            {person.links?.twitter && (
+                                <Link
+                                    href={person.links?.twitter}
+                                    target="_blank"
+                                >
+                                    <TwitterIcon className="size-4" />
+                                </Link>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="flex flex-col items-center text-center">
+                <h2 className="mt-6 text-pretty font-bold text-3xl lg:text-4xl bg-gradient-to-b from-[rgba(29,51,9,0.99)] via-[#41d324ff] to-[#41d324ff] text-transparent bg-clip-text">
+                    Advisors
+                </h2>
+            </div>
+            <div className="mt-12 mx-8 md:mx-12 flex gap-x-12 md:gap-x-20 lg:gap-x-28 gap-y-6 md:gap-y-16 items-center justify-center flex-wrap">
+                {people3.map((person) => (
+                    <div key={person.id} className="flex flex-col items-center">
+                        <Avatar className="mb-4 size-32 md:mb-5 lg:size-36 rounded-3xl border border-purple-500">
                             <AvatarImage
                                 src={person.image_source}
                                 className="object-cover object-top"
