@@ -18,25 +18,34 @@ function Footer() {
                     <h3 className="text-xl md:text-2xl font-bold mb-6">
                         CONTACT US
                     </h3>
-                    <Link target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/F29Jf2VedYtwBCY56">
-                    <div className="flex items-center mb-4">
-                        <FaMapMarkerAlt className="mr-2" />
-                        <p className="text-sm md:text-base">
-                            Maharaja Agrasen Institute <br></br> Of Technology
-                        </p>
-                    </div>
+                    <Link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://maps.app.goo.gl/F29Jf2VedYtwBCY56"
+                    >
+                        <div className="flex items-center mb-4">
+                            <FaMapMarkerAlt className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                Maharaja Agrasen Institute <br></br> Of
+                                Technology
+                            </p>
+                        </div>
                     </Link>
-                    <Link href="mailto:contact@csiinnowave.com">
-                    <div className="flex items-center mb-4">
-                        <FaEnvelope className="mr-2" />
-                        <p className="text-sm md:text-base">contact@csiinnowave.com</p>
-                    </div>
+                    <Link href="mailto:csiinnowave@gmail.com">
+                        <div className="flex items-center mb-4">
+                            <FaEnvelope className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                csiinnowave@gmail.com
+                            </p>
+                        </div>
                     </Link>
-                    <Link href="tel:+919871010872">
-                    <div className="flex items-center">
-                        <FaPhone className="mr-2" />
-                        <p className="text-sm md:text-base">+91 9871010872</p>
-                    </div>
+                    <Link href="tel:+918920125672">
+                        <div className="flex items-center">
+                            <FaPhone className="mr-2" />
+                            <p className="text-sm md:text-base">
+                                +91 8920125672
+                            </p>
+                        </div>
                     </Link>
                 </div>
                 <div className="w-full md:w-1/6">
@@ -92,7 +101,6 @@ function Footer() {
                                 </span>
                             </ShimmerButton>
                         </Link>
-
                     </div>
                 </div>
             </div>

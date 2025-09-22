@@ -9,7 +9,8 @@ import { OrbitingCirclesDemo } from "@/components/landingPage/Orbit";
 
 export const metadata = {
     title: "CSI - INNOWAVE | Technocultural Society of MAIT",
-    description: "Join MAIT's premier technocultural society. Experience workshops, internships, and innovative initiatives fostering skill development and entrepreneurial spirit.",
+    description:
+        "Join MAIT's premier technocultural society. Experience workshops, internships, and innovative initiatives fostering skill development and entrepreneurial spirit.",
     keywords: [
         "CSI INNOWAVE",
         "Computer Society of India",
@@ -68,7 +69,7 @@ export default function Home() {
                     </div>
                     {/* <Button className="text-[0.7rem] md:text-lg" containerClassName="w-20 lg:w-40 lg:h-14">Join Us</Button> */}
                     <a
-                        href="https://forms.gle/AKKuaGPyZgztVUwj7"
+                        href="https://forms.gle/oynZTTsJxGzPNyV76"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -79,14 +80,15 @@ export default function Home() {
                    hover:rotate-1 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 
                    hover:text-white hover:ring-2 hover:ring-purple-400 hover:ring-offset-2"
                         >
-                            <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight 
+                            <span
+                                className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight 
                          text-white dark:from-white dark:to-slate-900/10 lg:text-lg 
-                         transition-colors duration-300 ease-in-out hover:animate-pulse">
+                         transition-colors duration-300 ease-in-out hover:animate-pulse"
+                            >
                                 JOIN US
                             </span>
                         </ShimmerButton>
                     </a>
-
 
                     <OrbitingCirclesDemo />
 
