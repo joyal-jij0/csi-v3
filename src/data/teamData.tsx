@@ -181,7 +181,7 @@ export const people2: Person[] = [
         image_source:
             "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758197164/Bhumi_t7ltp9_3e033e.webp",
         name: "Bhumi Rajbhar",
-        position: "Social Media and Photography Co-Head",
+        position: "Social Media Co-Head",
         links: {
             linkedin: "https://www.linkedin.com/in/bhumi-rajbhar-292633291/",
         },
@@ -191,7 +191,7 @@ export const people2: Person[] = [
         image_source:
             "https://res.cloudinary.com/dmwkrlwik/image/upload/v1758197212/liesha_gupta_pryso1_0ac19b.jpg",
         name: "Liesha Gupta",
-        position: "Social Media and Photography Co-Head",
+        position: "Social Media Co-Head",
         links: {
             linkedin: "https://www.linkedin.com/in/liesha-gupta/",
         },
@@ -469,7 +469,6 @@ export const executivesData: Department[] = [
             { name: "Krish Mittal", links: { linkedin: "" } },
             { name: "Aniket Gupta", links: { linkedin: "" } },
             { name: "Krish Vishwakarma", links: { linkedin: "" } },
-            { name: "Prathak Gupta", links: { linkedin: "" } },
         ],
     },
     {
