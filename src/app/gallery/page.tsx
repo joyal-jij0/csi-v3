@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ImagesSlider } from "../../components/ui/images-slider";
 import { imagesOne } from "@/data/galleryData";
 import { EventsDataType } from "@/types/EventData";
@@ -11,13 +12,23 @@ function Gallery() {
   const [eventImages, setEventImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [lightboxIndex, setLightboxIndex] = useState(-1);
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
+
+  const convertHeicToJpg = (url: string): string => {
+    if (url.endsWith('.heic') || url.endsWith('.HEIC')) {
+      return url.replace(/\/upload\//, '/upload/f_jpg/');
+    }
+    return url;
+  };
 
   const fetchEvents = async () => {
     try {
       const response = await fetch("/api/events", { cache: "no-store" });
       if (!response.ok) { throw new Error(`Failed to fetch events: ${response.status}`); }
       const data = await response.json();
-      const eventImageUrls = (data as EventsDataType[]).flatMap((event) => event.imageUrls);
+      const eventImageUrls = (data as EventsDataType[])
+        .flatMap((event) => event.imageUrls)
+        .map(convertHeicToJpg);
       setEventImages(eventImageUrls);
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -55,6 +66,8 @@ function Gallery() {
 
               {loading ? (
                 <p className="text-center text-white text-xl">Loading Photos...</p>
+              ) : eventImages.length === 0 ? (
+                <p className="text-center text-white text-xl">No photos available yet. Check back soon!</p>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 grid-flow-dense">
                   {eventImages.map((imageUrl, index) => {
@@ -68,13 +81,21 @@ function Gallery() {
                     return (
                       <div
                         key={imageUrl + index}
-                        className={`cursor-pointer overflow-hidden rounded-lg group ${itemClasses}`}
+                        className={`cursor-pointer overflow-hidden rounded-lg group relative ${itemClasses}`}
+                        style={{ minHeight: '200px' }}
                         onClick={() => setLightboxIndex(index)}
                       >
-                        <img
+                        <Image
                           src={imageUrl}
                           alt={`Gallery image ${index + 1}`}
-                          className="h-full w-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                          fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          className="object-cover transform transition-transform duration-300 group-hover:scale-110"
+                          onError={() => {
+                            console.error(`Failed to load image: ${imageUrl}`);
+                            setImageErrors(prev => new Set(prev).add(imageUrl));
+                          }}
+                          unoptimized={imageErrors.has(imageUrl)}
                         />
                       </div>
                     );
