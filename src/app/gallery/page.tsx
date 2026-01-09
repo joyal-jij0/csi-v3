@@ -15,10 +15,17 @@ function Gallery() {
   const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const convertHeicToJpg = (url: string): string => {
-    if (url.endsWith('.heic') || url.endsWith('.HEIC')) {
-      return url.replace(/\/upload\//, '/upload/f_jpg/');
+    if (!/\.heic$/i.test(url)) {
+      return url;
     }
-    return url;
+
+    const uploadSegment = "/upload/";
+
+    if (url.includes(uploadSegment)) {
+      return url.replace(uploadSegment, `${uploadSegment}f_jpg/`);
+    }
+
+    return url.replace(/\.heic$/i, ".jpg");
   };
 
   const fetchEvents = async () => {
@@ -45,6 +52,8 @@ function Gallery() {
     return () => clearInterval(interval);
   }, []);
 
+  const visibleImages = eventImages.filter(url => !imageErrors.has(url));
+
   return (
     <>
       <div>
@@ -66,11 +75,11 @@ function Gallery() {
 
               {loading ? (
                 <p className="text-center text-white text-xl">Loading Photos...</p>
-              ) : eventImages.length === 0 ? (
+              ) : visibleImages.length === 0 ? (
                 <p className="text-center text-white text-xl">No photos available yet. Check back soon!</p>
               ) : (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 grid-flow-dense">
-                  {eventImages.map((imageUrl, index) => {
+                  {visibleImages.map((imageUrl, index) => {
                     let itemClasses = "";
                     if ((index + 1) % 5 === 0) {
                       itemClasses = "md:col-span-2";
@@ -78,9 +87,15 @@ function Gallery() {
                     if ((index + 1) % 7 === 0) {
                       itemClasses = "md:row-span-2";
                     }
+
+                    const isLarge = (index + 1) % 5 === 0;
+                    const sizes = isLarge
+                      ? "(max-width: 768px) 50vw, 50vw"
+                      : "(max-width: 768px) 50vw, 25vw";
+
                     return (
                       <div
-                        key={imageUrl + index}
+                        key={imageUrl}
                         className={`cursor-pointer overflow-hidden rounded-lg group relative ${itemClasses}`}
                         style={{ minHeight: '200px' }}
                         onClick={() => setLightboxIndex(index)}
@@ -89,13 +104,11 @@ function Gallery() {
                           src={imageUrl}
                           alt={`Gallery image ${index + 1}`}
                           fill
-                          sizes="(max-width: 768px) 50vw, 25vw"
+                          sizes={sizes}
                           className="object-cover transform transition-transform duration-300 group-hover:scale-110"
                           onError={() => {
-                            console.error(`Failed to load image: ${imageUrl}`);
                             setImageErrors(prev => new Set(prev).add(imageUrl));
                           }}
-                          unoptimized={imageErrors.has(imageUrl)}
                         />
                       </div>
                     );
@@ -111,7 +124,7 @@ function Gallery() {
         index={lightboxIndex}
         open={lightboxIndex >= 0}
         close={() => setLightboxIndex(-1)}
-        slides={eventImages.map((url) => ({ src: url }))}
+        slides={visibleImages.map((url) => ({ src: url }))}
       />
     </>
   );
