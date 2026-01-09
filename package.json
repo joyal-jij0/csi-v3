@@ -26,7 +26,7 @@
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.417.0",
     "mongoose": "^8.5.3",
-    "next": "^15.5.2",
+    "next": "15.5.9",
     "next-seo": "^6.6.0",
     "prisma": "^5.19.1",
     "react": "^18.3.1",
